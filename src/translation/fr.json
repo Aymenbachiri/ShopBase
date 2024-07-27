@@ -3,5 +3,10 @@
     "Home": "Principale",
     "About": "A propos",
     "Contact": "Contact"
+  },
+  "Languages": {
+    "Arabic": "Arab",
+    "English": "englais",
+    "French": "français"
   }
 }

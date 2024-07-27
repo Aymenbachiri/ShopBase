@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import MyImage from "./reusable_components/MyImage";
+import MyImage from "../reusable_components/MyImage";
 import SunIcon from "@/lib/svg/SunIcon";
 import MoonIcon from "@/lib/svg/MoonIcon";
 

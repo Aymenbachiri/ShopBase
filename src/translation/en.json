@@ -4,5 +4,10 @@
     "About": "About",
     "Contact": "Contact",
     "Log in": "Log in"
+  },
+  "Languages": {
+    "Arabic": "Arabic",
+    "English": "English",
+    "French": "French"
   }
 }

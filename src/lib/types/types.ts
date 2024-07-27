@@ -1,3 +1,5 @@
+import type { Session } from "next-auth";
+
 export type LocaleLayoutProps = {
   children: React.ReactNode;
   params: { locale: string };
@@ -12,4 +14,9 @@ export type MobileNavbarLinkProps = {
     href: string;
     label: string;
   };
+};
+
+export type AuthProviderProps = {
+  children: React.ReactNode;
+  session?: Session | null | undefined;
 };

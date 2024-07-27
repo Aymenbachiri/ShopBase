@@ -2,11 +2,12 @@ import LargeScreenNavbar from "./LargeScreenNavbar";
 import MobileNavbar from "./MobileNavbar";
 import MobileNavbarHeader from "./MobileNavbarHeader";
 import { NavbarProvider } from "@/lib/providers/NavbarProvider";
+import NavbarHeader from "./NavbarHeader";
 
 export default function Navbar() {
   return (
-    <header className="fixed top-0 w-full z-20 start-0 bg-gray-700/80">
-      <NavbarProvider>
+    <NavbarProvider>
+      <NavbarHeader>
         {/* Large Screen Menu */}
         <LargeScreenNavbar />
 
@@ -14,8 +15,8 @@ export default function Navbar() {
         <MobileNavbarHeader>
           <MobileNavbar />
         </MobileNavbarHeader>
-      </NavbarProvider>
-    </header>
+      </NavbarHeader>
+    </NavbarProvider>
   );
 }
 3;

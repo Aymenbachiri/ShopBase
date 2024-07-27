@@ -1,4 +1,5 @@
 import Navbar from "@/components/navbar/Navbar";
+import AuthProvider from "@/lib/providers/AuthProvider";
 import SmoothScrollProvider from "@/lib/providers/SmoothScroll";
 import ThemeProvider from "@/lib/providers/ThemeProvider";
 import type { LocaleLayoutProps } from "@/lib/types/types";
@@ -34,14 +35,16 @@ export default function LocaleLayout({
   return (
     <>
       <NextIntlClientProvider locale={locale} messages={messages}>
-        <ThemeProvider>
-          <SmoothScrollProvider>
-            <main dir={dir}>
-              <Navbar />
-              {children}
-            </main>
-          </SmoothScrollProvider>
-        </ThemeProvider>
+        <AuthProvider>
+          <ThemeProvider>
+            <SmoothScrollProvider>
+              <main dir={dir}>
+                <Navbar />
+                {children}
+              </main>
+            </SmoothScrollProvider>
+          </ThemeProvider>
+        </AuthProvider>
       </NextIntlClientProvider>
     </>
   );

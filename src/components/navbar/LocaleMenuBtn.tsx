@@ -24,7 +24,7 @@ export default function LocaleMenuButton({
     <button
       type="button"
       onClick={() => setIsOpen(!isOpen)}
-      className="inline-flex items-center gap-3 px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none dark:text-white dark:bg-gray-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-blue-500"
+      className="inline-flex items-center gap-3 px-4 text-sm font-medium text-gray-900 bg-white border border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 focus:outline-none dark:text-white dark:bg-gray-700 dark:border-gray-600 dark:hover:bg-gray-600 dark:focus:ring-blue-500"
     >
       <DisplayFlags />
       {Locale}

@@ -1,3 +1,3 @@
 export default function HomePage() {
-  return <></>;
+  return <div className="h-[320vh]"></div>;
 }

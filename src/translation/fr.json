@@ -1,12 +1,17 @@
 {
-  "Navbar": {
-    "Home": "Principale",
-    "About": "A propos",
-    "Contact": "Contact"
+  "NavLinks": {
+    "Home": "Accueil",
+    "Products": "Produits",
+    "Sell": "Vendre",
+    "About": "À Propos"
   },
   "Languages": {
     "Arabic": "Arab",
     "English": "englais",
     "French": "français"
+  },
+  "HomePageSeo": {
+    "Title": "ShopBase - Votre Destination Unique pour le Shopping en Ligne",
+    "Description": "Découvrez une large gamme de produits à des prix imbattables sur ShopBase. Profitez de la livraison rapide, des paiements sécurisés et d'un excellent service client. Achetez maintenant et vivez la meilleure expérience de shopping en ligne !"
   }
 }

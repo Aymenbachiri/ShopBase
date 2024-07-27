@@ -1,6 +1,12 @@
-export const NavLinks = [
-  { href: "/", label: "Home" },
-  { href: "/gallery", label: "Gallery" },
-  { href: "/deals", label: "Deals" },
-  { href: "/contact", label: "Contact" },
-];
+import { getTranslations } from "next-intl/server";
+
+export default async function getNavLinks() {
+  const t = await getTranslations("NavLinks");
+
+  return [
+    { href: "/", label: t("Home") },
+    { href: "/products", label: t("Products") },
+    { href: "/sell", label: t("Sell") },
+    { href: "/about", label: t("About") },
+  ];
+}

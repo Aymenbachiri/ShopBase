@@ -6,3 +6,10 @@ export type LocaleLayoutProps = {
 export type LocaleMenuProps = {
   buttonText: string;
 };
+
+export type MobileNavbarLinkProps = {
+  link: {
+    href: string;
+    label: string;
+  };
+};

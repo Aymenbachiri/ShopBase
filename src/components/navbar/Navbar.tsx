@@ -1,5 +1,6 @@
 import LargeScreenNavbar from "./LargeScreenNavbar";
 import MobileNavbar from "./MobileNavbar";
+import MobileNavbarHeader from "./MobileNavbarHeader";
 import { NavbarProvider } from "@/lib/providers/NavbarProvider";
 
 export default function Navbar() {
@@ -10,7 +11,9 @@ export default function Navbar() {
         <LargeScreenNavbar />
 
         {/* Mobile Menu */}
-        <MobileNavbar />
+        <MobileNavbarHeader>
+          <MobileNavbar />
+        </MobileNavbarHeader>
       </NavbarProvider>
     </header>
   );

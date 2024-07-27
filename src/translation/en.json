@@ -1,13 +1,17 @@
 {
-  "Navbar": {
+  "NavLinks": {
     "Home": "Home",
-    "About": "About",
-    "Contact": "Contact",
-    "Log in": "Log in"
+    "Products": "Products",
+    "Sell": "Sell",
+    "About": "About"
   },
   "Languages": {
     "Arabic": "Arabic",
     "English": "English",
     "French": "French"
+  },
+  "HomePageSeo": {
+    "Title": "ShopBase - Your One-Stop Online Shopping Destination",
+    "Description": "Discover a wide range of products at unbeatable prices on ShopBase. Enjoy fast shipping, secure payments, and excellent customer service. Shop now and experience the best in online shopping!"
   }
 }

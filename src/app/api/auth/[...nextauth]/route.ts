@@ -1,15 +1,14 @@
 import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
-import { z } from "zod";
 import jwt from "jsonwebtoken";
 import { serialize } from "cookie";
-import { parsedEnv } from "@/lib/env/env";
 import { credentialsSchema } from "@/lib/schemas/credentialsSchema";
 import connectToDB from "@/lib/database/database";
 import User from "@/lib/database/models/User";
+import { getErrorMessage } from "@/lib/hooks/getErrorMessage";
 
-const JWT_SECRET = parsedEnv.JWT_SECRET;
+const JWT_SECRET = process.env.JWT_SECRET || "";
 const COOKIE_NAME = "auth-token";
 
 const handler = NextAuth({
@@ -60,12 +59,10 @@ const handler = NextAuth({
           } else {
             throw new Error("User not found");
           }
-        } catch (error: any) {
-          if (error instanceof z.ZodError) {
-            throw new Error(error.issues[0].message);
-          } else {
-            throw new Error(error.message);
-          }
+        } catch (error) {
+          return {
+            error: getErrorMessage(error),
+          };
         }
       },
     }),

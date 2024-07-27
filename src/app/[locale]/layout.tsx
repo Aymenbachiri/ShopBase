@@ -2,6 +2,7 @@ import Navbar from "@/components/navbar/Navbar";
 import AuthProvider from "@/lib/providers/AuthProvider";
 import SmoothScrollProvider from "@/lib/providers/SmoothScroll";
 import ThemeProvider from "@/lib/providers/ThemeProvider";
+import { ToastProvider } from "@/lib/providers/ToastProvider";
 import type { LocaleLayoutProps } from "@/lib/types/types";
 import { NextIntlClientProvider, useLocale, useMessages } from "next-intl";
 import { getTranslations } from "next-intl/server";
@@ -38,10 +39,12 @@ export default function LocaleLayout({
         <AuthProvider>
           <ThemeProvider>
             <SmoothScrollProvider>
-              <main dir={dir}>
-                <Navbar />
-                {children}
-              </main>
+              <ToastProvider>
+                <main dir={dir}>
+                  <Navbar />
+                  {children}
+                </main>
+              </ToastProvider>
             </SmoothScrollProvider>
           </ThemeProvider>
         </AuthProvider>

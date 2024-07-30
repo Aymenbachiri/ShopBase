@@ -1,15 +1,152 @@
 export default function MoonIcon({ onClick }: { onClick: () => void }) {
   return (
     <svg
-      onClick={onClick}
-      className="cursor-pointer"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 24 24"
       width={30}
       height={30}
       stroke="currentColor"
+      viewBox="0 0 24 24"
+      onClick={onClick}
+      className="hover:cursor-pointer"
     >
-      <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeDasharray={4}
+        strokeDashoffset={4}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M13 4h1.5M13 4h-1.5M13 4v1.5M13 4v-1.5">
+          <animate
+            id="lineMdMoonAltLoop0"
+            fill="freeze"
+            attributeName="stroke-dashoffset"
+            begin="0.7s;lineMdMoonAltLoop0.begin+6s"
+            dur="0.4s"
+            values="4;0"
+          ></animate>
+          <animate
+            fill="freeze"
+            attributeName="stroke-dashoffset"
+            begin="lineMdMoonAltLoop0.begin+2s;lineMdMoonAltLoop0.begin+4s"
+            dur="0.4s"
+            values="4;0"
+          ></animate>
+          <animate
+            fill="freeze"
+            attributeName="stroke-dashoffset"
+            begin="lineMdMoonAltLoop0.begin+1.2s;lineMdMoonAltLoop0.begin+3.2s;lineMdMoonAltLoop0.begin+5.2s"
+            dur="0.4s"
+            values="0;4"
+          ></animate>
+          <set
+            attributeName="d"
+            begin="lineMdMoonAltLoop0.begin+1.8s"
+            to="M12 5h1.5M12 5h-1.5M12 5v1.5M12 5v-1.5"
+          ></set>
+          <set
+            attributeName="d"
+            begin="lineMdMoonAltLoop0.begin+3.8s"
+            to="M12 4h1.5M12 4h-1.5M12 4v1.5M12 4v-1.5"
+          ></set>
+          <set
+            attributeName="d"
+            begin="lineMdMoonAltLoop0.begin+5.8s"
+            to="M13 4h1.5M13 4h-1.5M13 4v1.5M13 4v-1.5"
+          ></set>
+        </path>
+        <path d="M19 11h1.5M19 11h-1.5M19 11v1.5M19 11v-1.5">
+          <animate
+            id="lineMdMoonAltLoop1"
+            fill="freeze"
+            attributeName="stroke-dashoffset"
+            begin="1.1s;lineMdMoonAltLoop1.begin+6s"
+            dur="0.4s"
+            values="4;0"
+          ></animate>
+          <animate
+            fill="freeze"
+            attributeName="stroke-dashoffset"
+            begin="lineMdMoonAltLoop1.begin+2s;lineMdMoonAltLoop1.begin+4s"
+            dur="0.4s"
+            values="4;0"
+          ></animate>
+          <animate
+            fill="freeze"
+            attributeName="stroke-dashoffset"
+            begin="lineMdMoonAltLoop1.begin+1.2s;lineMdMoonAltLoop1.begin+3.2s;lineMdMoonAltLoop1.begin+5.2s"
+            dur="0.4s"
+            values="0;4"
+          ></animate>
+          <set
+            attributeName="d"
+            begin="lineMdMoonAltLoop1.begin+1.8s"
+            to="M17 11h1.5M17 11h-1.5M17 11v1.5M17 11v-1.5"
+          ></set>
+          <set
+            attributeName="d"
+            begin="lineMdMoonAltLoop1.begin+3.8s"
+            to="M18 12h1.5M18 12h-1.5M18 12v1.5M18 12v-1.5"
+          ></set>
+          <set
+            attributeName="d"
+            begin="lineMdMoonAltLoop1.begin+5.8s"
+            to="M19 11h1.5M19 11h-1.5M19 11v1.5M19 11v-1.5"
+          ></set>
+        </path>
+        <path d="M19 4h1.5M19 4h-1.5M19 4v1.5M19 4v-1.5">
+          <animate
+            id="lineMdMoonAltLoop2"
+            fill="freeze"
+            attributeName="stroke-dashoffset"
+            begin="2.9s;lineMdMoonAltLoop2.begin+6s"
+            dur="0.4s"
+            values="4;0"
+          ></animate>
+          <animate
+            fill="freeze"
+            attributeName="stroke-dashoffset"
+            begin="lineMdMoonAltLoop2.begin+2s"
+            dur="0.4s"
+            values="4;0"
+          ></animate>
+          <animate
+            fill="freeze"
+            attributeName="stroke-dashoffset"
+            begin="lineMdMoonAltLoop2.begin+1.2s;lineMdMoonAltLoop2.begin+3.2s"
+            dur="0.4s"
+            values="0;4"
+          ></animate>
+          <set
+            attributeName="d"
+            begin="lineMdMoonAltLoop2.begin+1.8s"
+            to="M20 5h1.5M20 5h-1.5M20 5v1.5M20 5v-1.5"
+          ></set>
+          <set
+            attributeName="d"
+            begin="lineMdMoonAltLoop2.begin+5.8s"
+            to="M19 4h1.5M19 4h-1.5M19 4v1.5M19 4v-1.5"
+          ></set>
+        </path>
+      </g>
+      <path
+        fill="none"
+        stroke="currentColor"
+        strokeDasharray={56}
+        strokeDashoffset={56}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        d="M7 6 C7 12.08 11.92 17 18 17 C18.53 17 19.05 16.96 19.56 16.89 C17.95 19.36 15.17 21 12 21 C7.03 21 3 16.97 3 12 C3 8.83 4.64 6.05 7.11 4.44 C7.04 4.95 7 5.47 7 6 Z"
+      >
+        <animate
+          fill="freeze"
+          attributeName="stroke-dashoffset"
+          dur="0.6s"
+          values="56;0"
+        ></animate>
+      </path>
     </svg>
   );
 }

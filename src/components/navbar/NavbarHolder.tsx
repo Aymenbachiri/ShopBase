@@ -2,7 +2,7 @@
 
 import { useNavbar } from "@/lib/providers/NavbarProvider";
 
-export default function NavbarHeader({
+export default function NavbarHolder({
   children,
 }: {
   children: React.ReactNode;

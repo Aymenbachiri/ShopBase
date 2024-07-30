@@ -39,3 +39,9 @@ export type RegisterBtnProp = {
   captcha: boolean;
   RegisterButton: string;
 };
+
+export type LoginBtnProps = {
+  loading: boolean;
+  captcha: boolean;
+  LoginButton: string;
+};

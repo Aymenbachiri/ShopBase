@@ -1,9 +1,9 @@
-import RegisterUserPage from "@/pages/RegisterUserPage";
+import LoginPage from "@/pages/LoginPage";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("RegisterUserPage");
+  const t = await getTranslations("LoginPage");
 
   return {
     title: t("metaTitle"),
@@ -31,6 +31,6 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function page() {
-  return <RegisterUserPage />;
+export default function Login() {
+  return <LoginPage />;
 }

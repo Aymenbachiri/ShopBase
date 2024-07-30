@@ -10,6 +10,20 @@
     "English": "English",
     "French": "French"
   },
+  "ProfileMenu": {
+    "Profile": "Profile",
+    "Dashboard": "Dashboard",
+    "Settings": "Settings",
+    "SellProduct": "SellProduct",
+    "LogOut": "Log out"
+  },
+  "LoginCheck": {
+    "Header": "Login Successfully",
+    "SubHeader": "You are logged in. You can go to the",
+    "DashboardLink": "Dashboard",
+    "Or": "or",
+    "LogoutBtn": "Log Out"
+  },
   "HomePage": {
     "metaTitle": "ShopBase - Your One-Stop Online Shopping Destination",
     "metaDescription": "Discover a wide range of products at unbeatable prices on ShopBase. Enjoy fast shipping, secure payments, and excellent customer service. Shop now and experience the best in online shopping!",
@@ -67,6 +81,24 @@
       "passwordMinLength": "Password must be at least 8 characters",
       "confirmPasswordMinLength": "Confirm Password must be at least 8 characters",
       "passwordsDoNotMatch": "Passwords do not match"
+    }
+  },
+  "LoginPage": {
+    "metaTitle": "Log In to Your ShopBase Account | Access Your Dashboard",
+    "metaDescription": "Log in to your ShopBase account to manage your e-commerce store, track your sales, and access powerful tools to grow your business.",
+    "ogTitle": "Access Your ShopBase Account - Log In Now",
+    "ogDescription": "Log in to ShopBase to manage your online store, view your sales, and use powerful e-commerce features. Your business dashboard is just a click away!",
+    "ogImageAlt": "ShopBase login page featuring a user accessing their e-commerce dashboard",
+    "twitterTitle": "Log In to ShopBase - Manage Your Online Store Effortlessly",
+    "twitterDescription": "Access your ShopBase account to track your sales, manage your store, and utilize powerful tools. Log in now to continue growing your business.",
+    "heading": "Welcome Back to ShopBase",
+    "subheading": "Log in to your account to manage your store, track your sales, and access the tools you need to succeed. Your business is waiting for you!",
+    "Form": {
+      "emailInput": "Email",
+      "emailInputPlaceholder": "Enter Email",
+      "passwordInput": "Password",
+      "passwordInputPlaceholder": "Enter password",
+      "submitButton": "Login"
     }
   }
 }

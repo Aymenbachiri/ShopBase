@@ -10,6 +10,20 @@
     "English": "englais",
     "French": "français"
   },
+  "ProfileMenu": {
+    "Profile": "Profile",
+    "Dashboard": "Tableau de bord",
+    "Settings": "Paramètres",
+    "SellProduct": "Vendre produit",
+    "LogOut": "Se déconnecter"
+  },
+  "LoginCheck": {
+    "Header": "Connecté avec Succes",
+    "SubHeader": "Vous êtes déjà connecté. Vous pouvez aller au",
+    "DashboardLink": "Tableau de bord",
+    "Or": "ou",
+    "LogoutBtn": "Déconnexion"
+  },
   "HomePage": {
     "metaTitle": "ShopBase - Votre destination unique pour le shopping en ligne",
     "metaDescription": "Découvrez une large gamme de produits à des prix imbattables sur ShopBase. Profitez d'une livraison rapide, de paiements sécurisés et d'un excellent service client. Achetez maintenant et vivez la meilleure expérience de shopping en ligne !",
@@ -67,6 +81,24 @@
       "passwordMinLength": "Le mot de passe doit comporter au moins 8 caractères",
       "confirmPasswordMinLength": "La confirmation du mot de passe doit comporter au moins 8 caractères",
       "passwordsDoNotMatch": "Les mots de passe ne correspondent pas"
+    }
+  },
+  "LoginPage": {
+    "metaTitle": "Connectez-vous à votre compte ShopBase | Accédez à votre tableau de bord",
+    "metaDescription": "Connectez-vous à votre compte ShopBase pour gérer votre boutique en ligne, suivre vos ventes et accéder à des outils puissants pour faire croître votre entreprise.",
+    "ogTitle": "Accédez à votre compte ShopBase - Connectez-vous maintenant",
+    "ogDescription": "Connectez-vous à ShopBase pour gérer votre boutique en ligne, voir vos ventes et utiliser des fonctionnalités puissantes pour le commerce électronique. Votre tableau de bord est à un clic!",
+    "ogImageAlt": "Page de connexion ShopBase montrant un utilisateur accédant à son tableau de bord de commerce électronique",
+    "twitterTitle": "Connectez-vous à ShopBase - Gérez votre boutique en ligne facilement",
+    "twitterDescription": "Accédez à votre compte ShopBase pour suivre vos ventes, gérer votre boutique et utiliser des outils puissants. Connectez-vous maintenant pour continuer à développer votre entreprise.",
+    "heading": "Bienvenue de retour sur ShopBase",
+    "subheading": "Connectez-vous à votre compte pour gérer votre boutique, suivre vos ventes et accéder aux outils dont vous avez besoin pour réussir. Votre entreprise vous attend!",
+    "Form": {
+      "emailInput": "Email",
+      "emailInputPlaceholder": "Entrez l'email",
+      "passwordInput": "Mot de passe",
+      "passwordInputPlaceholder": "Entrez le mot de passe",
+      "submitButton": "Connexion"
     }
   }
 }

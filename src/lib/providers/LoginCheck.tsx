@@ -1,8 +1,8 @@
 "use client";
 
-import LogoutBtn from "@/components/auth/LogoutBtn";
 import { Link } from "@/navigation";
-import { useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
+import { useTranslations } from "next-intl";
 
 export default function LoginCheck({
   children,
@@ -10,6 +10,7 @@ export default function LoginCheck({
   children: React.ReactNode;
 }) {
   const { status } = useSession();
+  const t = useTranslations("LoginCheck");
 
   if (status === "loading") {
     return;
@@ -17,20 +18,21 @@ export default function LoginCheck({
 
   if (status === "authenticated") {
     return (
-      <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-lg text-center">
-          <h1 className="text-2xl font-bold sm:text-3xl">
-            You are already logged in
-          </h1>
+      <main className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+        <section className="mx-auto max-w-lg text-center">
+          <h1 className="text-2xl font-bold sm:text-3xl">{t("Header")}</h1>
           <p className="mt-4 text-gray-500">
-            You are already logged in. You can go to the{" "}
-            <Link href="/dashboard" className="underline">
-              Dashboard
+            {t("SubHeader")}{" "}
+            <Link href="/dashboard" className="underline mx-1">
+              {t("DashboardLink")}
             </Link>
-            or <LogoutBtn />
+            {t("Or")}
           </p>
-        </div>
-      </div>
+          <button className="underline" onClick={() => signOut()}>
+            {t("LogoutBtn")}
+          </button>
+        </section>
+      </main>
     );
   }
   return <>{children}</>;

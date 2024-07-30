@@ -1,21 +1,21 @@
 import LargeScreenNavbar from "./LargeScreenNavbar";
 import MobileNavbar from "./MobileNavbar";
-import MobileNavbarHeader from "./MobileNavbarHeader";
 import { NavbarProvider } from "@/lib/providers/NavbarProvider";
-import NavbarHeader from "./NavbarHeader";
+import NavbarHolder from "./NavbarHolder";
+import MobileNavbarHolder from "./MobileNavbarHolder";
 
 export default function Navbar() {
   return (
     <NavbarProvider>
-      <NavbarHeader>
+      <NavbarHolder>
         {/* Large Screen Menu */}
         <LargeScreenNavbar />
 
         {/* Mobile Menu */}
-        <MobileNavbarHeader>
+        <MobileNavbarHolder>
           <MobileNavbar />
-        </MobileNavbarHeader>
-      </NavbarHeader>
+        </MobileNavbarHolder>
+      </NavbarHolder>
     </NavbarProvider>
   );
 }

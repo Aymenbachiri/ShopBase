@@ -3,6 +3,8 @@ import LocaleMenu from "./LocaleMenu";
 import ThemeSwitch from "./ThemeSwitch";
 import MobileNavBtn from "./MobileNavBtn";
 import getNavLinks from "./NavLinks";
+import IsAuth from "@/lib/providers/IsAuth";
+import ProfileMenu from "./ProfileMenu";
 
 export default async function LargeScreenNavbar() {
   const navLinks = await getNavLinks();
@@ -21,6 +23,9 @@ export default async function LargeScreenNavbar() {
             </Link>
           </li>
         ))}
+        <IsAuth>
+          <ProfileMenu />
+        </IsAuth>
       </ul>
 
       {/* Translation Menu */}

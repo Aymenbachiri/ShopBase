@@ -2,7 +2,7 @@
 
 import { useNavbar } from "@/lib/providers/NavbarProvider";
 
-export default function MobileNavbarHeader({
+export default function MobileNavbarHolder({
   children,
 }: {
   children: React.ReactNode;

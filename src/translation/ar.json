@@ -10,8 +10,63 @@
     "English": "الانجليزية",
     "French": "الفرنسية"
   },
-  "HomePageSeo": {
-    "Title": "ShopBase - وجهتك الشاملة للتسوق عبر الإنترنت",
-    "Description": "اكتشف مجموعة واسعة من المنتجات بأسعار لا تقارن على shopBase. استمتع بشحن سريع، ودفعات آمنة، وخدمة عملاء ممتازة. تسوق الآن واختبر أفضل تجربة للتسوق عبر الإنترنت!"
+  "HomePage": {
+    "metaTitle": "ShopBase - وجهتك الشاملة للتسوق عبر الإنترنت",
+    "metaDescription": "اكتشف مجموعة واسعة من المنتجات بأسعار لا تقبل المنافسة على ShopBase. استمتع بشحن سريع، ودفع آمن، وخدمة عملاء ممتازة. تسوق الآن واختبر الأفضل في التسوق عبر الإنترنت!",
+    "ogTitle": "ShopBase: ارتقِ بتجربة تسوقك عبر الإنترنت",
+    "ogDescription": "استكشف آلاف المنتجات، من الأزياء إلى الإلكترونيات. استمتع بعروض حصرية، وتوصيل سريع، ودعم عملاء من الدرجة الأولى. ابدأ رحلتك مع ShopBase اليوم!",
+    "ogType": "website",
+    "ogUrl": "https://www.shopbase.com",
+    "ogImage": "https://www.shopbase.com/images/shopbase-og-image.jpg",
+    "ogImageAlt": "الصفحة الرئيسية لـ ShopBase تعرض مجموعة من المنتجات الشائعة والعملاء السعداء",
+    "ogSiteName": "ShopBase",
+    "twitterCard": "summary_large_image",
+    "twitterTitle": "ShopBase: حيث يجد المتسوقون الأذكياء صفقات مذهلة",
+    "twitterDescription": "انضم إلى ملايين العملاء الراضين. تسوق أحدث صيحات الموضة، والتقنيات المتطورة، وكل ما بينهما. أسعار لا تقبل المنافسة، تسوق آمن، توصيل سريع!",
+    "twitterImage": "https://www.shopbase.com/images/shopbase-twitter-image.jpg",
+    "twitterImageAlt": "عرض لأفضل المنتجات المتوفرة على ShopBase",
+    "canonicalUrl": "https://www.shopbase.com",
+    "keywords": "تسوق عبر الإنترنت، تجارة إلكترونية، صفقات، أزياء، إلكترونيات، مستلزمات منزلية، شحن سريع، دفع آمن",
+    "robots": "index, follow",
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ShopBase",
+      "url": "https://www.shopbase.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.shopbase.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  },
+  "RegisterUserPage": {
+    "metaTitle": "إنشاء حساب ShopBase | ابدأ البيع عبر الإنترنت اليوم",
+    "metaDescription": "انضم إلى آلاف التجار الناجحين على ShopBase. أنشئ متجرك الإلكتروني، وصل إلى العملاء العالميين، ونمِّ أعمالك بأدوات قوية ودعم متميز.",
+    "ogTitle": "أطلق متجرك الإلكتروني مع ShopBase - سجل الآن",
+    "ogDescription": "أنشئ حسابك على ShopBase في دقائق وابدأ البيع للعملاء في جميع أنحاء العالم. أدوات تجارة إلكترونية قوية، لا حاجة للبرمجة!",
+    "ogImageAlt": "صفحة تسجيل ShopBase تعرض جهاز كمبيوتر محمول مع متجر إلكتروني",
+    "twitterTitle": "ابدأ رحلتك في التجارة الإلكترونية مع ShopBase - سجل الآن!",
+    "twitterDescription": "انضم إلى ShopBase وحول فكرة عملك إلى متجر إلكتروني مزدهر. إعداد سهل، ميزات قوية، وصول عالمي.",
+    "heading": "ابدأ قصة نجاحك في التجارة الإلكترونية",
+    "subheading": "انضم إلى آلاف الشركات المزدهرة على ShopBase. أنشئ حسابك الآن للوصول إلى أدوات التجارة الإلكترونية القوية، والوصول إلى الأسواق العالمية، وتحويل شغفك إلى ربح.",
+    "Form": {
+      "nameInput": "الاسم",
+      "nameInputPlaceholder": "أدخل اسمك",
+      "emailInput": "البريد الإلكتروني",
+      "emailInputPlaceholder": "أدخل البريد الإلكتروني",
+      "passwordInput": "كلمة المرور",
+      "passwordInputPlaceholder": "أدخل كلمة المرور",
+      "confirmPasswordInput": "تأكيد كلمة المرور",
+      "confirmPasswordInputPlaceholder": "كرر كلمة المرور",
+      "submitButton": "التسجيل"
+    },
+    "RegisterSchemaErrors": {
+      "nameRequired": "الاسم مطلوب",
+      "invalidEmail": "عنوان البريد الإلكتروني غير صالح",
+      "passwordMinLength": "يجب أن تكون كلمة المرور مكونة من 8 أحرف على الأقل",
+      "confirmPasswordMinLength": "يجب أن تكون كلمة المرور المؤكدة مكونة من 8 أحرف على الأقل",
+      "passwordsDoNotMatch": "كلمات المرور غير متطابقة"
+    }
   }
 }

@@ -10,8 +10,63 @@
     "English": "English",
     "French": "French"
   },
-  "HomePageSeo": {
-    "Title": "ShopBase - Your One-Stop Online Shopping Destination",
-    "Description": "Discover a wide range of products at unbeatable prices on ShopBase. Enjoy fast shipping, secure payments, and excellent customer service. Shop now and experience the best in online shopping!"
+  "HomePage": {
+    "metaTitle": "ShopBase - Your One-Stop Online Shopping Destination",
+    "metaDescription": "Discover a wide range of products at unbeatable prices on ShopBase. Enjoy fast shipping, secure payments, and excellent customer service. Shop now and experience the best in online shopping!",
+    "ogTitle": "ShopBase: Elevate Your Online Shopping Experience",
+    "ogDescription": "Explore thousands of products, from fashion to electronics. Enjoy exclusive deals, fast delivery, and top-notch customer support. Start your ShopBase journey today!",
+    "ogType": "website",
+    "ogUrl": "https://www.shopbase.com",
+    "ogImage": "https://www.shopbase.com/images/shopbase-og-image.jpg",
+    "ogImageAlt": "ShopBase homepage featuring a collage of popular products and happy customers",
+    "ogSiteName": "ShopBase",
+    "twitterCard": "summary_large_image",
+    "twitterTitle": "ShopBase: Where Smart Shoppers Find Amazing Deals",
+    "twitterDescription": "Join millions of satisfied customers. Shop trendy fashion, cutting-edge tech, and everything in between. Unbeatable prices, secure shopping, fast delivery!",
+    "twitterImage": "https://www.shopbase.com/images/shopbase-twitter-image.jpg",
+    "twitterImageAlt": "Showcase of top products available on ShopBase",
+    "canonicalUrl": "https://www.shopbase.com",
+    "keywords": "online shopping, e-commerce, deals, fashion, electronics, home goods, fast shipping, secure payments",
+    "robots": "index, follow",
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ShopBase",
+      "url": "https://www.shopbase.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.shopbase.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  },
+  "RegisterUserPage": {
+    "metaTitle": "Create Your ShopBase Account | Start Selling Online Today",
+    "metaDescription": "Join thousands of successful merchants on ShopBase. Create your e-commerce store, reach global customers, and grow your business with powerful tools and support.",
+    "ogTitle": "Launch Your Online Store with ShopBase - Sign Up Now",
+    "ogDescription": "Create your ShopBase account in minutes and start selling to customers worldwide. Powerful e-commerce tools, no coding required!",
+    "ogImageAlt": "ShopBase registration page featuring a laptop with an online store",
+    "twitterTitle": "Begin Your E-commerce Journey with ShopBase - Register Now!",
+    "twitterDescription": "Join ShopBase and transform your business idea into a thriving online store. Easy setup, powerful features, global reach.",
+    "heading": "Start Your E-commerce Success Story",
+    "subheading": "Join thousands of thriving businesses on ShopBase. Create your account now to access powerful e-commerce tools, reach global markets, and turn your passion into profit.",
+    "Form": {
+      "nameInput": "Name",
+      "nameInputPlaceholder": "Enter your name",
+      "emailInput": "Email",
+      "emailInputPlaceholder": "Enter Email",
+      "passwordInput": "Password",
+      "passwordInputPlaceholder": "Enter password",
+      "confirmPasswordInput": "Confirm Password",
+      "confirmPasswordInputPlaceholder": "Repeat password",
+      "submitButton": "Register"
+    },
+    "RegisterSchemaErrors": {
+      "nameRequired": "Name is required",
+      "invalidEmail": "Invalid email address",
+      "passwordMinLength": "Password must be at least 8 characters",
+      "confirmPasswordMinLength": "Confirm Password must be at least 8 characters",
+      "passwordsDoNotMatch": "Passwords do not match"
+    }
   }
 }

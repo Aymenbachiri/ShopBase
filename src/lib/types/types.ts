@@ -37,4 +37,5 @@ export type RecaptchaProps = {
 export type RegisterBtnProp = {
   loading: boolean;
   captcha: boolean;
+  RegisterButton: string;
 };

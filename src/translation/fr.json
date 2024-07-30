@@ -10,8 +10,63 @@
     "English": "englais",
     "French": "français"
   },
-  "HomePageSeo": {
-    "Title": "ShopBase - Votre Destination Unique pour le Shopping en Ligne",
-    "Description": "Découvrez une large gamme de produits à des prix imbattables sur ShopBase. Profitez de la livraison rapide, des paiements sécurisés et d'un excellent service client. Achetez maintenant et vivez la meilleure expérience de shopping en ligne !"
+  "HomePage": {
+    "metaTitle": "ShopBase - Votre destination unique pour le shopping en ligne",
+    "metaDescription": "Découvrez une large gamme de produits à des prix imbattables sur ShopBase. Profitez d'une livraison rapide, de paiements sécurisés et d'un excellent service client. Achetez maintenant et vivez la meilleure expérience de shopping en ligne !",
+    "ogTitle": "ShopBase : Élevez votre expérience de shopping en ligne",
+    "ogDescription": "Explorez des milliers de produits, de la mode à l'électronique. Profitez d'offres exclusives, d'une livraison rapide et d'un support client de premier ordre. Commencez votre aventure ShopBase aujourd'hui !",
+    "ogType": "website",
+    "ogUrl": "https://www.shopbase.com",
+    "ogImage": "https://www.shopbase.com/images/shopbase-og-image.jpg",
+    "ogImageAlt": "Page d'accueil ShopBase présentant un collage de produits populaires et de clients satisfaits",
+    "ogSiteName": "ShopBase",
+    "twitterCard": "summary_large_image",
+    "twitterTitle": "ShopBase : Là où les acheteurs malins trouvent des offres incroyables",
+    "twitterDescription": "Rejoignez des millions de clients satisfaits. Achetez de la mode tendance, de la technologie de pointe et tout ce qui se trouve entre les deux. Prix imbattables, achats sécurisés, livraison rapide !",
+    "twitterImage": "https://www.shopbase.com/images/shopbase-twitter-image.jpg",
+    "twitterImageAlt": "Présentation des meilleurs produits disponibles sur ShopBase",
+    "canonicalUrl": "https://www.shopbase.com",
+    "keywords": "shopping en ligne, e-commerce, offres, mode, électronique, articles ménagers, livraison rapide, paiements sécurisés",
+    "robots": "index, follow",
+    "structuredData": {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ShopBase",
+      "url": "https://www.shopbase.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.shopbase.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+  },
+  "RegisterUserPage": {
+    "metaTitle": "Créez votre compte ShopBase | Commencez à vendre en ligne aujourd'hui",
+    "metaDescription": "Rejoignez des milliers de commerçants prospères sur ShopBase. Créez votre boutique en ligne, atteignez des clients internationaux et développez votre entreprise avec des outils puissants et un support dédié.",
+    "ogTitle": "Lancez votre boutique en ligne avec ShopBase - Inscrivez-vous maintenant",
+    "ogDescription": "Créez votre compte ShopBase en quelques minutes et commencez à vendre à des clients du monde entier. Des outils e-commerce puissants, sans codage nécessaire !",
+    "ogImageAlt": "Page d'inscription ShopBase présentant un ordinateur portable avec une boutique en ligne",
+    "twitterTitle": "Débutez votre aventure e-commerce avec ShopBase - Inscrivez-vous maintenant !",
+    "twitterDescription": "Rejoignez ShopBase et transformez votre idée commerciale en une boutique en ligne florissante. Configuration facile, fonctionnalités puissantes, portée mondiale.",
+    "heading": "Commencez votre succès dans l'e-commerce",
+    "subheading": "Rejoignez des milliers d'entreprises prospères sur ShopBase. Créez votre compte maintenant pour accéder à des outils e-commerce puissants, atteindre des marchés mondiaux et transformer votre passion en profit.",
+    "Form": {
+      "nameInput": "Nom",
+      "nameInputPlaceholder": "Entrez votre nom",
+      "emailInput": "E-mail",
+      "emailInputPlaceholder": "Entrez votre e-mail",
+      "passwordInput": "Mot de passe",
+      "passwordInputPlaceholder": "Entrez votre mot de passe",
+      "confirmPasswordInput": "Confirmer le mot de passe",
+      "confirmPasswordInputPlaceholder": "Répétez le mot de passe",
+      "submitButton": "Enregistrer"
+    },
+    "RegisterSchemaErrors": {
+      "nameRequired": "Le nom est requis",
+      "invalidEmail": "Adresse e-mail invalide",
+      "passwordMinLength": "Le mot de passe doit comporter au moins 8 caractères",
+      "confirmPasswordMinLength": "La confirmation du mot de passe doit comporter au moins 8 caractères",
+      "passwordsDoNotMatch": "Les mots de passe ne correspondent pas"
+    }
   }
 }

@@ -2,7 +2,11 @@
 
 import type { RegisterBtnProp } from "@/lib/types/types";
 
-export default function RegisterBtn({ loading, captcha }: RegisterBtnProp) {
+export default function RegisterBtn({
+  loading,
+  captcha,
+  RegisterButton,
+}: RegisterBtnProp) {
   return (
     <>
       {!loading ? (
@@ -11,7 +15,7 @@ export default function RegisterBtn({ loading, captcha }: RegisterBtnProp) {
           type="submit"
           disabled={!captcha}
         >
-          Register
+          {RegisterButton}
         </button>
       ) : (
         <button

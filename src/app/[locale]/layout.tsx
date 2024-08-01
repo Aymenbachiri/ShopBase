@@ -9,7 +9,6 @@ import { NextIntlClientProvider, useLocale, useMessages } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { Toaster } from "react-hot-toast";
-import "/src/app/globals.css";
 
 export async function generateStaticParams() {
   return [{ lang: "ar" }, { lang: "en" }, { lang: "fr" }];

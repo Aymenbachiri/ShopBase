@@ -1,10 +1,7 @@
 import { useState, useCallback } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  RegisterFormInputs,
-  registerUserSchema,
-} from "../schemas/registerUserSchema";
+import { RegisterFormInputs } from "../schemas/registerUserSchema";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { useTranslations } from "next-intl";

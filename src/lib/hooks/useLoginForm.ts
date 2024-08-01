@@ -25,13 +25,7 @@ const useLoginForm = () => {
       redirect: false,
     });
 
-    if (res?.ok) {
-      // Successful login, no error
-      return;
-    } else {
-      // Handle failed login
-      throw new Error(res?.error || "Failed to login");
-    }
+    if (!res || !res.ok) throw new Error(res?.error || "Failed to login");
   };
 
   const onSubmit = useCallback(

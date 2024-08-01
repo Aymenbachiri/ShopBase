@@ -1,5 +1,8 @@
 import NextAuth from "next-auth/next";
-import CredentialsProvider from "next-auth/providers/credentials";
+import CredentialsProvider, {
+  type CredentialInput,
+  type CredentialsConfig,
+} from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { serialize } from "cookie";
@@ -13,12 +16,15 @@ const COOKIE_NAME = "auth-token";
 
 const handler = NextAuth({
   providers: [
-    CredentialsProvider(<any>{
+    CredentialsProvider(<CredentialsConfig<Record<string, CredentialInput>>>(<
+      unknown
+    >{
       id: "credentials",
       name: "Credentials",
-      async authorize(credentials: any) {
+      async authorize(credentials: Credential) {
         const parsedCredentials = credentialsSchema.safeParse(credentials);
         if (!parsedCredentials.success) {
+          console.error("Invalid credentials format:", credentials); // Debugging line
           throw new Error("Invalid credentials");
         }
 
@@ -27,7 +33,7 @@ const handler = NextAuth({
         await connectToDB();
 
         try {
-          const user = await User.findOne({ email: email });
+          const user = await User.findOne({ email });
 
           if (user) {
             const isPasswordCorrect = await bcrypt.compare(
@@ -54,22 +60,26 @@ const handler = NextAuth({
               // Return user and set cookie in response headers
               return { ...user.toObject(), token, cookie: secureCookie };
             } else {
+              console.error("Wrong password for user:", email); // Debugging line
               throw new Error("Wrong Credentials");
             }
           } else {
+            console.error("User not found for email:", email); // Debugging line
             throw new Error("User not found");
           }
         } catch (error) {
-          return {
-            error: getErrorMessage(error),
-          };
+          console.error("Error during authorization:", error); // Debugging line
+          throw new Error(getErrorMessage(error));
         }
       },
-    }),
+    })),
   ],
   callbacks: {
-    async signIn({ user, account, profile, email, credentials }) {
-      return true; // Return true to proceed with sign in
+    async signIn({ user }) {
+      if (user) {
+        return true;
+      }
+      return false;
     },
     async jwt({ token, user }) {
       if (user) {
@@ -77,7 +87,6 @@ const handler = NextAuth({
           id: user.id,
           email: user.email,
           name: user.name,
-          // token: user.token,
         };
       }
       return token;
@@ -91,7 +100,6 @@ const handler = NextAuth({
     signIn: "/auth/register",
     error: "/auth/error",
   },
-
   session: {
     strategy: "jwt",
   },

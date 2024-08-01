@@ -1,14 +1,34 @@
 import { useState, useCallback } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { RegisterFormInputs, registerSchema } from "../schemas/registerSchema";
+import {
+  RegisterFormInputs,
+  registerUserSchema,
+} from "../schemas/registerUserSchema";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
+import { useTranslations } from "next-intl";
+import { z } from "zod";
 
 const useRegisterUserForm = () => {
   const [loading, setLoading] = useState(false);
   const [captcha, setCaptcha] = useState(false);
   const router = useRouter();
+  const t = useTranslations("RegisterUserPage.RegisterUserSchemaErrors");
+
+  const registerSchema = z
+    .object({
+      name: z.string().min(1, { message: t("nameRequired") }),
+      email: z.string().email({ message: t("invalidEmail") }),
+      password: z.string().min(8, { message: t("passwordMinLength") }),
+      confirmPassword: z
+        .string()
+        .min(8, { message: t("confirmPasswordMinLength") }),
+    })
+    .refine((data) => data.password === data.confirmPassword, {
+      message: t("passwordsDoNotMatch"),
+      path: ["confirmPassword"],
+    });
 
   const {
     register,
@@ -39,9 +59,7 @@ const useRegisterUserForm = () => {
   const onSubmit = useCallback(
     async (data: RegisterFormInputs) => {
       if (!captcha) {
-        toast.error(
-          "Captcha verification failed; please confirm you are not a robot."
-        );
+        toast.error(t("captchaFailed"));
         return;
       }
 
@@ -49,8 +67,8 @@ const useRegisterUserForm = () => {
 
       try {
         await toast.promise(registerUser(data), {
-          loading: "Registering...",
-          success: "Registration succeeded. Navigating to dashboard...",
+          loading: t("registration"),
+          success: t("loginSuccess"),
           error: (err) => err.message,
         });
 
@@ -63,7 +81,7 @@ const useRegisterUserForm = () => {
         setLoading(false);
       }
     },
-    [captcha, router, reset]
+    [captcha, reset, router, t]
   );
 
   return {

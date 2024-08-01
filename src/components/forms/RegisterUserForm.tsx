@@ -1,3 +1,4 @@
+// RegisterUserForm.tsx
 "use client";
 
 import { useTranslations } from "next-intl";
@@ -43,7 +44,7 @@ export default function RegisterUserForm() {
         type="password"
         placeholder={t("confirmPasswordInputPlaceholder")}
         registration={register("confirmPassword")}
-        error={errors["confirmPassword"]}
+        error={errors.confirmPassword}
       />
       <Recaptcha onChange={() => setCaptcha(true)} />
       <RegisterBtn

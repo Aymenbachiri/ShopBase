@@ -75,12 +75,16 @@
       "confirmPasswordInputPlaceholder": "Répétez le mot de passe",
       "submitButton": "Enregistrer"
     },
-    "RegisterSchemaErrors": {
+    "RegisterUserSchemaErrors": {
       "nameRequired": "Le nom est requis",
       "invalidEmail": "Adresse e-mail invalide",
       "passwordMinLength": "Le mot de passe doit comporter au moins 8 caractères",
       "confirmPasswordMinLength": "La confirmation du mot de passe doit comporter au moins 8 caractères",
-      "passwordsDoNotMatch": "Les mots de passe ne correspondent pas"
+      "passwordsDoNotMatch": "Les mots de passe ne correspondent pas",
+      "registration": "Registration...",
+      "captchaFailed": "Échec de la vérification Captcha ; veuillez confirmer que vous n'êtes pas un robot.",
+      "loginSuccess": "Inscription réussie. Redirection vers le tableau de bord...",
+      "loginFailed": "Échec de la connexion"
     }
   },
   "LoginPage": {

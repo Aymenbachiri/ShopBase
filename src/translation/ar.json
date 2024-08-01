@@ -75,12 +75,16 @@
       "confirmPasswordInputPlaceholder": "كرر كلمة المرور",
       "submitButton": "التسجيل"
     },
-    "RegisterSchemaErrors": {
+    "RegisterUserSchemaErrors": {
       "nameRequired": "الاسم مطلوب",
       "invalidEmail": "عنوان البريد الإلكتروني غير صالح",
       "passwordMinLength": "يجب أن تكون كلمة المرور مكونة من 8 أحرف على الأقل",
       "confirmPasswordMinLength": "يجب أن تكون كلمة المرور المؤكدة مكونة من 8 أحرف على الأقل",
-      "passwordsDoNotMatch": "كلمات المرور غير متطابقة"
+      "passwordsDoNotMatch": "كلمات المرور غير متطابقة",
+      "captchaFailed": "فشل التحقق من الكابتشا؛ يرجى تأكيد أنك لست روبوتًا.",
+      "registration": "التسجيل...",
+      "loginSuccess": "تم التسجيل بنجاح. جاري الانتقال إلى لوحة التحكم...",
+      "loginFailed": "فشل تسجيل الدخول"
     }
   },
   "LoginPage": {

@@ -1,6 +1,6 @@
 import connectToDB from "@/lib/database/database";
 import User from "@/lib/database/models/User";
-import { registerSchema } from "@/lib/schemas/registerSchema";
+import { registerUserSchema } from "@/lib/schemas/registerUserSchema";
 import bcrypt from "bcryptjs";
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
@@ -9,15 +9,17 @@ export const POST = async (req: NextRequest) => {
   try {
     const body = await req.json();
 
-    const parsedBody = registerSchema.safeParse(body);
+    const parsedBody = registerUserSchema.safeParse(body);
 
     if (!parsedBody.success) {
       return new NextResponse(
         JSON.stringify({
-          errors: parsedBody.error.issues.map((issue) => ({
-            field: issue.path[0],
-            message: issue.message,
-          })),
+          errors: parsedBody.error.issues.map(
+            (issue: { path: any[]; message: any }) => ({
+              field: issue.path[0],
+              message: issue.message,
+            })
+          ),
         }),
         { status: 400 }
       );

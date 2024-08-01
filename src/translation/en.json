@@ -75,12 +75,16 @@
       "confirmPasswordInputPlaceholder": "Repeat password",
       "submitButton": "Register"
     },
-    "RegisterSchemaErrors": {
+    "RegisterUserSchemaErrors": {
       "nameRequired": "Name is required",
       "invalidEmail": "Invalid email address",
       "passwordMinLength": "Password must be at least 8 characters",
       "confirmPasswordMinLength": "Confirm Password must be at least 8 characters",
-      "passwordsDoNotMatch": "Passwords do not match"
+      "passwordsDoNotMatch": "Passwords do not match",
+      "registration": "Registration...",
+      "captchaFailed": "Captcha verification failed; please confirm you are not a robot.",
+      "loginSuccess": "Registration succeeded. Navigating to dashboard...",
+      "loginFailed": "Failed to login"
     }
   },
   "LoginPage": {

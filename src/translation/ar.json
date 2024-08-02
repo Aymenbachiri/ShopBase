@@ -119,5 +119,46 @@
       "wrongCredentials": "بيانات الايميل و كلمة المرور خاطئة",
       "userNotFound": "المستخدم بهذا الايميل غير موجود"
     }
+  },
+  "ProtectedRoute": {
+    "LoginRequired": "مطلوب تسجيل الدخول",
+    "message": "يرجى تسجيل الدخول للوصول إلى هذه الصفحة.",
+    "loginLink": "تسجيل الدخول"
+  },
+  "SellProductPage": {
+    "metaTitle": "بيع منتجك | ShopBase",
+    "metaDescription": "قم بإدراج منتجك على ShopBase واصل إلى جمهور واسع. سهل وسريع وفعال.",
+    "ogTitle": "بيع منتجك على ShopBase",
+    "ogDescription": "انضم إلى ShopBase وبيع منتجك لجمهور كبير. ابدأ الآن وزد من مبيعاتك!",
+    "ogImageAlt": "صفحة بيع المنتج على ShopBase",
+    "twitterTitle": "بيع منتجك على ShopBase",
+    "twitterDescription": "أدرج منتجك على ShopBase وجذب المزيد من العملاء. ابدأ البيع اليوم!",
+    "heading": "بيع منتجك",
+    "subHeading": "قم بإدراج منتجاتك على ShopBase وحقق وصولاً أوسع للجمهور. املأ النموذج أدناه للبدء.",
+    "failedToAddProduct": "فشل إضافة المنتج",
+    "captchaFailed": "فشل التحقق من كابتشا؛ يرجى التأكد من أنك لست روبوتًا.",
+    "addingProduct": "إضافة المنتج...",
+    "productAddedSuccessfully": "تمت إضافة المنتج بنجاح",
+    "unexpectedError": "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى.",
+    "SellProductForm": {
+      "ProductTitle": "عنوان المنتج",
+      "ProductTitleInputPlaceholder": "أدخل اسم المنتج",
+      "Description": "الوصف",
+      "DescriptionInputPlaceholder": "أدخل وصف المنتج",
+      "SelectCategory": "اختر الفئة",
+      "men": "رجال",
+      "women": "نساء",
+      "electronics": "إلكترونيات",
+      "jewelery": "مجوهرات",
+      "ImageUrl": "رابط الصورة",
+      "Price": "السعر",
+      "PriceInputPlaceholder": "أدخل السعر",
+      "captchaFailed": "فشل التحقق من كابتشا",
+      "addingProduct": "إضافة المنتج...",
+      "productAddedSuccessfully": "تمت إضافة المنتج بنجاح",
+      "failedToAddProduct": "فشل في إضافة المنتج",
+      "unexpectedError": "حدث خطأ غير متوقع",
+      "addProduct": "إضافة منتج"
+    }
   }
 }

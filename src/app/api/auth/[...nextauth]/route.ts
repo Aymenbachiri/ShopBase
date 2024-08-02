@@ -1,8 +1,5 @@
 import NextAuth from "next-auth/next";
-import CredentialsProvider, {
-  type CredentialInput,
-  type CredentialsConfig,
-} from "next-auth/providers/credentials";
+import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 import { serialize } from "cookie";
@@ -10,19 +7,24 @@ import { credentialsSchema } from "@/lib/schemas/credentialsSchema";
 import connectToDB from "@/lib/database/database";
 import User from "@/lib/database/models/User";
 import { getErrorMessage } from "@/lib/hooks/getErrorMessage";
-import { NextResponse } from "next/server";
+import { AuthOptions } from "next-auth";
 
 const JWT_SECRET = process.env.JWT_SECRET || "";
 const COOKIE_NAME = "auth-token";
 
-const handler = NextAuth({
+export const authOptions: AuthOptions = {
   providers: [
-    CredentialsProvider(<CredentialsConfig<Record<string, CredentialInput>>>(<
-      unknown
-    >{
-      id: "credentials",
+    CredentialsProvider({
       name: "Credentials",
-      async authorize(credentials: Credential) {
+      credentials: {
+        email: { label: "Email", type: "text" },
+        password: { label: "Password", type: "password" },
+      },
+      async authorize(credentials) {
+        if (!credentials) {
+          throw new Error("No credentials provided");
+        }
+
         const parsedCredentials = credentialsSchema.safeParse(credentials);
         if (!parsedCredentials.success) {
           console.error("Invalid credentials format:", credentials);
@@ -59,13 +61,17 @@ const handler = NextAuth({
               });
 
               // Return user and set cookie in response headers
-              return { ...user.toObject(), token, cookie: secureCookie };
+              return {
+                id: user._id.toString(),
+                email: user.email,
+                name: user.name,
+                token,
+                cookie: secureCookie,
+              };
             } else {
-              console.error("Wrong password for user:", email);
               throw new Error("Wrong Credentials");
             }
           } else {
-            console.error("User not found for email:", email);
             throw new Error("User not found");
           }
         } catch (error) {
@@ -73,7 +79,7 @@ const handler = NextAuth({
           throw new Error(getErrorMessage(error));
         }
       },
-    })),
+    }),
   ],
   callbacks: {
     async signIn({ user }) {
@@ -118,6 +124,8 @@ const handler = NextAuth({
       },
     },
   },
-});
+};
+
+const handler = NextAuth(authOptions);
 
 export { handler as GET, handler as POST };

@@ -119,5 +119,46 @@
       "wrongCredentials": "Informations d'identification incorrectes",
       "userNotFound": "Utilisateur non trouvé"
     }
+  },
+  "ProtectedRoute": {
+    "LoginRequired": "Connexion requise",
+    "message": "Veuillez vous connecter pour accéder à cette page.",
+    "loginLink": "Se connecter"
+  },
+  "SellProductPage": {
+    "metaTitle": "Vendez Votre Produit | ShopBase",
+    "metaDescription": "Listez votre produit sur ShopBase et atteignez un large public. Simple, rapide et efficace.",
+    "ogTitle": "Vendez Votre Produit sur ShopBase",
+    "ogDescription": "Rejoignez ShopBase et vendez votre produit à un large public. Commencez maintenant et boostez vos ventes !",
+    "ogImageAlt": "Page de Vente de Produit sur ShopBase",
+    "twitterTitle": "Vendez Votre Produit sur ShopBase",
+    "twitterDescription": "Listez votre produit sur ShopBase et attirez plus de clients. Commencez à vendre dès aujourd'hui !",
+    "heading": "Vendez Votre Produit",
+    "subHeading": "Listez vos produits sur ShopBase et atteignez un public plus large. Remplissez le formulaire ci-dessous pour commencer.",
+    "failedToAddProduct": "Échec d'ajouter le produit",
+    "captchaFailed": "Échec de la vérification du captcha; veuillez confirmer que vous n'êtes pas un robot.",
+    "addingProduct": "Ajouter le Product en cours...",
+    "productAddedSuccessfully": "Le produit est ajoutée avec success",
+    "unexpectedError": "Une erreur inattendue s'est produite. Veuillez réessayer.",
+    "SellProductForm": {
+      "ProductTitle": "Titre du produit",
+      "ProductTitleInputPlaceholder": "Entrez le titre du produit",
+      "Description": "Description",
+      "DescriptionInputPlaceholder": "Entrez la description du produit",
+      "SelectCategory": "Sélectionnez une catégorie",
+      "men": "Hommes",
+      "women": "Femmes",
+      "electronics": "Électronique",
+      "jewelery": "Bijoux",
+      "ImageUrl": "URL de l'image",
+      "Price": "Prix",
+      "PriceInputPlaceholder": "Entrez le prix",
+      "captchaFailed": "Échec de la vérification du captcha",
+      "addingProduct": "Ajout du produit...",
+      "productAddedSuccessfully": "Produit ajouté avec succès",
+      "failedToAddProduct": "Échec de l'ajout du produit",
+      "unexpectedError": "Une erreur inattendue s'est produite",
+      "addProduct": "Ajouter un produit"
+    }
   }
 }

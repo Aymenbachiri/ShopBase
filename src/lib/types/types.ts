@@ -73,3 +73,9 @@ export type TranslationFunction = {
 
 export type TranslationFunctionWithStringFallback = TranslationFunction &
   ((key: string) => string);
+
+export type SellProductBtnProp = {
+  loading: boolean;
+  captcha: boolean;
+  SellProductButton: string;
+};

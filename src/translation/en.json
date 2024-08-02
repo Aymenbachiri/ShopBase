@@ -119,5 +119,46 @@
       "wrongCredentials": "Wrong credentials",
       "userNotFound": "User not found"
     }
+  },
+  "ProtectedRoute": {
+    "LoginRequired": "Login Required",
+    "message": "Please log in to access this page.",
+    "loginLink": "Log in"
+  },
+  "SellProductPage": {
+    "metaTitle": "Sell Your Product | ShopBase",
+    "metaDescription": "List your product on ShopBase and reach a wide audience. Easy, fast, and effective.",
+    "ogTitle": "Sell Your Product on ShopBase",
+    "ogDescription": "Join ShopBase and sell your product to a large audience. Start now and boost your sales!",
+    "ogImageAlt": "Sell Product Page on ShopBase",
+    "twitterTitle": "Sell Your Product on ShopBase",
+    "twitterDescription": "List your product on ShopBase and attract more customers. Start selling today!",
+    "heading": "Sell Your Product",
+    "subHeading": "List your products on ShopBase and reach a wider audience. Fill out the form below to get started.",
+    "failedToAddProduct": "Failed to add product",
+    "captchaFailed": "Captcha verification failed; please confirm you are not a robot.",
+    "addingProduct": "Adding Product...",
+    "productAddedSuccessfully": "Product Added Successfully",
+    "unexpectedError": "An unexpected error occurred. Please try again.",
+    "SellProductForm": {
+      "ProductTitle": "Product Title",
+      "ProductTitleInputPlaceholder": "Enter the product title",
+      "Description": "Description",
+      "DescriptionInputPlaceholder": "Enter product description",
+      "SelectCategory": "Select a category",
+      "men": "Men",
+      "women": "Women",
+      "electronics": "Electronics",
+      "jewelery": "Jewelry",
+      "ImageUrl": "Image URL",
+      "Price": "Price",
+      "PriceInputPlaceholder": "Enter the price",
+      "captchaFailed": "Captcha verification failed",
+      "addingProduct": "Adding product...",
+      "productAddedSuccessfully": "Product added successfully",
+      "failedToAddProduct": "Failed to add product",
+      "unexpectedError": "An unexpected error occurred",
+      "addProduct": "Add Product"
+    }
   }
 }

@@ -66,7 +66,7 @@ const useLoginForm = () => {
         });
 
         setCaptcha(false);
-        router.push("/dashboard");
+        router.refresh();
       } catch (error) {
         console.error("Login error:", error);
         toast.error(t("unexpectedError"));

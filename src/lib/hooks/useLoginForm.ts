@@ -4,10 +4,18 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { signIn } from "next-auth/react";
 import toast from "react-hot-toast";
 import { LoginFormInputs, loginSchema } from "../schemas/LoginSchema";
+import { useTranslations } from "next-intl";
+import type { TranslationFunctionWithStringFallback } from "../types/types";
+import { translatedLoginSchema } from "../schemas/translatedLoginSchema";
+import { useRouter } from "@/navigation";
 
 const useLoginForm = () => {
   const [loading, setLoading] = useState(false);
   const [captcha, setCaptcha] = useState(false);
+  const router = useRouter();
+  const tRaw = useTranslations("LoginPage.LoginSchemaErrors");
+  const t = tRaw as unknown as TranslationFunctionWithStringFallback;
+  const loginSchema = translatedLoginSchema(t);
 
   const {
     register,
@@ -25,15 +33,22 @@ const useLoginForm = () => {
       redirect: false,
     });
 
-    if (!res || !res.ok) throw new Error(res?.error || "Failed to login");
+    if (!res || !res.ok) {
+      switch (res?.error) {
+        case "Wrong Credentials":
+          throw new Error(t("wrongCredentials"));
+        case "User not found":
+          throw new Error(t("userNotFound"));
+        default:
+          throw new Error(t("loginFailed"));
+      }
+    }
   };
 
   const onSubmit = useCallback(
     async (data: LoginFormInputs) => {
       if (!captcha) {
-        toast.error(
-          "Captcha verification failed; please confirm you are not a robot."
-        );
+        toast.error(t("captchaFailed"));
         return;
       }
 
@@ -41,25 +56,25 @@ const useLoginForm = () => {
 
       try {
         await toast.promise(loginUser(data), {
-          loading: "Logging in...",
+          loading: t("loggingIn"),
           success: () => {
             reset();
             setCaptcha(false);
-            return "Login Successful"; // Change success message if needed
+            return t("loginSuccess");
           },
-          error: (err) =>
-            err.message || "Failed to login. Please try again later.",
+          error: (err) => err.message || t("loginFailed"),
         });
+
+        setCaptcha(false);
+        router.push("/dashboard");
       } catch (error) {
-        // Error handling
         console.error("Login error:", error);
-        // Optional: Display a general error message if needed
-        toast.error("An unexpected error occurred. Please try again.");
+        toast.error(t("unexpectedError"));
       } finally {
         setLoading(false);
       }
     },
-    [captcha, reset]
+    [captcha, reset, t]
   );
 
   return {

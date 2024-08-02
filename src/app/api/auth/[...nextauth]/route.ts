@@ -10,6 +10,7 @@ import { credentialsSchema } from "@/lib/schemas/credentialsSchema";
 import connectToDB from "@/lib/database/database";
 import User from "@/lib/database/models/User";
 import { getErrorMessage } from "@/lib/hooks/getErrorMessage";
+import { NextResponse } from "next/server";
 
 const JWT_SECRET = process.env.JWT_SECRET || "";
 const COOKIE_NAME = "auth-token";
@@ -24,7 +25,7 @@ const handler = NextAuth({
       async authorize(credentials: Credential) {
         const parsedCredentials = credentialsSchema.safeParse(credentials);
         if (!parsedCredentials.success) {
-          console.error("Invalid credentials format:", credentials); // Debugging line
+          console.error("Invalid credentials format:", credentials);
           throw new Error("Invalid credentials");
         }
 
@@ -60,15 +61,15 @@ const handler = NextAuth({
               // Return user and set cookie in response headers
               return { ...user.toObject(), token, cookie: secureCookie };
             } else {
-              console.error("Wrong password for user:", email); // Debugging line
+              console.error("Wrong password for user:", email);
               throw new Error("Wrong Credentials");
             }
           } else {
-            console.error("User not found for email:", email); // Debugging line
+            console.error("User not found for email:", email);
             throw new Error("User not found");
           }
         } catch (error) {
-          console.error("Error during authorization:", error); // Debugging line
+          console.error("Error during authorization:", error);
           throw new Error(getErrorMessage(error));
         }
       },
@@ -118,4 +119,5 @@ const handler = NextAuth({
     },
   },
 });
+
 export { handler as GET, handler as POST };

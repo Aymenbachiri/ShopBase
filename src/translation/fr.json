@@ -83,10 +83,11 @@
       "passwordsDoNotMatch": "Les mots de passe ne correspondent pas",
       "registration": "Registration...",
       "captchaFailed": "Échec de la vérification Captcha ; veuillez confirmer que vous n'êtes pas un robot.",
-      "loginSuccess": "Inscription réussie. Redirection vers le tableau de bord...",
-      "loginFailed": "Échec de la connexion",
+      "registerSuccess": "Inscription réussie. Redirection vers le tableau de bord...",
+      "registerFailed": "Échec de la connexion",
       "emailIsAlreadyUsed": "Email est déja utilisé",
-      "failedToRegister": "Échec d'enregistrement"
+      "failedToRegister": "Échec d'Inscription",
+      "unexpectedError": "Une erreur inattendue s'est produite. Veuillez réessayer."
     }
   },
   "LoginPage": {
@@ -105,6 +106,18 @@
       "passwordInput": "Mot de passe",
       "passwordInputPlaceholder": "Entrez le mot de passe",
       "submitButton": "Connexion"
+    },
+    "LoginSchemaErrors": {
+      "invalidEmail": "Adresse email invalide",
+      "passwordMinLength": "Le mot de passe doit comporter au moins 8 caractères",
+      "loginFailed": "Échec de la connexion",
+      "captchaFailed": "Échec de la vérification du captcha; veuillez confirmer que vous n'êtes pas un robot.",
+      "loggingIn": "Connexion en cours...",
+      "loginSuccess": "Connexion réussie",
+      "unexpectedError": "Une erreur inattendue s'est produite. Veuillez réessayer.",
+      "invalidCredentials": "Format des informations d'identification invalide",
+      "wrongCredentials": "Informations d'identification incorrectes",
+      "userNotFound": "Utilisateur non trouvé"
     }
   }
 }

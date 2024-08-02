@@ -83,10 +83,11 @@
       "passwordsDoNotMatch": "Passwords do not match",
       "registration": "Registration...",
       "captchaFailed": "Captcha verification failed; please confirm you are not a robot.",
-      "loginSuccess": "Registration succeeded. Navigating to dashboard...",
-      "loginFailed": "Failed to login",
+      "registerSuccess": "Registration succeeded. Navigating to dashboard...",
+      "registerFailed": "Failed to login",
       "emailIsAlreadyUsed": "Email is already used",
-      "failedToRegister": "Failed to register"
+      "failedToRegister": "Failed to register",
+      "unexpectedError": "An unexpected error occurred. Please try again."
     }
   },
   "LoginPage": {
@@ -105,6 +106,18 @@
       "passwordInput": "Password",
       "passwordInputPlaceholder": "Enter password",
       "submitButton": "Login"
+    },
+    "LoginSchemaErrors": {
+      "invalidEmail": "Invalid email address",
+      "passwordMinLength": "Password must be at least 8 characters",
+      "loginFailed": "Failed to login",
+      "captchaFailed": "Captcha verification failed; please confirm you are not a robot.",
+      "loggingIn": "Login in...",
+      "loginSuccess": "Login Successful",
+      "unexpectedError": "An unexpected error occurred. Please try again.",
+      "invalidCredentials": "Invalid credentials format",
+      "wrongCredentials": "Wrong credentials",
+      "userNotFound": "User not found"
     }
   }
 }

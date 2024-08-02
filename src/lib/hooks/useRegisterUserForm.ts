@@ -2,11 +2,11 @@ import { useState, useCallback } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { RegisterFormInputs } from "../schemas/registerUserSchema";
-import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { useTranslations } from "next-intl";
 import { translatedRegisterUserSchema } from "../schemas/translatedRegisterUserSchema";
 import type { TranslationFunctionWithStringFallback } from "../types/types";
+import { useRouter } from "@/navigation";
 
 const useRegisterUserForm = () => {
   const [loading, setLoading] = useState(false);
@@ -49,7 +49,7 @@ const useRegisterUserForm = () => {
   const onSubmit = useCallback(
     async (data: RegisterFormInputs) => {
       if (!captcha) {
-        toast.error(t(""));
+        toast.error(t("captchaFailed"));
         return;
       }
 
@@ -58,15 +58,16 @@ const useRegisterUserForm = () => {
       try {
         await toast.promise(registerUser(data), {
           loading: t("registration"),
-          success: t("loginSuccess"),
-          error: (err) => err.message,
+          success: t("registerSuccess"),
+          error: (err) => err.message || t("registerFailed"),
         });
 
         reset();
         setCaptcha(false);
-        router.push("/dashboard");
+        router.push("/login");
       } catch (error) {
         console.error("Registration error:", error);
+        toast.error(t("unexpectedError"));
       } finally {
         setLoading(false);
       }

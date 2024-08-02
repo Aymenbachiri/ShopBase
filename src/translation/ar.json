@@ -83,10 +83,11 @@
       "passwordsDoNotMatch": "كلمات المرور غير متطابقة",
       "captchaFailed": "فشل التحقق من الكابتشا؛ يرجى تأكيد أنك لست روبوتًا.",
       "registration": "التسجيل...",
-      "loginSuccess": "تم التسجيل بنجاح. جاري الانتقال إلى لوحة التحكم...",
-      "loginFailed": "فشل تسجيل الدخول",
+      "registerSuccess": "تم التسجيل بنجاح. جاري الانتقال إلى لوحة التحكم...",
+      "registerFailed": "فشل تسجيل الدخول",
       "emailIsAlreadyUsed": "الايميل مستعمل بالفعل",
-      "failedToRegister": "فشل التسجيل"
+      "failedToRegister": "فشل التسجيل",
+      "unexpectedError": "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى."
     }
   },
   "LoginPage": {
@@ -105,6 +106,18 @@
       "passwordInput": "كلمة المرور",
       "passwordInputPlaceholder": "أدخل كلمة المرور",
       "submitButton": "تسجيل الدخول"
+    },
+    "LoginSchemaErrors": {
+      "invalidEmail": "عنوان البريد الإلكتروني غير صالح",
+      "passwordMinLength": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل",
+      "loginFailed": "فشل تسجيل الدخول",
+      "captchaFailed": "فشل التحقق من كابتشا؛ يرجى التأكد من أنك لست روبوتًا.",
+      "loggingIn": "تسجيل الدخول...",
+      "loginSuccess": "تم تسجيل الدخول بنجاح",
+      "unexpectedError": "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى.",
+      "invalidCredentials": "تنسيق بيانات الايميل و كلمة المرور غير صالح",
+      "wrongCredentials": "بيانات الايميل و كلمة المرور خاطئة",
+      "userNotFound": "المستخدم بهذا الايميل غير موجود"
     }
   }
 }

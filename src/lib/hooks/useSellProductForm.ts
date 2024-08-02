@@ -6,11 +6,13 @@ import toast from "react-hot-toast";
 import { useTranslations } from "next-intl";
 import type { TranslationFunctionWithStringFallback } from "../types/types";
 import { translatedSellProductSchema } from "../schemas/translatedSellProductSchema";
+import { useSession } from "next-auth/react";
 
 const useSellProductForm = () => {
   const [loading, setLoading] = useState(false);
   const [captcha, setCaptcha] = useState(false);
-  const tRaw = useTranslations("SellProductPage");
+  const session = useSession();
+  const tRaw = useTranslations("SellProductPage.SellProductForm");
   const t = tRaw as unknown as TranslationFunctionWithStringFallback;
   const sellSchema = translatedSellProductSchema(t);
 
@@ -45,6 +47,10 @@ const useSellProductForm = () => {
       if (!captcha) {
         toast.error(t("captchaFailed"));
         return;
+      }
+
+      if (session) {
+        data.creator = session.data?.user.name as string;
       }
 
       setLoading(true);

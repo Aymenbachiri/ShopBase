@@ -158,7 +158,14 @@
       "productAddedSuccessfully": "Produit ajouté avec succès",
       "failedToAddProduct": "Échec de l'ajout du produit",
       "unexpectedError": "Une erreur inattendue s'est produite",
-      "addProduct": "Ajouter un produit"
+      "addProduct": "Ajouter un produit",
+      "TitleRequired": "Le titre est requis",
+      "DescriptionRequired": "La description est requise",
+      "invalidCategory": "Veuillez entrer une catégorie valide",
+      "InvalidURL": "Veuillez entrer une URL valide",
+      "PriceRequired": "Le prix est requis",
+      "PriceMustBeNumber": "Le prix doit être un nombre",
+      "PriceMustBePositiveNumber": "Le prix doit être un nombre positif"
     }
   }
 }

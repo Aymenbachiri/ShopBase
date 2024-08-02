@@ -6,6 +6,7 @@ export const productSchema = z.object({
   category: z.enum(["men", "women", "electronics", "jewelery"]),
   imageurl: z.string().url({ message: "Please enter a valid URL" }),
   price: z.number().positive({ message: "Price must be a positive number" }),
+  creator: z.string(),
 });
 
 export type ProductFormData = z.infer<typeof productSchema>;

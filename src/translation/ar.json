@@ -158,7 +158,14 @@
       "productAddedSuccessfully": "تمت إضافة المنتج بنجاح",
       "failedToAddProduct": "فشل في إضافة المنتج",
       "unexpectedError": "حدث خطأ غير متوقع",
-      "addProduct": "إضافة منتج"
+      "addProduct": "إضافة منتج",
+      "TitleRequired": "الاسم مطلوب",
+      "DescriptionRequired": "الوصف مطلوب",
+      "invalidCategory": "يرجى إدخال فئة صالحة",
+      "InvalidURL": "يرجى إدخال رابط صالح",
+      "PriceRequired": "السعر مطلوب",
+      "PriceMustBeNumber": "يجب أن يكون السعر رقماً",
+      "PriceMustBePositiveNumber": "يجب أن يكون السعر رقماً موجبا"
     }
   }
 }

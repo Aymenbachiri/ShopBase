@@ -22,7 +22,8 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const { title, price, description, category, imageurl } = parsedBody.data;
+    const { title, price, description, category, imageurl, creator } =
+      parsedBody.data;
 
     await connectToDB();
 
@@ -32,6 +33,7 @@ export async function POST(req: NextRequest) {
       description,
       category,
       imageurl,
+      creator,
     });
 
     await newProduct.save();

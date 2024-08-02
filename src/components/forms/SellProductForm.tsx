@@ -25,7 +25,7 @@ export default function SellProductForm() {
       />
       <textarea
         {...register("description")}
-        placeholder="Enter product description"
+        placeholder={t("DescriptionInputPlaceholder")}
         className="w-full p-2 mb-2 border"
       />
       {errors.description ? (

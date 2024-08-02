@@ -1,7 +1,7 @@
 import Navbar from "@/components/navbar/Navbar";
 import AuthProvider from "@/lib/providers/AuthProvider";
 import ProgressBarProvider from "@/lib/providers/ProgressBarProvider";
-import SmoothScrollProvider from "@/lib/providers/SmoothScroll";
+import SmoothScrollProvider from "@/lib/providers/SmoothScrollProvider";
 import ThemeProvider from "@/lib/providers/ThemeProvider";
 import type { LocaleLayoutProps } from "@/lib/types/types";
 import type { Metadata } from "next";

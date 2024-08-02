@@ -105,7 +105,9 @@
       "emailInputPlaceholder": "Enter Email",
       "passwordInput": "Password",
       "passwordInputPlaceholder": "Enter password",
-      "submitButton": "Login"
+      "submitButton": "Login",
+      "NoAccount": "No account ?",
+      "SignUp": "Sign up"
     },
     "LoginSchemaErrors": {
       "invalidEmail": "Invalid email address",
@@ -167,5 +169,15 @@
       "PriceMustBeNumber": "Price must be a number",
       "PriceMustBePositiveNumber": "Price must be a positive number"
     }
+  },
+  "ProductsPage": {
+    "metaTitle": "Products | ShopBase",
+    "metaDescription": "Browse through our diverse range of products available at ShopBase. Find what you're looking for with ease.",
+    "ogTitle": "ShopBase Products",
+    "ogDescription": "Discover a wide variety of products at ShopBase. Shop the latest and greatest items online.",
+    "ogImageAlt": "ShopBase Products Overview",
+    "twitterTitle": "ShopBase Products",
+    "twitterDescription": "Explore our extensive product catalog and find your favorite items at ShopBase.",
+    "twitterImageAlt": "ShopBase Products"
   }
 }

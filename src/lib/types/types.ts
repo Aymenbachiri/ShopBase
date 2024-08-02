@@ -79,3 +79,15 @@ export type SellProductBtnProp = {
   captcha: boolean;
   SellProductButton: string;
 };
+
+export type ProductsType = {
+  _id: string;
+  title: string;
+  description: string;
+  category: "men" | "women" | "electronics" | "jewelery";
+  imageurl: string;
+  price: number;
+  creator: string;
+  createdAt: Date;
+  updatedAt: Date;
+};

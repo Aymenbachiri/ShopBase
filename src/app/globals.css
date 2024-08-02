@@ -3,12 +3,12 @@
 @tailwind utilities;
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 @layer base {
   body {
-    @apply bg-[#ecf0f3] dark:bg-[#1D232A] text-[#1f2937] dark:text-white tracking-wide;
+    @apply bg-[#ecf0f3] h-screen dark:bg-[#1D232A] text-[#1f2937] dark:text-white tracking-wide;
   }
 }
 

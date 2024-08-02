@@ -4,6 +4,22 @@ import { productSchema } from "@/lib/schemas/productSchema";
 import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
 
+export async function GET(req: NextRequest) {
+  try {
+    await connectToDB();
+
+    const products = await Product.find();
+
+    return new NextResponse(JSON.stringify(products), {
+      status: 200,
+      headers: { "Content-Type": "application/json" },
+    });
+  } catch (error) {
+    console.error("Failed to fetch all products:", error);
+    return new NextResponse("Failed to fetch all products", { status: 500 });
+  }
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();

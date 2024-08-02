@@ -105,7 +105,9 @@
       "emailInputPlaceholder": "أدخل البريد الإلكتروني",
       "passwordInput": "كلمة المرور",
       "passwordInputPlaceholder": "أدخل كلمة المرور",
-      "submitButton": "تسجيل الدخول"
+      "submitButton": "تسجيل الدخول",
+      "NoAccount": "ليس لديك حساب؟",
+      "SignUp": "سجل حسابك"
     },
     "LoginSchemaErrors": {
       "invalidEmail": "عنوان البريد الإلكتروني غير صالح",
@@ -167,5 +169,15 @@
       "PriceMustBeNumber": "يجب أن يكون السعر رقماً",
       "PriceMustBePositiveNumber": "يجب أن يكون السعر رقماً موجبا"
     }
+  },
+  "ProductsPage": {
+    "metaTitle": "المنتجات | ShopBase",
+    "metaDescription": "تصفح مجموعة متنوعة من المنتجات المتاحة في ShopBase. ابحث عن ما تريده بسهولة.",
+    "ogTitle": "منتجات ShopBase",
+    "ogDescription": "اكتشف مجموعة واسعة من المنتجات في ShopBase. تسوق أحدث وأعظم العناصر عبر الإنترنت.",
+    "ogImageAlt": "نظرة عامة على منتجات ShopBase",
+    "twitterTitle": "منتجات ShopBase",
+    "twitterDescription": "استكشف كتالوج منتجاتنا الواسع وابحث عن عناصر مفضلة لديك في ShopBase.",
+    "twitterImageAlt": "منتجات ShopBase"
   }
 }

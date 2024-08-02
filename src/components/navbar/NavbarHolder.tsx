@@ -13,7 +13,7 @@ export default function NavbarHolder({
     <header
       className={
         shadow
-          ? "fixed shadow-xl top-0 w-full start-0 z-[100] ease-in-out duration-300 dark:shadow-[#dedbdb] dark:ease-in-out dark:duration-300"
+          ? "fixed shadow-xl backdrop-blur-md top-0 w-full start-0 z-[100] ease-in-out duration-300 dark:shadow-[#dedbdb] dark:ease-in-out dark:duration-300"
           : "fixed top-0 w-full z-20 start-0"
       }
     >

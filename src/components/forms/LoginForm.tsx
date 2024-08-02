@@ -35,9 +35,9 @@ export default function LoginForm() {
       <Recaptcha onChange={() => setCaptcha(true)} />
       <section className="flex items-center justify-between">
         <p className="text-sm text-gray-500">
-          No account?
+          {t("NoAccount")}
           <Link href="/register" className="underline mx-1">
-            Sign Up
+            {t("SignUp")}
           </Link>
         </p>
         <LoginBtn

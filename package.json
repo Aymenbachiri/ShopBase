@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
-    "@studio-freight/react-lenis": "^0.0.47",
+    "@studio-freight/lenis": "^1.0.42",
     "@types/bcryptjs": "^2.4.6",
     "@types/nprogress": "^0.2.3",
     "bcryptjs": "^2.4.3",

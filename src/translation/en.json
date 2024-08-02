@@ -84,7 +84,9 @@
       "registration": "Registration...",
       "captchaFailed": "Captcha verification failed; please confirm you are not a robot.",
       "loginSuccess": "Registration succeeded. Navigating to dashboard...",
-      "loginFailed": "Failed to login"
+      "loginFailed": "Failed to login",
+      "emailIsAlreadyUsed": "Email is already used",
+      "failedToRegister": "Failed to register"
     }
   },
   "LoginPage": {

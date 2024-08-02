@@ -84,7 +84,9 @@
       "registration": "Registration...",
       "captchaFailed": "Échec de la vérification Captcha ; veuillez confirmer que vous n'êtes pas un robot.",
       "loginSuccess": "Inscription réussie. Redirection vers le tableau de bord...",
-      "loginFailed": "Échec de la connexion"
+      "loginFailed": "Échec de la connexion",
+      "emailIsAlreadyUsed": "Email est déja utilisé",
+      "failedToRegister": "Échec d'enregistrement"
     }
   },
   "LoginPage": {

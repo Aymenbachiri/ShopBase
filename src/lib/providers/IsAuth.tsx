@@ -1,15 +1,17 @@
-"use client";
-
-import { useSession } from "next-auth/react";
 import LogInIcon from "../svg/LogInIcon";
 import { Link } from "@/navigation";
-import { useTranslations } from "next-intl";
+import { getServerSession } from "next-auth";
+import { getTranslations } from "next-intl/server";
 
-export default function IsAuth({ children }: { children: React.ReactNode }) {
-  const session = useSession();
-  const t = useTranslations("LoginPage.Form");
+export default async function IsAuth({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const session = await getServerSession();
+  const t = await getTranslations("LoginPage.Form");
 
-  if (session.status === "authenticated") {
+  if (session) {
     return <>{children}</>;
   }
   return (

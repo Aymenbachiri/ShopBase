@@ -45,3 +45,31 @@ export type LoginBtnProps = {
   captcha: boolean;
   LoginButton: string;
 };
+
+export type RegisterUserSchemaErrors = {
+  nameRequired: string;
+  invalidEmail: string;
+  passwordMinLength: string;
+  confirmPasswordMinLength: string;
+  passwordsDoNotMatch: string;
+  registration: string;
+  captchaFailed: string;
+  loginSuccess: string;
+  loginFailed: string;
+};
+
+export type MessageKeys<T, K extends keyof T> = K;
+
+export type TranslationFunction = {
+  <
+    TargetKey extends MessageKeys<
+      RegisterUserSchemaErrors,
+      keyof RegisterUserSchemaErrors
+    >
+  >(
+    key: TargetKey
+  ): string;
+};
+
+export type TranslationFunctionWithStringFallback = TranslationFunction &
+  ((key: string) => string);

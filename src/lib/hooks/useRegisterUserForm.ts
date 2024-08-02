@@ -5,27 +5,16 @@ import { RegisterFormInputs } from "../schemas/registerUserSchema";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { useTranslations } from "next-intl";
-import { z } from "zod";
+import { translatedRegisterUserSchema } from "../schemas/translatedRegisterUserSchema";
+import type { TranslationFunctionWithStringFallback } from "../types/types";
 
 const useRegisterUserForm = () => {
   const [loading, setLoading] = useState(false);
   const [captcha, setCaptcha] = useState(false);
   const router = useRouter();
-  const t = useTranslations("RegisterUserPage.RegisterUserSchemaErrors");
-
-  const registerSchema = z
-    .object({
-      name: z.string().min(1, { message: t("nameRequired") }),
-      email: z.string().email({ message: t("invalidEmail") }),
-      password: z.string().min(8, { message: t("passwordMinLength") }),
-      confirmPassword: z
-        .string()
-        .min(8, { message: t("confirmPasswordMinLength") }),
-    })
-    .refine((data) => data.password === data.confirmPassword, {
-      message: t("passwordsDoNotMatch"),
-      path: ["confirmPassword"],
-    });
+  const tRaw = useTranslations("RegisterUserPage.RegisterUserSchemaErrors");
+  const t = tRaw as unknown as TranslationFunctionWithStringFallback;
+  const registerSchema = translatedRegisterUserSchema(t);
 
   const {
     register,
@@ -45,18 +34,22 @@ const useRegisterUserForm = () => {
 
     if (!res.ok) {
       const errorData = await res.json();
+      let errorMessage: string;
+
       if (res.status === 409) {
-        throw new Error("Email is already in use");
+        errorMessage = t("emailIsAlreadyUsed");
       } else {
-        throw new Error(errorData.error || "Failed to register");
+        errorMessage = errorData.error || t("failedToRegister");
       }
+
+      throw new Error(errorMessage);
     }
   };
 
   const onSubmit = useCallback(
     async (data: RegisterFormInputs) => {
       if (!captcha) {
-        toast.error(t("captchaFailed"));
+        toast.error(t(""));
         return;
       }
 

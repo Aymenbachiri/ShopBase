@@ -1,22 +1,17 @@
-"use client";
-
+import LogoutBtn from "@/components/auth/LogoutBtn";
 import { Link } from "@/navigation";
-import { signOut, useSession } from "next-auth/react";
-import { useTranslations } from "next-intl";
+import { getServerSession } from "next-auth";
+import { getTranslations } from "next-intl/server";
 
-export default function LoginCheck({
+export default async function LoginCheck({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const { status } = useSession();
-  const t = useTranslations("LoginCheck");
+  const session = await getServerSession();
+  const t = await getTranslations("LoginCheck");
 
-  if (status === "loading") {
-    return;
-  }
-
-  if (status === "authenticated") {
+  if (session) {
     return (
       <main className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
         <section className="mx-auto max-w-lg text-center">
@@ -28,9 +23,7 @@ export default function LoginCheck({
             </Link>
             {t("Or")}
           </p>
-          <button className="underline" onClick={() => signOut()}>
-            {t("LogoutBtn")}
-          </button>
+          <LogoutBtn />
         </section>
       </main>
     );

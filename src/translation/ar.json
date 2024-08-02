@@ -84,7 +84,9 @@
       "captchaFailed": "فشل التحقق من الكابتشا؛ يرجى تأكيد أنك لست روبوتًا.",
       "registration": "التسجيل...",
       "loginSuccess": "تم التسجيل بنجاح. جاري الانتقال إلى لوحة التحكم...",
-      "loginFailed": "فشل تسجيل الدخول"
+      "loginFailed": "فشل تسجيل الدخول",
+      "emailIsAlreadyUsed": "الايميل مستعمل بالفعل",
+      "failedToRegister": "فشل التسجيل"
     }
   },
   "LoginPage": {

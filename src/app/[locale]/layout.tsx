@@ -1,6 +1,5 @@
 import Navbar from "@/components/navbar/Navbar";
 import AuthProvider from "@/lib/providers/AuthProvider";
-import ProgressBarProvider from "@/lib/providers/ProgressBarProvider";
 import SmoothScrollProvider from "@/lib/providers/SmoothScrollProvider";
 import ThemeProvider from "@/lib/providers/ThemeProvider";
 import type { LocaleLayoutProps } from "@/lib/types/types";
@@ -8,6 +7,7 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider, useLocale, useMessages } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
+import NextTopLoader from "nextjs-toploader";
 import { Toaster } from "react-hot-toast";
 
 export async function generateStaticParams() {
@@ -39,13 +39,12 @@ export default function LocaleLayout({
         <AuthProvider>
           <ThemeProvider>
             <SmoothScrollProvider>
-              <ProgressBarProvider>
-                <main dir={dir}>
-                  <Navbar />
-                  {children}
-                  <Toaster position="top-center" />
-                </main>
-              </ProgressBarProvider>
+              <NextTopLoader />
+              <main dir={dir}>
+                <Navbar />
+                {children}
+                <Toaster position="top-center" />
+              </main>
             </SmoothScrollProvider>
           </ThemeProvider>
         </AuthProvider>

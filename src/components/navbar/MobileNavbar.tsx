@@ -1,3 +1,4 @@
+import CartLink from "./CartLink";
 import LocaleMenu from "./LocaleMenu";
 import MobileNavbarLink from "./MobileNavbarLink";
 import getNavLinks from "./NavLinks";
@@ -13,6 +14,9 @@ export default async function MobileNavbar() {
           <MobileNavbarLink link={link} />
         </li>
       ))}
+      <li className="text-2xl py-8">
+        <CartLink />
+      </li>
       <li className="text-2xl py-8">
         <LocaleMenu />
       </li>

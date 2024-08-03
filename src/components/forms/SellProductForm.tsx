@@ -4,7 +4,7 @@ import { useTranslations } from "next-intl";
 import InputField from "../reusable_components/InputField";
 import useSellProductForm from "@/lib/hooks/useSellProductForm";
 import Recaptcha from "../reusable_components/Recaptcha";
-import SellProductBtn from "../SellProductBtn";
+import SellProductBtn from "../buttons/SellProductBtn";
 
 export default function SellProductForm() {
   const { register, handleSubmit, errors, loading, captcha, setCaptcha } =

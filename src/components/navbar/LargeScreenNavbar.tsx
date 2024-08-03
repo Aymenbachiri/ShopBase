@@ -5,6 +5,7 @@ import MobileNavBtn from "./MobileNavBtn";
 import getNavLinks from "./NavLinks";
 import IsAuth from "@/lib/providers/IsAuth";
 import ProfileMenu from "./ProfileMenu";
+import CartLink from "./CartLink";
 
 export default async function LargeScreenNavbar() {
   const navLinks = await getNavLinks();
@@ -26,6 +27,9 @@ export default async function LargeScreenNavbar() {
         <IsAuth>
           <ProfileMenu />
         </IsAuth>
+        <li>
+          <CartLink />
+        </li>
       </ul>
 
       {/* Translation Menu */}

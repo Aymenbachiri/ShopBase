@@ -181,5 +181,8 @@
     "twitterImageAlt": "Produits ShopBase",
     "header": "Nos Derniers Produits",
     "subHeader": "Découvrez notre gamme de produits de haute qualité, chacun soigneusement sélectionné pour répondre à vos besoins."
+  },
+  "CartPage": {
+    "AddToCartBtn": "Ajouter au panier"
   }
 }

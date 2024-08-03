@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../redux-toolkit/store";
-import { ProductCartProps } from "../types/cartTypes";
+import type { ProductCartProps } from "../types/cartTypes";
 import {
   addToCart,
   clearCart,
@@ -16,7 +16,7 @@ const useCart = () => {
   const dispatch = useDispatch();
 
   const totalPrice = products.reduce((acc, product) => {
-    acc += product.price * product.quantity;
+    acc += product.price * product.quantity!;
     return acc;
   }, 0);
 

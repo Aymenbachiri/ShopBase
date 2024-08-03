@@ -3,20 +3,32 @@ import StoreIcon from "@/lib/svg/StoreIcon";
 import TagIcon from "@/lib/svg/TagIcon";
 import type { ProductsType } from "@/lib/types/types";
 import { Link } from "@/navigation";
+import AddToCartBtn from "../buttons/AddToCartBtn";
+import LinkIcon from "@/lib/svg/LinkIcon";
+import { getTranslations } from "next-intl/server";
 
-export default function ProductCard({ product }: { product: ProductsType }) {
+export default async function ProductCard({
+  product,
+}: {
+  product: ProductsType;
+}) {
   const { _id, imageurl, title, description, category, price, creator } =
     product;
 
   const discount = Math.floor(Math.random() * 11);
+  const t = await getTranslations("ProductsPage");
+
+  const productWithId = {
+    ...product,
+    id: _id,
+    rating: product.rating || 0,
+    quantity: product.quantity || 1,
+  };
 
   return (
-    <Link
-      href={`/products/${_id}`}
-      className="relative block rounded-tr-3xl border border-gray-100"
-    >
+    <main className="relative block rounded-tr-3xl border border-gray-600 rounded-md shadow-xl">
       <span className="absolute -right-px -top-px rounded-bl-3xl rounded-tr-3xl bg-rose-600 px-6 py-4 font-medium uppercase tracking-widest text-white">
-        Save {discount}%
+        {t("Save")} {discount}%
       </span>
       <img
         src={imageurl}
@@ -45,10 +57,16 @@ export default function ProductCard({ product }: { product: ProductsType }) {
           <StoreIcon />
           {creator}
         </h2>
-        <span className="mt-4 block rounded-md border border-indigo-900 bg-indigo-900 px-5 py-3 text-sm font-medium uppercase tracking-widest text-white transition-colors hover:bg-white hover:text-indigo-900">
-          Learn More
-        </span>
+        <div className="flex justify-center items-center gap-2 mt-4">
+          <Link
+            href={`/products/${_id}`}
+            className="flex justify-center items-center gap-1 rounded-md border  bg-indigo-600 px-2 py-[5px] text-sm font-medium uppercase tracking-widest text-white duration-300 transition-colors hover:bg-indigo-700"
+          >
+            <LinkIcon />
+          </Link>
+          <AddToCartBtn product={productWithId} />
+        </div>
       </div>
-    </Link>
+    </main>
   );
 }

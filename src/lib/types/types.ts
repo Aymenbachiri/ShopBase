@@ -82,6 +82,7 @@ export type SellProductBtnProp = {
 
 export type ProductsType = {
   _id: string;
+  id?: string;
   title: string;
   description: string;
   category: "men" | "women" | "electronics" | "jewelery";
@@ -90,4 +91,6 @@ export type ProductsType = {
   creator: string;
   createdAt: Date;
   updatedAt: Date;
+  rating?: number;
+  quantity?: number;
 };

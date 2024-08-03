@@ -180,9 +180,12 @@
     "twitterDescription": "Explore our extensive product catalog and find your favorite items at ShopBase.",
     "twitterImageAlt": "ShopBase Products",
     "header": "Our Latest Products",
-    "subHeader": "Explore our range of high-quality products, each carefully selected to meet your needs."
+    "subHeader": "Explore our range of high-quality products, each carefully selected to meet your needs.",
+    "Save": "Save"
   },
   "CartPage": {
-    "AddToCartBtn": "Add To Cart"
+    "AddToCartBtn": "Add To Cart",
+    "AddToCartToastPrefix": "Added ",
+    "AddToCartToastSuffix": " to cart"
   }
 }

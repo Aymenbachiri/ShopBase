@@ -8,42 +8,46 @@ export default function ProductCard({ product }: { product: ProductsType }) {
   const { _id, imageurl, title, description, category, price, creator } =
     product;
 
+  const discount = Math.floor(Math.random() * 11);
+
   return (
     <Link
-      key={_id}
       href={`/products/${_id}`}
-      aria-label="View Item"
-      className="inline-block overflow-hidden duration-300 transform bg-white dark:bg-gray-800 rounded shadow-sm hover:-translate-y-2"
+      className="relative block rounded-tr-3xl border border-gray-100"
     >
-      <div className="flex flex-col h-full">
-        <img
-          src={imageurl}
-          className="object-cover w-full h-48"
-          alt={title}
-          loading="lazy"
-        />
-        <div className="flex-grow border border-t-0 rounded-b bg-gray-100 dark:bg-gray-900">
-          <section className="p-5">
-            <h6 className="mb-2 text-xl font-semibold leading-5 text-gray-900 dark:text-gray-100">
-              {title}
-            </h6>
-            <p className="text-sm text-gray-700 dark:text-gray-300">
-              {description}
-            </p>
-            <div className="flex items-center mt-4 text-gray-600 dark:text-gray-400">
-              <TagIcon />
-              <span className="text-sm">{category}</span>
-            </div>
-            <div className="flex items-center mt-2 text-gray-600 dark:text-gray-400">
-              <MoneyBillAltIcon />
-              <span className="text-sm">${price}</span>
-            </div>
-            <div className="flex items-center mt-2 text-gray-600 dark:text-gray-400">
-              <StoreIcon />
-              <span className="text-sm">{creator}</span>
-            </div>
-          </section>
-        </div>
+      <span className="absolute -right-px -top-px rounded-bl-3xl rounded-tr-3xl bg-rose-600 px-6 py-4 font-medium uppercase tracking-widest text-white">
+        Save {discount}%
+      </span>
+      <img
+        src={imageurl}
+        alt={title}
+        className="h-80 w-full rounded-tr-3xl object-cover"
+        loading="lazy"
+      />
+      <div className="p-4 text-center">
+        <strong className="text-xl font-medium text-gray-900 dark:text-gray-500">
+          {title}
+        </strong>
+        <p className="mt-2 text-pretty text-gray-700 dark:text-gray-500">
+          {description}
+        </p>
+        <section className="flex justify-between items-center ">
+          <h2 className="flex justify-center items-center gap-2 dark:text-gray-500">
+            <TagIcon />
+            {category}
+          </h2>
+          <h2 className="flex justify-center items-center gap-2 dark:text-gray-500">
+            <MoneyBillAltIcon />
+            {price}
+          </h2>
+        </section>
+        <h2 className="flex justify-center items-center gap-2 dark:text-gray-500">
+          <StoreIcon />
+          {creator}
+        </h2>
+        <span className="mt-4 block rounded-md border border-indigo-900 bg-indigo-900 px-5 py-3 text-sm font-medium uppercase tracking-widest text-white transition-colors hover:bg-white hover:text-indigo-900">
+          Learn More
+        </span>
       </div>
     </Link>
   );

@@ -1,5 +1,6 @@
 import Navbar from "@/components/navbar/Navbar";
 import AuthProvider from "@/lib/providers/AuthProvider";
+import ReduxProvider from "@/lib/providers/ReduxProvider";
 import SmoothScrollProvider from "@/lib/providers/SmoothScrollProvider";
 import ThemeProvider from "@/lib/providers/ThemeProvider";
 import type { LocaleLayoutProps } from "@/lib/types/types";
@@ -39,12 +40,14 @@ export default function LocaleLayout({
         <AuthProvider>
           <ThemeProvider>
             <SmoothScrollProvider>
-              <NextTopLoader />
-              <main dir={dir}>
-                <Navbar />
-                {children}
-                <Toaster position="top-center" />
-              </main>
+              <ReduxProvider>
+                <NextTopLoader />
+                <main dir={dir}>
+                  <Navbar />
+                  {children}
+                  <Toaster position="top-center" />
+                </main>
+              </ReduxProvider>
             </SmoothScrollProvider>
           </ThemeProvider>
         </AuthProvider>

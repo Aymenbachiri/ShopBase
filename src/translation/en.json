@@ -184,8 +184,18 @@
     "Save": "Save"
   },
   "CartPage": {
+    "metaTitle": "Your Shopping Cart - ShopBase",
+    "metaDescription": "View the items in your shopping cart and proceed to checkout on ShopBase.",
+    "ogTitle": "Your Shopping Cart - ShopBase",
+    "ogDescription": "View the items in your shopping cart and proceed to checkout on ShopBase.",
+    "ogImageAlt": "Shopping Cart on ShopBase",
+    "twitterTitle": "Your Shopping Cart - ShopBase",
+    "twitterDescription": "View the items in your shopping cart and proceed to checkout on ShopBase.",
     "AddToCartBtn": "Add To Cart",
     "AddToCartToastPrefix": "Added ",
-    "AddToCartToastSuffix": " to cart"
+    "AddToCartToastSuffix": " to cart",
+    "emptyCartTitle": "Your Cart feels lonely.",
+    "emptyCartDescription": "Your Shopping cart lives to serve. Give it purpose - fill it with books, electronics, videos, etc. and make it happy.",
+    "continueShopping": "Continue Shopping"
   }
 }

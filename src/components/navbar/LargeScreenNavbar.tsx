@@ -3,7 +3,7 @@ import LocaleMenu from "./LocaleMenu";
 import ThemeSwitch from "./ThemeSwitch";
 import MobileNavBtn from "./MobileNavBtn";
 import getNavLinks from "./NavLinks";
-import IsAuth from "@/lib/providers/IsAuth";
+import IsAuth from "@/lib/helpers/IsAuth";
 import ProfileMenu from "./ProfileMenu";
 import CartLink from "./CartLink";
 

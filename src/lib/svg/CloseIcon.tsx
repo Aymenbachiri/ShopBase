@@ -5,6 +5,7 @@ export default function CloseIcon() {
       width="30px"
       height="30px"
       viewBox="0 0 24 24"
+      className="text-gray-400"
     >
       <path
         fill="currentColor"

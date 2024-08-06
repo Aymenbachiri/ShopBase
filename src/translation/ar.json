@@ -184,8 +184,18 @@
     "Save": "وفر"
   },
   "CartPage": {
+    "metaTitle": "سلة التسوق الخاصة بك - ShopBase",
+    "metaDescription": "اعرض العناصر في سلة التسوق الخاصة بك وتابع إلى الدفع على ShopBase.",
+    "ogTitle": "سلة التسوق الخاصة بك - ShopBase",
+    "ogDescription": "اعرض العناصر في سلة التسوق الخاصة بك وتابع إلى الدفع على ShopBase.",
+    "ogImageAlt": "سلة التسوق على ShopBase",
+    "twitterTitle": "سلة التسوق الخاصة بك - ShopBase",
+    "twitterDescription": "اعرض العناصر في سلة التسوق الخاصة بك وتابع إلى الدفع على ShopBase.",
     "AddToCartBtn": "إضافة إلى السلة",
     "AddToCartToastPrefix": "تمت إضافة ",
-    "AddToCartToastSuffix": "إلى السلة"
+    "AddToCartToastSuffix": "إلى السلة",
+    "emptyCartTitle": "عربة التسوق الخاصة بك تشعر بالوحدة.",
+    "emptyCartDescription": "عربة التسوق الخاصة بك تعيش لتخدم. أعطها هدفًا - املأها بالكتب، والإلكترونيات، والفيديوهات، وما إلى ذلك، واجعلها سعيدة.",
+    "continueShopping": "تابع التسوق"
   }
 }

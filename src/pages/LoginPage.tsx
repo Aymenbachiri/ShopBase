@@ -1,5 +1,5 @@
 import LoginForm from "@/components/forms/LoginForm";
-import LoginCheck from "@/lib/providers/LoginCheck";
+import LoginCheck from "@/lib/helpers/LoginCheck";
 import { getTranslations } from "next-intl/server";
 
 export default async function LoginPage() {

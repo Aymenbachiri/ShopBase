@@ -1,5 +1,5 @@
 import SellProductForm from "@/components/forms/SellProductForm";
-import ProtectedRoute from "@/lib/providers/ProtectedRoute";
+import ProtectedRoute from "@/lib/helpers/ProtectedRoute";
 import { getTranslations } from "next-intl/server";
 
 export default async function SellProductPage() {

@@ -6,7 +6,6 @@ export default async function getNavLinks() {
   return [
     { href: "/", label: t("Home") },
     { href: "/products", label: t("Products") },
-    { href: "/sell", label: t("Sell") },
     { href: "/about", label: t("About") },
   ];
 }

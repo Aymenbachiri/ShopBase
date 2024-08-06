@@ -184,8 +184,18 @@
     "Save": "économisez"
   },
   "CartPage": {
+    "metaTitle": "Votre Panier - ShopBase",
+    "metaDescription": "Voir les articles dans votre panier et procéder au paiement sur ShopBase.",
+    "ogTitle": "Votre Panier - ShopBase",
+    "ogDescription": "Voir les articles dans votre panier et procéder au paiement sur ShopBase.",
+    "ogImageAlt": "Panier sur ShopBase",
+    "twitterTitle": "Votre Panier - ShopBase",
+    "twitterDescription": "Voir les articles dans votre panier et procéder au paiement sur ShopBase.",
     "AddToCartBtn": "Ajouter au panier",
     "AddToCartToastPrefix": "Ajouté ",
-    "AddToCartToastSuffix": " au panier"
+    "AddToCartToastSuffix": " au panier",
+    "emptyCartTitle": "Votre panier semble seul.",
+    "emptyCartDescription": "Votre panier est là pour servir. Donnez-lui un but - remplissez-le de livres, d'électroniques, de vidéos, etc., et rendez-le heureux.",
+    "continueShopping": "Continuer vos achats"
   }
 }

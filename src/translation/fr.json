@@ -191,11 +191,19 @@
     "ogImageAlt": "Panier sur ShopBase",
     "twitterTitle": "Votre Panier - ShopBase",
     "twitterDescription": "Voir les articles dans votre panier et procéder au paiement sur ShopBase.",
+    "Header": "Mon Panier",
     "AddToCartBtn": "Ajouter au panier",
     "AddToCartToastPrefix": "Ajouté ",
     "AddToCartToastSuffix": " au panier",
     "emptyCartTitle": "Votre panier semble seul.",
     "emptyCartDescription": "Votre panier est là pour servir. Donnez-lui un but - remplissez-le de livres, d'électroniques, de vidéos, etc., et rendez-le heureux.",
-    "continueShopping": "Continuer vos achats"
+    "continueShopping": "Continuer vos achats",
+    "Remove": "Retirer",
+    "Reset": "Réinitialiser",
+    "Subtotal": "Sous-total",
+    "Shipping": "Expédition",
+    "Free": "Gratuit",
+    "Total": "Total",
+    "Checkout": "Passer à la caisse"
   }
 }

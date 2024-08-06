@@ -191,11 +191,19 @@
     "ogImageAlt": "Shopping Cart on ShopBase",
     "twitterTitle": "Your Shopping Cart - ShopBase",
     "twitterDescription": "View the items in your shopping cart and proceed to checkout on ShopBase.",
+    "Header": "My Cart",
     "AddToCartBtn": "Add To Cart",
     "AddToCartToastPrefix": "Added ",
     "AddToCartToastSuffix": " to cart",
     "emptyCartTitle": "Your Cart feels lonely.",
     "emptyCartDescription": "Your Shopping cart lives to serve. Give it purpose - fill it with books, electronics, videos, etc. and make it happy.",
-    "continueShopping": "Continue Shopping"
+    "continueShopping": "Continue Shopping",
+    "Remove": "Remove",
+    "Reset": "Reset",
+    "Subtotal": "Subtotal",
+    "Shipping": "Shipping",
+    "Free": "Free",
+    "Total": "Total",
+    "Checkout": "Checkout"
   }
 }

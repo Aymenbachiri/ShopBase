@@ -1,17 +1,15 @@
-import { useCartServer } from "@/lib/hooks/useCartServer";
-import { createServerStore } from "@/lib/redux-toolkit/serverStore";
+"use client";
+
 import CartItem from "./CartItem";
+import useCart from "@/lib/hooks/useCart";
 
 export default function CartProducts() {
-  const store = createServerStore();
   const {
-    getProducts,
+    products,
     handleDecreaseQuantity,
     handleIncreaseQuantity,
     handleRemoveFromCart,
-  } = useCartServer(store);
-
-  const products = getProducts();
+  } = useCart();
 
   return (
     <ul className="-my-8">

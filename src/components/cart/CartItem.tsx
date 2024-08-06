@@ -1,4 +1,5 @@
 import type { CartItemProps } from "@/lib/types/cartTypes";
+import { useTranslations } from "next-intl";
 
 export default function CartItem({
   product,
@@ -7,6 +8,7 @@ export default function CartItem({
   onRemove,
 }: CartItemProps) {
   const { quantity, imageurl, title, category } = product;
+  const t = useTranslations("CartPage");
 
   return (
     <li className="flex flex-col space-y-3 py-6 text-left sm:flex-row sm:space-x-5 sm:space-y-0">
@@ -28,12 +30,12 @@ export default function CartItem({
           </section>
           <div className="mt-4 flex items-end justify-between sm:mt-0 sm:items-start sm:justify-end">
             <p className="shrink-0 w-20 text-base font-semibold text-gray-900 sm:order-2 sm:ml-8 sm:text-right">
-              ${quantity! * product.price}
+              ${quantity ? quantity * product.price : null}
             </p>
             <div className="sm:order-1">
               <section className="mx-auto flex h-8 items-stretch text-gray-600">
                 <button
-                  onClick={() => onDecrease(product.id)}
+                  onClick={() => onDecrease(product._id)}
                   className="flex items-center justify-center rounded-l-md bg-gray-200 px-4 transition hover:bg-black hover:text-white"
                 >
                   -
@@ -42,7 +44,7 @@ export default function CartItem({
                   {quantity}
                 </p>
                 <button
-                  onClick={() => onIncrease(product.id)}
+                  onClick={() => onIncrease(product._id)}
                   className="flex items-center justify-center rounded-r-md bg-gray-200 px-4 transition hover:bg-black hover:text-white"
                 >
                   +
@@ -54,9 +56,9 @@ export default function CartItem({
         <section className="absolute top-0 right-0 flex sm:bottom-0 sm:top-auto">
           <button
             onClick={() => onRemove(product.id)}
-            className="text-xs text-gray-400 underline"
+            className="text-xs text-gray-800 underline"
           >
-            Remove
+            {t("Remove")}
           </button>
         </section>
       </div>

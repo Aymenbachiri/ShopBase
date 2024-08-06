@@ -6,7 +6,7 @@ import { serialize } from "cookie";
 import { credentialsSchema } from "@/lib/schemas/credentialsSchema";
 import connectToDB from "@/lib/database/database";
 import User from "@/lib/database/models/User";
-import { getErrorMessage } from "@/lib/hooks/getErrorMessage";
+import { getErrorMessage } from "@/lib/helpers/getErrorMessage";
 import { AuthOptions } from "next-auth";
 
 const JWT_SECRET = process.env.JWT_SECRET || "";

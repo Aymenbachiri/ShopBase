@@ -6,7 +6,9 @@ export default function CartUi() {
     <main className="h-[90vh]  my-[110px]">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <section className="flex items-center justify-center">
-          <h1 className="text-2xl font-semibold text-gray-900">My Cart</h1>
+          <h1 className="text-2xl font-semibold text-gray-900 dark:text-gray-200">
+            My Cart
+          </h1>
         </section>
         <div className="mx-auto mt-8 max-w-2xl md:mt-12">
           <div className="bg-white rounded-md shadow">

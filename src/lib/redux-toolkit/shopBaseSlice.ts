@@ -14,7 +14,7 @@ export const shopBaseSlice = createSlice({
         (product) => product.id === action.payload.id
       );
       if (item) {
-        item.quantity += action.payload.quantity;
+        item.quantity! += action.payload.quantity!;
       } else {
         state.products.push(action.payload);
       }
@@ -22,7 +22,7 @@ export const shopBaseSlice = createSlice({
     increaseQuantity: (state, action: PayloadAction<string>) => {
       const item = state.products.find((item) => item.id === action.payload);
       if (item) {
-        item.quantity++;
+        item.quantity!++;
       }
     },
     decreaseQuantity: (state, action: PayloadAction<string>) => {
@@ -31,11 +31,10 @@ export const shopBaseSlice = createSlice({
         if (item.quantity === 1) {
           item.quantity = 1;
         } else {
-          item.quantity--;
+          item.quantity!--;
         }
       }
     },
-
     removeFromCart: (state, action: PayloadAction<string>) => {
       state.products = state.products.filter(
         (product) => product.id !== action.payload

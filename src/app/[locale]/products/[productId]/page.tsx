@@ -1,6 +1,6 @@
 import Notfound from "@/app/not-found";
-import { getAllProductIds } from "@/lib/hooks/getAllProductIds";
-import { getProductById } from "@/lib/hooks/getProductById";
+import { getAllProductIds } from "@/lib/helpers/getAllProductIds";
+import { getProductById } from "@/lib/helpers/getProductById";
 import SingleProductPage from "@/pages/SingleProductPage";
 import type { Metadata } from "next";
 

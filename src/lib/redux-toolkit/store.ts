@@ -10,7 +10,7 @@ import {
   REGISTER,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import shopBaseSlice from "./shopBaseSlice";
+import shopBaseReducer from "./shopBaseSlice";
 
 const persistConfig = {
   key: "root",
@@ -18,18 +18,31 @@ const persistConfig = {
   storage,
 };
 
-const persistedReducer = persistReducer(persistConfig, shopBaseSlice);
+const persistedReducer = persistReducer(persistConfig, shopBaseReducer);
 
-export const store = configureStore({
-  reducer: { shop: persistedReducer },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      serializableCheck: {
-        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-      },
-    }),
-});
+export const createStore = (preloadedState = {}) => {
+  if (typeof window === "undefined") {
+    // Server-side store
+    return configureStore({
+      reducer: { shop: shopBaseReducer },
+      preloadedState,
+    });
+  } else {
+    // Client-side store with persistence
+    return configureStore({
+      reducer: { shop: persistedReducer },
+      preloadedState,
+      middleware: (getDefaultMiddleware) =>
+        getDefaultMiddleware({
+          serializableCheck: {
+            ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+          },
+        }),
+    });
+  }
+};
 
+export const store = createStore();
 export let persistor = persistStore(store);
 
 export type RootState = ReturnType<typeof store.getState>;

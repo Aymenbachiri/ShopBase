@@ -1,10 +1,10 @@
 "use client";
 
-export default function ResetCartBtn({
-  handleResetCart,
-}: {
-  handleResetCart: () => void;
-}) {
+import useCart from "@/lib/hooks/useCart";
+
+export default function ResetCartBtn() {
+  const { handleResetCart } = useCart();
+
   return (
     <button
       onClick={handleResetCart}

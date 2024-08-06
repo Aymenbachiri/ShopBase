@@ -1,6 +1,6 @@
 import connectToDB from "@/lib/database/database";
 import Product from "@/lib/database/models/Product";
-import { getErrorMessage } from "@/lib/hooks/getErrorMessage";
+import { getErrorMessage } from "@/lib/helpers/getErrorMessage";
 import { productIdSchema } from "@/lib/schemas/productIdSchema";
 import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";

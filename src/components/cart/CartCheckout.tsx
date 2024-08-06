@@ -1,18 +1,16 @@
-"use client";
-
-import useCart from "@/lib/hooks/useCart";
 import { Link } from "@/navigation";
 import ResetCartBtn from "./ResetCartBtn";
+import CartTotalPrice from "./CartTotalPrice";
 
 export default function CartCheckout() {
-  const { totalPrice, handleResetCart } = useCart();
-
   return (
     <main>
       <div className="mt-6 border-t border-b py-2">
         <section className="flex items-center justify-between">
           <p className="text-sm text-gray-400">Subtotal</p>
-          <p className="text-lg font-semibold text-gray-900">${totalPrice}</p>
+          <p className="text-lg font-semibold text-gray-900">
+            $<CartTotalPrice />
+          </p>
         </section>
         <section className="flex items-center justify-between">
           <p className="text-sm text-gray-400">Shipping</p>
@@ -23,11 +21,11 @@ export default function CartCheckout() {
         <p className="text-sm font-medium text-gray-900">Total</p>
         <p className="text-2xl font-semibold text-gray-900">
           <span className="text-xs font-normal text-gray-400">USD</span>{" "}
-          {totalPrice}
+          <CartTotalPrice />
         </p>
       </section>
       <section className="mt-8  flex items-center justify-between">
-        <ResetCartBtn handleResetCart={handleResetCart} />
+        <ResetCartBtn />
       </section>
       <section className="mt-6 text-center flex items-center gap-4">
         <button

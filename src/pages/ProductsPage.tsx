@@ -1,5 +1,5 @@
 import ProductCard from "@/components/products/ProductCard";
-import { getProducts } from "@/lib/hooks/getProducts";
+import { getProducts } from "@/lib/helpers/getProducts";
 import type { ProductsType } from "@/lib/types/types";
 
 export default async function ProductsPage() {

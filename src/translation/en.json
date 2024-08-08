@@ -205,5 +205,14 @@
     "Free": "Free",
     "Total": "Total",
     "Checkout": "Checkout"
+  },
+  "DashboardPage": {
+    "metaTitle": "Dashboard - ShopBase",
+    "metaDescription": "Manage your products, orders, and more in your ShopBase dashboard.",
+    "ogTitle": "Dashboard - ShopBase",
+    "ogDescription": "Manage your products, orders, and more in your ShopBase dashboard.",
+    "ogImageAlt": "ShopBase Dashboard",
+    "twitterTitle": "Dashboard - ShopBase",
+    "twitterDescription": "Manage your products, orders, and more in your ShopBase dashboard."
   }
 }

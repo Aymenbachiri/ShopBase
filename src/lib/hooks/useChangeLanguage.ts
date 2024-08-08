@@ -8,7 +8,7 @@ const useChangeLanguage = () => {
   const changeLanguage = useCallback(
     (language: string) => {
       // Split the current path and filter out empty segments
-      const pathSegments = currentPath.split("/").filter((segment) => segment);
+      const pathSegments = currentPath!.split("/").filter((segment) => segment);
 
       // Remove the current language segment if present
       if (

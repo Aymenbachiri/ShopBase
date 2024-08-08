@@ -94,3 +94,11 @@ export type ProductsType = {
   rating?: number;
   quantity?: number;
 };
+
+export type DashboardProductCardProps = {
+  product: ProductsType;
+};
+
+export type DeleteProductProps = {
+  id: string;
+};

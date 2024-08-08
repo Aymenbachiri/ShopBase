@@ -205,5 +205,14 @@
     "Free": "Gratuit",
     "Total": "Total",
     "Checkout": "Passer à la caisse"
+  },
+  "DashboardPage": {
+    "metaTitle": "Tableau de bord - ShopBase",
+    "metaDescription": "Gérez vos produits, commandes et plus encore dans votre tableau de bord ShopBase.",
+    "ogTitle": "Tableau de bord - ShopBase",
+    "ogDescription": "Gérez vos produits, commandes et plus encore dans votre tableau de bord ShopBase.",
+    "ogImageAlt": "Tableau de bord ShopBase",
+    "twitterTitle": "Tableau de bord - ShopBase",
+    "twitterDescription": "Gérez vos produits, commandes et plus encore dans votre tableau de bord ShopBase."
   }
 }

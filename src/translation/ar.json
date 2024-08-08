@@ -205,5 +205,14 @@
     "Free": "مجانا",
     "Total": "الإجمالي",
     "Checkout": "إتمام الشراء"
+  },
+  "DashboardPage": {
+    "metaTitle": "لوحة التحكم - ShopBase",
+    "metaDescription": "قم بإدارة منتجاتك وطلباتك والمزيد في لوحة التحكم الخاصة بـ ShopBase.",
+    "ogTitle": "لوحة التحكم - ShopBase",
+    "ogDescription": "قم بإدارة منتجاتك وطلباتك والمزيد في لوحة التحكم الخاصة بـ ShopBase.",
+    "ogImageAlt": "لوحة تحكم ShopBase",
+    "twitterTitle": "لوحة التحكم - ShopBase",
+    "twitterDescription": "قم بإدارة منتجاتك وطلباتك والمزيد في لوحة التحكم الخاصة بـ ShopBase."
   }
 }

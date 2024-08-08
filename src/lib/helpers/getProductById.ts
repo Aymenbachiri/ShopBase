@@ -5,7 +5,9 @@ const API_URL = process.env.API_URL;
 
 export async function getProductById(ProductId: string): Promise<ProductsType> {
   try {
-    const res = await fetch(`${API_URL}/api/products/${ProductId}`);
+    const res = await fetch(`${API_URL}/api/products/${ProductId}`, {
+      cache: "no-store",
+    });
 
     if (!res.ok) notFound();
 

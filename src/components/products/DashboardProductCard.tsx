@@ -1,6 +1,6 @@
 import type { DashboardProductCardProps } from "@/lib/types/types";
 import { Link } from "@/navigation";
-import DeleteProduct from "../buttons/DeleteProduct";
+import DeleteProductBtn from "../buttons/DeleteProductBtn";
 import EditIcon from "@/lib/svg/EditIcon";
 import TimeStamp from "@/lib/helpers/TimeStamp";
 
@@ -35,21 +35,21 @@ export default function DashboardProductCard({
         </p>
         <section className="flex flex-col md:flex-row md:items-center md:justify-between text-center pt-4">
           <TimeStamp time={product.updatedAt} />
-          <div className="flex items-center justify-center mt-4 md:mt-0">
+          <nav className="flex items-center justify-center mt-4 md:mt-0">
             <Link
               href={`/products/${product._id}`}
               className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mr-2"
             >
               View
             </Link>
-            <DeleteProduct id={product._id} />
+            <DeleteProductBtn id={product._id} />
             <Link
-              href={`/edit/${product._id}`}
+              href={`/editProduct/${product._id}`}
               className="bg-gray-500 hover:bg-gray-600 text-white font-bold p-2 rounded-full text-center ml-2"
             >
               <EditIcon />
             </Link>
-          </div>
+          </nav>
         </section>
       </div>
     </main>

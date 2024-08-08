@@ -102,3 +102,19 @@ export type DashboardProductCardProps = {
 export type DeleteProductProps = {
   id: string;
 };
+
+export type EditProductPageProps = {
+  params: { productId: string };
+};
+
+export type EditProductFormProps = {
+  product: {
+    _id: string;
+    title: string;
+    description: string;
+    category: "men" | "women" | "electronics" | "jewelery";
+    imageurl: string;
+    price: number;
+    creator: string;
+  };
+};

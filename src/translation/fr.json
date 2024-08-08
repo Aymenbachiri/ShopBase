@@ -214,5 +214,9 @@
     "ogImageAlt": "Tableau de bord ShopBase",
     "twitterTitle": "Tableau de bord - ShopBase",
     "twitterDescription": "Gérez vos produits, commandes et plus encore dans votre tableau de bord ShopBase."
+  },
+  "EditProductPage": {
+    "Header": "Modifier un produit",
+    "UpdateBtn": "Actualisez"
   }
 }

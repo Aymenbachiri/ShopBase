@@ -214,5 +214,9 @@
     "ogImageAlt": "ShopBase Dashboard",
     "twitterTitle": "Dashboard - ShopBase",
     "twitterDescription": "Manage your products, orders, and more in your ShopBase dashboard."
+  },
+  "EditProductPage": {
+    "Header": "Edit a Product",
+    "UpdateBtn": "Update"
   }
 }

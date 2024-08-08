@@ -6,7 +6,7 @@ import DeleteIcon from "@/lib/svg/DeleteIcon";
 import type { DeleteProductProps } from "@/lib/types/types";
 import { useSession } from "next-auth/react";
 
-export default function DeleteProduct({ id }: DeleteProductProps) {
+export default function DeleteProductBtn({ id }: DeleteProductProps) {
   const session = useSession();
   const { mutate } = useFetchDashboardProducts(session.data?.user.name);
   const handleDelete = useDeleteProduct(mutate);

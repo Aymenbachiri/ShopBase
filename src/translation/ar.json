@@ -214,5 +214,9 @@
     "ogImageAlt": "لوحة تحكم ShopBase",
     "twitterTitle": "لوحة التحكم - ShopBase",
     "twitterDescription": "قم بإدارة منتجاتك وطلباتك والمزيد في لوحة التحكم الخاصة بـ ShopBase."
+  },
+  "EditProductPage": {
+    "Header": "تعديل منتج",
+    "UpdateBtn": "تحديث"
   }
 }

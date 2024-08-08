@@ -7,7 +7,8 @@ export async function getDashboardProducts(
 ): Promise<ProductsType[]> {
   try {
     const res = await fetch(
-      `${API_URL}//api/dashboardProducts?creator=${name}`
+      `${API_URL}//api/dashboardProducts?creator=${name}`,
+      { cache: "no-store" }
     );
 
     if (!res.ok) {

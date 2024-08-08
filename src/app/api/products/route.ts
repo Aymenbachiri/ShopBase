@@ -1,5 +1,7 @@
 import connectToDB from "@/lib/database/database";
 import Product from "@/lib/database/models/Product";
+import { rateLimitByIp } from "@/lib/helpers/Limiter";
+import { RateLimitError } from "@/lib/helpers/RateLimitError";
 import { productSchema } from "@/lib/schemas/productSchema";
 import { NextResponse, type NextRequest } from "next/server";
 import { z } from "zod";
@@ -22,6 +24,8 @@ export async function GET(req: NextRequest) {
 
 export async function POST(req: NextRequest) {
   try {
+    await rateLimitByIp({ key: "product-creation" });
+
     const body = await req.json();
 
     const parsedBody = productSchema.safeParse(body);
@@ -56,6 +60,9 @@ export async function POST(req: NextRequest) {
 
     return new Response("Product has been created", { status: 201 });
   } catch (error) {
+    if (error instanceof RateLimitError) {
+      return new NextResponse("Rate limit exceeded", { status: 429 });
+    }
     if (error instanceof z.ZodError) {
       console.error("Input validation error:", error.issues);
       return new NextResponse(

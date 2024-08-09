@@ -204,7 +204,8 @@
     "Shipping": "Expédition",
     "Free": "Gratuit",
     "Total": "Total",
-    "Checkout": "Passer à la caisse"
+    "Checkout": "Passer à la caisse",
+    "RestCartAlert": "Êtes-vous sûr de vouloir réinitialiser votre panier ?"
   },
   "DashboardPage": {
     "metaTitle": "Tableau de bord - ShopBase",
@@ -213,7 +214,11 @@
     "ogDescription": "Gérez vos produits, commandes et plus encore dans votre tableau de bord ShopBase.",
     "ogImageAlt": "Tableau de bord ShopBase",
     "twitterTitle": "Tableau de bord - ShopBase",
-    "twitterDescription": "Gérez vos produits, commandes et plus encore dans votre tableau de bord ShopBase."
+    "twitterDescription": "Gérez vos produits, commandes et plus encore dans votre tableau de bord ShopBase.",
+    "ViewLink": "Voir",
+    "DeleteProductAlert": "Êtes-vous sûr de vouloir supprimer ce produit ?",
+    "NoProductHeader": "Vous n'avez aucun produit.",
+    "NoProductLink": "Vendre un"
   },
   "EditProductPage": {
     "Header": "Modifier un produit",

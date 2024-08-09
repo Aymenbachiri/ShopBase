@@ -6,6 +6,7 @@ import { EditProductFormData } from "../schemas/editProductSchema";
 import { useTranslations } from "next-intl";
 import { TranslationFunctionWithStringFallback } from "../types/types";
 import { translatedEditProductSchema } from "../schemas/translatedEditProductSchema";
+import { useRouter } from "@/navigation";
 
 export const useEditProductForm = (initialData: EditProductFormData) => {
   const [loading, setLoading] = useState(false);
@@ -13,6 +14,7 @@ export const useEditProductForm = (initialData: EditProductFormData) => {
   const tRaw = useTranslations("EditProductPage.EditProductForm");
   const t = tRaw as unknown as TranslationFunctionWithStringFallback;
   const editSchema = translatedEditProductSchema(t);
+  const router = useRouter();
 
   const {
     register,
@@ -47,12 +49,11 @@ export const useEditProductForm = (initialData: EditProductFormData) => {
 
         await toast.promise(editProduct(), {
           loading: t("updateProduct"),
-          success: () => {
-            reset();
-            return t("productUpdatedSuccessfully");
-          },
+          success: t("productUpdatedSuccessfully"),
           error: (err) => err.message || t("failedToUpdateProduct"),
         });
+
+        router.push("/dashboard");
       } catch (error) {
         if (error instanceof Error) {
           setErr(error.message);

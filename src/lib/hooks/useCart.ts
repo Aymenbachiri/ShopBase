@@ -8,12 +8,14 @@ import {
   increaseQuantity,
   removeFromCart,
 } from "../redux-toolkit/shopBaseSlice";
+import { useTranslations } from "next-intl";
 
 const useCart = () => {
   const products: ProductCartProps[] = useSelector(
     (state: RootState) => state.shop.products
   );
   const dispatch = useDispatch();
+  const t = useTranslations("CartPage");
 
   const totalPrice = products.reduce((acc, product) => {
     acc += product.price * product.quantity!;
@@ -21,9 +23,7 @@ const useCart = () => {
   }, 0);
 
   const handleResetCart = () => {
-    const confirmed = window.confirm(
-      "Are you sure you want to reset your cart?"
-    );
+    const confirmed = window.confirm(t("RestCartAlert"));
     if (confirmed) {
       dispatch(clearCart());
     }

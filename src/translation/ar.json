@@ -204,7 +204,8 @@
     "Shipping": "الشحن",
     "Free": "مجانا",
     "Total": "الإجمالي",
-    "Checkout": "إتمام الشراء"
+    "Checkout": "إتمام الشراء",
+    "RestCartAlert": "هل أنت متأكد أنك تريد إعادة تعيين عربة التسوق الخاصة بك؟"
   },
   "DashboardPage": {
     "metaTitle": "لوحة التحكم - ShopBase",
@@ -213,7 +214,11 @@
     "ogDescription": "قم بإدارة منتجاتك وطلباتك والمزيد في لوحة التحكم الخاصة بـ ShopBase.",
     "ogImageAlt": "لوحة تحكم ShopBase",
     "twitterTitle": "لوحة التحكم - ShopBase",
-    "twitterDescription": "قم بإدارة منتجاتك وطلباتك والمزيد في لوحة التحكم الخاصة بـ ShopBase."
+    "twitterDescription": "قم بإدارة منتجاتك وطلباتك والمزيد في لوحة التحكم الخاصة بـ ShopBase.",
+    "ViewLink": "رؤية",
+    "DeleteProductAlert": "هل أنت متأكد أنك تريد حذف هذا المنتج؟",
+    "NoProductHeader": "ليس لديك أي منتج.",
+    "NoProductLink": "قم ببيع واحد"
   },
   "EditProductPage": {
     "Header": "تعديل منتج",

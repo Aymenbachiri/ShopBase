@@ -19,28 +19,26 @@ const useSellProductForm = () => {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<ProductFormData>({
     resolver: zodResolver(sellSchema),
   });
 
-  const registerProduct = useCallback(
-    async (data: ProductFormData): Promise<void> => {
-      const res = await fetch("/api/products", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+  const registerProduct = async (data: ProductFormData): Promise<void> => {
+    const res = await fetch("/api/products", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
 
-      if (!res.ok) {
-        const errorData = await res.json();
-        throw new Error(errorData.error || t("failedToAddProduct"));
-      }
-    },
-    [t]
-  );
+    if (!res.ok) {
+      const errorData = await res.json();
+      throw new Error(errorData.error || t("failedToAddProduct"));
+    }
+  };
 
   const onSubmit = useCallback(
     async (data: ProductFormData) => {
@@ -54,7 +52,6 @@ const useSellProductForm = () => {
       }
 
       setLoading(true);
-
       try {
         await toast.promise(registerProduct(data), {
           loading: t("addingProduct"),
@@ -62,23 +59,29 @@ const useSellProductForm = () => {
           error: (err) => err.message || t("failedToAddProduct"),
         });
 
+        reset();
         setCaptcha(false);
       } catch (error) {
         console.error("Product addition error:", error);
         toast.error(t("unexpectedError"));
       } finally {
         setLoading(false);
+        window.location.reload();
       }
     },
-    [captcha, registerProduct, t]
+    [captcha, registerProduct, reset, session, t]
   );
+
+  const handleCaptchaChange = useCallback((value: boolean) => {
+    setCaptcha(value);
+  }, []);
 
   return {
     register,
     handleSubmit: handleSubmit(onSubmit),
     errors,
     loading,
-    setCaptcha,
+    setCaptcha: handleCaptchaChange,
     captcha,
   };
 };

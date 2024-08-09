@@ -1,30 +1,45 @@
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+"use client";
+
+import { useSession } from "next-auth/react";
+import useSWR from "swr";
 import DashboardProductCard from "@/components/products/DashboardProductCard";
-import { getDashboardProducts } from "@/lib/helpers/getDashboardProducts";
 import { ProductsType } from "@/lib/types/types";
 import { Link } from "@/navigation";
-import { getServerSession } from "next-auth";
+import LoadingSpinner from "@/lib/svg/LoadingSpinner";
+import { SwrFetcher } from "@/lib/helpers/SwrFetcher";
+import { useTranslations } from "next-intl";
 
-export default async function DashboardPage() {
-  const session = await getServerSession(authOptions);
-  const dashboardProducts: ProductsType[] | null = session?.user.name
-    ? await getDashboardProducts(session?.user.name)
-    : null;
+export default function DashboardPage() {
+  const t = useTranslations("DashboardPage");
+  const { data: session } = useSession();
+  const {
+    data: dashboardProducts,
+    error,
+    isLoading,
+  } = useSWR<ProductsType[]>(
+    session?.user?.name
+      ? `/api/dashboardProducts?creator=${session.user.name}`
+      : null,
+    SwrFetcher
+  );
 
-  if (!dashboardProducts) {
+  if (isLoading) return <LoadingSpinner />;
+  if (error) return <div>Failed to load products</div>;
+
+  if (!dashboardProducts || dashboardProducts.length === 0) {
     return (
-      <main>
-        <h1 className="mt-10">You don&apos;t have any product.</h1>
-        <Link href="/sell" className="ml-2 underline">
-          Sell One
+      <main className="flex justify-center items-center mt-[30%] gap-4">
+        <h1 className="">{t("NoProductHeader")}</h1>
+        <Link href="/sell" className="underline">
+          {t("NoProductLink")}
         </Link>
       </main>
     );
   }
 
   return (
-    <main className="grid gap-4 gap-y-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-20 md:mt-[200px] md:mx-[200px]">
-      {dashboardProducts?.map((item: ProductsType) => (
+    <main className="grid gap-4 gap-y-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 my-20 md:mt-[200px] md:mx-[200px]">
+      {dashboardProducts.map((item: ProductsType) => (
         <DashboardProductCard key={item._id} product={item} />
       ))}
     </main>

@@ -204,7 +204,8 @@
     "Shipping": "Shipping",
     "Free": "Free",
     "Total": "Total",
-    "Checkout": "Checkout"
+    "Checkout": "Checkout",
+    "RestCartAlert": "Are you sure you want to reset your cart?"
   },
   "DashboardPage": {
     "metaTitle": "Dashboard - ShopBase",
@@ -213,7 +214,11 @@
     "ogDescription": "Manage your products, orders, and more in your ShopBase dashboard.",
     "ogImageAlt": "ShopBase Dashboard",
     "twitterTitle": "Dashboard - ShopBase",
-    "twitterDescription": "Manage your products, orders, and more in your ShopBase dashboard."
+    "twitterDescription": "Manage your products, orders, and more in your ShopBase dashboard.",
+    "ViewLink": "View",
+    "DeleteProductAlert": "Are you sure you want to delete this product?",
+    "NoProductHeader": "You don't have any product.",
+    "NoProductLink": "Sell One"
   },
   "EditProductPage": {
     "Header": "Edit a Product",

@@ -1,19 +1,24 @@
 "use client";
 
 import { useDeleteProduct } from "@/lib/hooks/useDeleteProduct";
-import { useFetchDashboardProducts } from "@/lib/hooks/useFetchDashboardProducts";
 import DeleteIcon from "@/lib/svg/DeleteIcon";
 import type { DeleteProductProps } from "@/lib/types/types";
 import { useSession } from "next-auth/react";
+import { useSWRConfig } from "swr";
 
 export default function DeleteProductBtn({ id }: DeleteProductProps) {
-  const session = useSession();
-  const { mutate } = useFetchDashboardProducts(session.data?.user.name);
-  const handleDelete = useDeleteProduct(mutate);
+  const { mutate } = useSWRConfig();
+  const { data: session } = useSession();
+  const handleDelete = useDeleteProduct();
+
+  const onDelete = async () => {
+    await handleDelete(id);
+    mutate(`/api/dashboardProducts?creator=${session?.user?.name}`);
+  };
 
   return (
     <button
-      onClick={() => handleDelete(id)}
+      onClick={onDelete}
       className="bg-red-500 hover:bg-red-600 text-white font-bold p-2 rounded-full"
     >
       <DeleteIcon />

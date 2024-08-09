@@ -1,7 +1,9 @@
 import ProtectedRoute from "@/lib/helpers/ProtectedRoute";
+import LoadingSpinner from "@/lib/svg/LoadingSpinner";
 import DashboardPage from "@/pages/DashboardPage";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import { Suspense } from "react";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("DashboardPage");
@@ -35,7 +37,9 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Dashboard() {
   return (
     <ProtectedRoute>
-      <DashboardPage />
+      <Suspense fallback={<LoadingSpinner />}>
+        <DashboardPage />
+      </Suspense>
     </ProtectedRoute>
   );
 }

@@ -62,7 +62,11 @@ export default function EditProductForm({ product }: EditProductFormProps) {
         label={t("Price")}
         type="number"
         placeholder={""}
-        registration={register("price")}
+        registration={{
+          ...register("price", {
+            valueAsNumber: true,
+          }),
+        }}
         error={errors.price}
       />
 

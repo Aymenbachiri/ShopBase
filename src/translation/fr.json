@@ -217,6 +217,32 @@
   },
   "EditProductPage": {
     "Header": "Modifier un produit",
-    "UpdateBtn": "Actualisez"
+    "UpdateBtn": "Actualisez",
+    "EditProductForm": {
+      "ProductTitle": "Titre du produit",
+      "ProductTitleInputPlaceholder": "Entrez le titre du produit",
+      "Description": "Description",
+      "DescriptionInputPlaceholder": "Entrez la description du produit",
+      "SelectCategory": "Sélectionnez une catégorie",
+      "men": "Hommes",
+      "women": "Femmes",
+      "electronics": "Électronique",
+      "jewelery": "Bijoux",
+      "ImageUrl": "URL de l'image",
+      "Price": "Prix",
+      "PriceInputPlaceholder": "Entrez le prix",
+      "captchaFailed": "Échec de la vérification du Captcha",
+      "updateProduct": "Mise à jour du produit...",
+      "productUpdatedSuccessfully": "Produit mis à jour avec succès",
+      "failedToUpdateProduct": "Échec de la mise à jour du produit",
+      "unexpectedError": "Une erreur inattendue s'est produite",
+      "TitleRequired": "Le titre est requis",
+      "DescriptionRequired": "La description est requise",
+      "invalidCategory": "Veuillez entrer une catégorie valide",
+      "InvalidURL": "Veuillez entrer une URL valide",
+      "PriceRequired": "Le prix est requis",
+      "PriceMustBeNumber": "Le prix doit être un nombre",
+      "PriceMustBePositiveNumber": "Le prix doit être un nombre positif"
+    }
   }
 }

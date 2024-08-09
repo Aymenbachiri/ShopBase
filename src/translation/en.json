@@ -217,6 +217,32 @@
   },
   "EditProductPage": {
     "Header": "Edit a Product",
-    "UpdateBtn": "Update"
+    "UpdateBtn": "Update",
+    "EditProductForm": {
+      "ProductTitle": "Product Title",
+      "ProductTitleInputPlaceholder": "Enter the product title",
+      "Description": "Description",
+      "DescriptionInputPlaceholder": "Enter product description",
+      "SelectCategory": "Select a category",
+      "men": "Men",
+      "women": "Women",
+      "electronics": "Electronics",
+      "jewelery": "Jewelry",
+      "ImageUrl": "Image URL",
+      "Price": "Price",
+      "PriceInputPlaceholder": "Enter the price",
+      "captchaFailed": "Captcha verification failed",
+      "updateProduct": "Updating product...",
+      "productUpdatedSuccessfully": "Product updated successfully",
+      "failedToUpdateProduct": "Failed to update product",
+      "unexpectedError": "An unexpected error occurred",
+      "TitleRequired": "Title is required",
+      "DescriptionRequired": "Description is required",
+      "invalidCategory": "Please enter a valid Category",
+      "InvalidURL": "Please enter a valid Url",
+      "PriceRequired": "Price is required",
+      "PriceMustBeNumber": "Price must be a number",
+      "PriceMustBePositiveNumber": "Price must be a positive number"
+    }
   }
 }

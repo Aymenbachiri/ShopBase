@@ -217,6 +217,32 @@
   },
   "EditProductPage": {
     "Header": "تعديل منتج",
-    "UpdateBtn": "تحديث"
+    "UpdateBtn": "تحديث",
+    "EditProductForm": {
+      "ProductTitle": "عنوان المنتج",
+      "ProductTitleInputPlaceholder": "أدخل عنوان المنتج",
+      "Description": "الوصف",
+      "DescriptionInputPlaceholder": "أدخل وصف المنتج",
+      "SelectCategory": "اختر فئة",
+      "men": "رجال",
+      "women": "نساء",
+      "electronics": "إلكترونيات",
+      "jewelery": "مجوهرات",
+      "ImageUrl": "رابط الصورة",
+      "Price": "السعر",
+      "PriceInputPlaceholder": "أدخل السعر",
+      "captchaFailed": "فشل التحقق من الكابتشا",
+      "updateProduct": "تحديث المنتج...",
+      "productUpdatedSuccessfully": "تم تحديث المنتج بنجاح",
+      "failedToUpdateProduct": "فشل في تحديث المنتج",
+      "unexpectedError": "حدث خطأ غير متوقع",
+      "TitleRequired": "العنوان مطلوب",
+      "DescriptionRequired": "الوصف مطلوب",
+      "invalidCategory": "يرجى إدخال فئة صالحة",
+      "InvalidURL": "يرجى إدخال رابط صالح",
+      "PriceRequired": "السعر مطلوب",
+      "PriceMustBeNumber": "يجب أن يكون السعر رقمًا",
+      "PriceMustBePositiveNumber": "يجب أن يكون السعر رقمًا موجبًا"
+    }
   }
 }

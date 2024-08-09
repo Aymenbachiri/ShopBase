@@ -116,3 +116,46 @@ export const PATCH = async (req: NextRequest, { params }: Props) => {
     }
   }
 };
+
+export const DELETE = async (req: NextRequest, { params }: Props) => {
+  const parsedParams = productIdSchema.safeParse(params);
+
+  if (!parsedParams.success) {
+    return new NextResponse(
+      JSON.stringify({
+        errors: parsedParams.error.issues.map((issue) => ({
+          field: issue.path[0],
+          message: issue.message,
+        })),
+      }),
+      { status: 400 }
+    );
+  }
+
+  const { productId } = parsedParams.data;
+  try {
+    await connectToDB();
+
+    const product = await Product.findByIdAndDelete(productId);
+
+    if (!product) {
+      return new NextResponse("Product not found", { status: 404 });
+    }
+
+    return new NextResponse("Product deleted successfully", { status: 200 });
+  } catch (error) {
+    if (error instanceof z.ZodError) {
+      console.error("Input validation error:", error.issues);
+      return new NextResponse(
+        JSON.stringify({ error: error.issues[0].message }),
+        { status: 400 }
+      );
+    } else {
+      console.error("Error during product suppression:", error);
+      return new NextResponse(
+        JSON.stringify({ error: "Failed to delete product" }),
+        { status: 500 }
+      );
+    }
+  }
+};

@@ -65,7 +65,7 @@ export const useEditProductForm = (initialData: EditProductFormData) => {
         setLoading(false);
       }
     },
-    [reset, t]
+    [initialData?.id, reset, t]
   );
 
   return {

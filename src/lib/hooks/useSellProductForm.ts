@@ -7,11 +7,13 @@ import { useTranslations } from "next-intl";
 import type { TranslationFunctionWithStringFallback } from "../types/types";
 import { translatedSellProductSchema } from "../schemas/translatedSellProductSchema";
 import { useSession } from "next-auth/react";
+import { useRouter } from "@/navigation";
 
 const useSellProductForm = () => {
   const [loading, setLoading] = useState(false);
   const [captcha, setCaptcha] = useState(false);
   const session = useSession();
+  const router = useRouter();
   const tRaw = useTranslations("SellProductPage.SellProductForm");
   const t = tRaw as unknown as TranslationFunctionWithStringFallback;
   const sellSchema = translatedSellProductSchema(t);
@@ -66,10 +68,10 @@ const useSellProductForm = () => {
         toast.error(t("unexpectedError"));
       } finally {
         setLoading(false);
-        window.location.reload();
+        router.push("/dashboard");
       }
     },
-    [captcha, registerProduct, reset, session, t]
+    [captcha, registerProduct, reset, router, session, t]
   );
 
   const handleCaptchaChange = useCallback((value: boolean) => {

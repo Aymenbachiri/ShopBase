@@ -26,7 +26,6 @@ export const useEditProductForm = (initialData: EditProductFormData) => {
 
   const onSubmit = useCallback(
     async (data: EditProductFormData) => {
-      console.log(`/api/products/${initialData.id}`);
       try {
         setLoading(true);
         setErr(null);

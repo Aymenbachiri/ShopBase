@@ -8,7 +8,7 @@ import { z } from "zod";
 
 type Props = {
   params: {
-    id: string;
+    productId: string;
   };
 };
 

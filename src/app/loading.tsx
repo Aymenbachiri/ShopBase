@@ -1,5 +1,5 @@
-import LoadingSpinner from "@/lib/svg/LoadingSpinner";
+import LoadingDots from "@/components/reusable_components/LoadingDots";
 
 export default function Loading() {
-  return <LoadingSpinner />;
+  return <LoadingDots />;
 }

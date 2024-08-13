@@ -1,9 +1,9 @@
 import SellProductForm from "@/components/forms/SellProductForm";
 import ProtectedRoute from "@/lib/helpers/ProtectedRoute";
-import { getTranslations } from "next-intl/server";
+import { ServerTranslation } from "@/lib/helpers/ServerTranslation";
 
 export default async function SellProductPage() {
-  const t = await getTranslations("SellProductPage");
+  const { t } = await ServerTranslation("SellProductPage");
 
   return (
     <ProtectedRoute>

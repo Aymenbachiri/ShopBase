@@ -1,9 +1,10 @@
-import { getTranslations } from "next-intl/server";
 import CartCheckout from "./CartCheckout";
 import CartProducts from "./CartProducts";
+import MySuspense from "../reusable_components/MySuspense";
+import { ServerTranslation } from "@/lib/helpers/ServerTranslation";
 
 export default async function CartUi() {
-  const t = await getTranslations("CartPage");
+  const { t } = await ServerTranslation("CartPage");
 
   return (
     <main className="h-[90vh]  my-[110px]">
@@ -17,7 +18,9 @@ export default async function CartUi() {
           <div className="bg-white rounded-md shadow">
             <div className="px-4 py-6 sm:px-8 sm:py-10">
               <div className="flow-root">
-                <CartProducts />
+                <MySuspense>
+                  <CartProducts />
+                </MySuspense>
               </div>
               <CartCheckout />
             </div>

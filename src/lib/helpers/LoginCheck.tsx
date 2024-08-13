@@ -2,7 +2,7 @@ import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import LogoutBtn from "@/components/auth/LogoutBtn";
 import { Link } from "@/navigation";
 import { getServerSession } from "next-auth";
-import { getTranslations } from "next-intl/server";
+import { ServerTranslation } from "./ServerTranslation";
 
 export default async function LoginCheck({
   children,
@@ -10,7 +10,7 @@ export default async function LoginCheck({
   children: React.ReactNode;
 }) {
   const session = await getServerSession(authOptions);
-  const t = await getTranslations("LoginCheck");
+  const { t } = await ServerTranslation("LoginCheck");
 
   if (session) {
     return (

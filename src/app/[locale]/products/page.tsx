@@ -1,9 +1,8 @@
+import MySuspense from "@/components/reusable_components/MySuspense";
 import DotsIcon from "@/lib/svg/DotsIcon";
-import LoadingSpinner from "@/lib/svg/LoadingSpinner";
 import ProductsPage from "@/pages/ProductsPage";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
-import { Suspense } from "react";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("ProductsPage");
@@ -50,9 +49,9 @@ export default async function Products() {
           {t("subHeader")}
         </p>
       </section>
-      <Suspense fallback={<LoadingSpinner />}>
+      <MySuspense>
         <ProductsPage />
-      </Suspense>
+      </MySuspense>
     </main>
   );
 }

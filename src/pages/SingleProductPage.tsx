@@ -15,6 +15,11 @@ export default function SingleProductPage({
   const starCount = Math.random() < 0.5 ? 4 : 5;
   const reviewsCount = Math.floor(Math.random() * 151) + 50;
 
+  const productWithId = {
+    ...product,
+    id: product.id || "",
+  };
+
   return (
     <main className="mt-32 dark:text-white">
       <div className="container mx-auto px-4 py-8">
@@ -64,7 +69,7 @@ export default function SingleProductPage({
                 {creator}
               </h2>
             </section>
-            <AddToCartBtn product={product} />
+            <AddToCartBtn product={productWithId} />
           </div>
         </div>
       </div>

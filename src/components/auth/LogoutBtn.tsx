@@ -1,9 +1,9 @@
 "use client";
+import { ClientTranslation } from "@/lib/helpers/ClientTranslation";
 import { signOut } from "next-auth/react";
-import { useTranslations } from "next-intl";
 
 export default function LogoutBtn() {
-  const t = useTranslations("LoginCheck");
+  const { t } = ClientTranslation("LoginCheck");
   return (
     <button className="underline" onClick={() => signOut()}>
       {t("LogoutBtn")}

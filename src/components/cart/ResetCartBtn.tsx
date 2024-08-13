@@ -1,11 +1,11 @@
 "use client";
 
+import { ClientTranslation } from "@/lib/helpers/ClientTranslation";
 import useCart from "@/lib/hooks/useCart";
-import { useTranslations } from "next-intl";
 
 export default function ResetCartBtn() {
   const { handleResetCart } = useCart();
-  const t = useTranslations("CartPage");
+  const { t } = ClientTranslation("CartPage");
 
   return (
     <button

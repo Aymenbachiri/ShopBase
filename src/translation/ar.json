@@ -221,7 +221,13 @@
     "NoProductLink": "قم ببيع واحد"
   },
   "EditProductPage": {
-    "Header": "تعديل منتج",
+    "Header": "تعديل المنتج",
+    "metaTitle": "تعديل {title}",
+    "metaDescription": "تعديل تفاصيل المنتج لـ {title}. {description}",
+    "ogTitle": "تعديل {title}",
+    "ogDescription": "تعديل تفاصيل المنتج لـ {title}. {description}",
+    "twitterTitle": "تعديل {title}",
+    "twitterDescription": "تعديل تفاصيل المنتج لـ {title}. {description}",
     "UpdateBtn": "تحديث",
     "EditProductForm": {
       "ProductTitle": "عنوان المنتج",

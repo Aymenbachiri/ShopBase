@@ -6,6 +6,7 @@ import UsaFlag from "@/lib/svg/UsaFlag";
 import FranceFlag from "@/lib/svg/FranceFlag";
 import AlgeriaFlag from "@/lib/svg/AlgeriaFlag";
 import { useTranslations } from "next-intl";
+import { ClientTranslation } from "@/lib/helpers/ClientTranslation";
 
 export default function LocaleMenuList({
   setIsOpen,
@@ -14,7 +15,7 @@ export default function LocaleMenuList({
 }) {
   const { menuRef } = useLocaleMenu();
   const changeLanguage = useChangeLanguage();
-  const t = useTranslations("Languages");
+  const { t } = ClientTranslation("Languages");
 
   const Languages = [
     { code: "ar", name: t("Arabic"), flag: <AlgeriaFlag /> },

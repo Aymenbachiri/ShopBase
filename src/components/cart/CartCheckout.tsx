@@ -1,10 +1,11 @@
 import { Link } from "@/navigation";
 import ResetCartBtn from "./ResetCartBtn";
 import CartTotalPrice from "./CartTotalPrice";
-import { getTranslations } from "next-intl/server";
+import { ServerTranslation } from "@/lib/helpers/ServerTranslation";
 
 export default async function CartCheckout() {
-  const t = await getTranslations("CartPage");
+  const { t } = await ServerTranslation("CartPage");
+
   return (
     <main>
       <div className="mt-6 border-t border-b py-2">

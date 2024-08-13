@@ -1,4 +1,5 @@
 import Notfound from "@/app/not-found";
+import MySuspense from "@/components/reusable_components/MySuspense";
 import { getAllProductIds } from "@/lib/helpers/getAllProductIds";
 import { getProductById } from "@/lib/helpers/getProductById";
 import SingleProductPage from "@/pages/SingleProductPage";
@@ -65,5 +66,9 @@ export default async function Product({ params }: Props) {
 
   if (!product) Notfound();
 
-  return <SingleProductPage product={product} />;
+  return (
+    <MySuspense>
+      <SingleProductPage product={product} />;
+    </MySuspense>
+  );
 }

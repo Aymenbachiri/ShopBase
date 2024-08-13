@@ -1,5 +1,6 @@
 "use client";
 
+import { ClientTranslation } from "@/lib/helpers/ClientTranslation";
 import { useNavbar } from "@/lib/providers/NavbarProvider";
 import DashboardIcon from "@/lib/svg/DashboardIcon";
 import LogoutIcon from "@/lib/svg/LogoutIcon";
@@ -8,12 +9,11 @@ import SettingsIcon from "@/lib/svg/SettingsIcon";
 import UserIcon from "@/lib/svg/UserIcon";
 import { Link } from "@/navigation";
 import { signOut } from "next-auth/react";
-import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 export default function ProfileMenu() {
   const [isOpen, setIsOpen] = useState(false);
-  const t = useTranslations("ProfileMenu");
+  const { t } = ClientTranslation("ProfileMenu");
   const { handleNav } = useNavbar();
 
   return (

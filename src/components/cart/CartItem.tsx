@@ -1,5 +1,5 @@
+import { ClientTranslation } from "@/lib/helpers/ClientTranslation";
 import type { CartItemProps } from "@/lib/types/cartTypes";
-import { useTranslations } from "next-intl";
 
 export default function CartItem({
   product,
@@ -8,7 +8,7 @@ export default function CartItem({
   onRemove,
 }: CartItemProps) {
   const { quantity, imageurl, title, category } = product;
-  const t = useTranslations("CartPage");
+  const { t } = ClientTranslation("CartPage");
 
   return (
     <li className="flex flex-col space-y-3 py-6 text-left sm:flex-row sm:space-x-5 sm:space-y-0">

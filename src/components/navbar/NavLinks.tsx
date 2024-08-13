@@ -1,7 +1,7 @@
-import { getTranslations } from "next-intl/server";
+import { ServerTranslation } from "@/lib/helpers/ServerTranslation";
 
 export default async function getNavLinks() {
-  const t = await getTranslations("NavLinks");
+  const { t } = await ServerTranslation("NavLinks");
 
   return [
     { href: "/", label: t("Home") },

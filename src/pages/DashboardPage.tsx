@@ -5,12 +5,12 @@ import useSWR from "swr";
 import DashboardProductCard from "@/components/products/DashboardProductCard";
 import { ProductsType } from "@/lib/types/types";
 import { Link } from "@/navigation";
-import LoadingSpinner from "@/lib/svg/LoadingSpinner";
 import { SwrFetcher } from "@/lib/helpers/SwrFetcher";
-import { useTranslations } from "next-intl";
+import { ClientTranslation } from "@/lib/helpers/ClientTranslation";
+import LoadingDots from "@/components/reusable_components/LoadingDots";
 
 export default function DashboardPage() {
-  const t = useTranslations("DashboardPage");
+  const { t } = ClientTranslation("DashboardPage");
   const { data: session } = useSession();
   const {
     data: dashboardProducts,
@@ -23,7 +23,7 @@ export default function DashboardPage() {
     SwrFetcher
   );
 
-  if (isLoading) return <LoadingSpinner />;
+  if (isLoading) return <LoadingDots />;
   if (error) return <div>Failed to load products</div>;
 
   if (!dashboardProducts || dashboardProducts.length === 0) {

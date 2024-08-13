@@ -1,12 +1,11 @@
+import MySuspense from "@/components/reusable_components/MySuspense";
 import ProtectedRoute from "@/lib/helpers/ProtectedRoute";
-import LoadingSpinner from "@/lib/svg/LoadingSpinner";
+import { ServerTranslation } from "@/lib/helpers/ServerTranslation";
 import DashboardPage from "@/pages/DashboardPage";
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
-import { Suspense } from "react";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("DashboardPage");
+  const { t } = await ServerTranslation("DashboardPage");
 
   return {
     title: t("metaTitle"),
@@ -37,9 +36,9 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Dashboard() {
   return (
     <ProtectedRoute>
-      <Suspense fallback={<LoadingSpinner />}>
+      <MySuspense>
         <DashboardPage />
-      </Suspense>
+      </MySuspense>
     </ProtectedRoute>
   );
 }

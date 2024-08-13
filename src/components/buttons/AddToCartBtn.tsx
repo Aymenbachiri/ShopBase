@@ -1,8 +1,8 @@
 "use client";
 
+import { ClientTranslation } from "@/lib/helpers/ClientTranslation";
 import useCart from "@/lib/hooks/useCart";
-import { ProductCartProps } from "@/lib/types/cartTypes";
-import { useTranslations } from "next-intl";
+import type { ProductCartProps } from "@/lib/types/cartTypes";
 import toast from "react-hot-toast";
 
 export default function AddToCartBtn({
@@ -11,7 +11,7 @@ export default function AddToCartBtn({
   product: ProductCartProps;
 }) {
   const { handleAddToCart } = useCart();
-  const t = useTranslations("CartPage");
+  const { t } = ClientTranslation("CartPage");
 
   const handleClick = () => {
     handleAddToCart(product);

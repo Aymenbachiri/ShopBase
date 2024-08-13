@@ -1,9 +1,9 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { ClientTranslation } from "@/lib/helpers/ClientTranslation";
 
 export default function UpdateProductBtn({ loading }: { loading: boolean }) {
-  const t = useTranslations("EditProductPage");
+  const { t } = ClientTranslation("EditProductPage");
 
   return (
     <>

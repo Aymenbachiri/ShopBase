@@ -1,7 +1,7 @@
 import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { Link } from "@/navigation";
 import { getServerSession } from "next-auth";
-import { getTranslations } from "next-intl/server";
+import { ServerTranslation } from "./ServerTranslation";
 
 export default async function ProtectedRoute({
   children,
@@ -9,7 +9,7 @@ export default async function ProtectedRoute({
   children: React.ReactNode;
 }) {
   const session = await getServerSession(authOptions);
-  const t = await getTranslations("ProtectedRoute");
+  const { t } = await ServerTranslation("ProtectedRoute");
 
   if (!session) {
     return (

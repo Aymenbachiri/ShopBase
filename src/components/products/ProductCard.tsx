@@ -5,7 +5,7 @@ import type { ProductsType } from "@/lib/types/types";
 import { Link } from "@/navigation";
 import AddToCartBtn from "../buttons/AddToCartBtn";
 import LinkIcon from "@/lib/svg/LinkIcon";
-import { getTranslations } from "next-intl/server";
+import { ServerTranslation } from "@/lib/helpers/ServerTranslation";
 
 export default async function ProductCard({
   product,
@@ -16,7 +16,7 @@ export default async function ProductCard({
     product;
 
   const discount = Math.floor(Math.random() * 11);
-  const t = await getTranslations("ProductsPage");
+  const { t } = await ServerTranslation("ProductsPage");
 
   const productWithId = {
     ...product,

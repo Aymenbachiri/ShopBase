@@ -3,10 +3,10 @@
 import { Link } from "@/navigation";
 import Image from "next/image";
 import Img from "/public/assets/images/empty-cart.webp";
-import { useTranslations } from "next-intl";
+import { ClientTranslation } from "@/lib/helpers/ClientTranslation";
 
 export default function EmptyCart() {
-  const t = useTranslations("CartPage");
+  const { t } = ClientTranslation("CartPage");
 
   return (
     <main className="flex-col md:flex md:flex-row justify-center items-center my-[110px]">

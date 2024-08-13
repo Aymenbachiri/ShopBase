@@ -221,7 +221,13 @@
     "NoProductLink": "Sell One"
   },
   "EditProductPage": {
-    "Header": "Edit a Product",
+    "Header": "Edit Product",
+    "metaTitle": "Edit {title}",
+    "metaDescription": "Edit the product details for {title}. {description}",
+    "ogTitle": "Edit {title}",
+    "ogDescription": "Edit the product details for {title}. {description}",
+    "twitterTitle": "Edit {title}",
+    "twitterDescription": "Edit the product details for {title}. {description}",
     "UpdateBtn": "Update",
     "EditProductForm": {
       "ProductTitle": "Product Title",

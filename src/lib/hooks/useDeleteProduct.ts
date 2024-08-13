@@ -1,10 +1,10 @@
-import { useTranslations } from "next-intl";
 import { useSession } from "next-auth/react";
 import { useSWRConfig } from "swr";
 import { ProductsType } from "@/lib/types/types";
+import { ClientTranslation } from "../helpers/ClientTranslation";
 
 export const useDeleteProduct = () => {
-  const t = useTranslations("DashboardPage");
+  const { t } = ClientTranslation("DashboardPage");
   const { mutate } = useSWRConfig();
   const { data: session } = useSession();
 

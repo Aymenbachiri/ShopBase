@@ -1,9 +1,9 @@
 import RegisterUserForm from "@/components/forms/RegisterUserForm";
 import LoginCheck from "@/lib/helpers/LoginCheck";
-import { getTranslations } from "next-intl/server";
+import { ServerTranslation } from "@/lib/helpers/ServerTranslation";
 
 export default async function RegisterUserPage() {
-  const t = await getTranslations("RegisterUserPage");
+  const { t } = await ServerTranslation("RegisterUserPage");
 
   return (
     <LoginCheck>

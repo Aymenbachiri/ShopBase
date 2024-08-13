@@ -1,4 +1,5 @@
 import type { Session } from "next-auth";
+import { AbstractIntlMessages, TranslationValues } from "next-intl";
 import type { FieldError, UseFormRegisterReturn } from "react-hook-form";
 
 export type LocaleLayoutProps = {
@@ -117,4 +118,9 @@ export type EditProductFormProps = {
     price: number;
     creator: string;
   };
+};
+
+export type TypedTranslator<Messages extends AbstractIntlMessages> = {
+  (key: keyof Messages, values?: TranslationValues): string;
+  (key: (keyof Messages)[], values?: TranslationValues): string[];
 };

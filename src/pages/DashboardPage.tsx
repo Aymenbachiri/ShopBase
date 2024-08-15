@@ -7,7 +7,7 @@ import { ProductsType } from "@/lib/types/types";
 import { Link } from "@/navigation";
 import { SwrFetcher } from "@/lib/helpers/SwrFetcher";
 import { ClientTranslation } from "@/lib/helpers/ClientTranslation";
-import LoadingDots from "@/components/reusable_components/LoadingDots";
+import LoadingLoader from "@/components/reusable_components/LoadingLoader";
 
 export default function DashboardPage() {
   const { t } = ClientTranslation("DashboardPage");
@@ -23,7 +23,7 @@ export default function DashboardPage() {
     SwrFetcher
   );
 
-  if (isLoading) return <LoadingDots />;
+  if (isLoading) return <LoadingLoader />;
   if (error) return <div>Failed to load products</div>;
 
   if (!dashboardProducts || dashboardProducts.length === 0) {

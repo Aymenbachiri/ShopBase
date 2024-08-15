@@ -1,3 +1,4 @@
+import { getAllProductIds } from "@/lib/helpers/getAllProductIds";
 import { getProductById } from "@/lib/helpers/getProductById";
 import { ServerTranslation } from "@/lib/helpers/ServerTranslation";
 import type { EditProductPageProps } from "@/lib/types/types";
@@ -37,6 +38,18 @@ export async function generateMetadata({
       images: [imageurl],
     },
   };
+}
+
+export async function generateStaticParams(): Promise<
+  {
+    productId: string;
+  }[]
+> {
+  const productIds = await getAllProductIds();
+
+  return productIds.map((id) => ({
+    productId: id,
+  }));
 }
 
 export default function EditProduct({

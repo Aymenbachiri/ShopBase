@@ -1,16 +1,14 @@
-export default function LocaleMenuBtnIcon({ isOpen }: { isOpen: boolean }) {
+export default function ArrowIcon() {
   return (
     <svg
-      className={`w-5 h-5 transition-transform duration-200 ${
-        isOpen ? "rotate-180" : ""
-      }`}
+      className="w-4 h-4 ml-2 -mr-1 dark:text-gray-200 transform transition-transform duration-300 group-hover:rotate-180"
       xmlns="http://www.w3.org/2000/svg"
       width="1em"
       height="1em"
       viewBox="0 0 48 48"
     >
       <path
-        fill="none"
+        fill="currentColor"
         stroke="#000"
         strokeLinecap="round"
         strokeLinejoin="round"

@@ -1,10 +1,10 @@
 import { Suspense } from "react";
-import LoadingDots from "./LoadingDots";
+import LoadingLoader from "./LoadingLoader";
 
 export default function MySuspense({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <Suspense fallback={<LoadingDots />}>{children}</Suspense>;
+  return <Suspense fallback={<LoadingLoader />}>{children}</Suspense>;
 }

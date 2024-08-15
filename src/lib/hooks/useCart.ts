@@ -8,14 +8,14 @@ import {
   increaseQuantity,
   removeFromCart,
 } from "../redux-toolkit/shopBaseSlice";
-import { useTranslations } from "next-intl";
+import { ClientTranslation } from "../helpers/ClientTranslation";
 
 const useCart = () => {
   const products: ProductCartProps[] = useSelector(
     (state: RootState) => state.shop.products
   );
   const dispatch = useDispatch();
-  const t = useTranslations("CartPage");
+  const { t } = ClientTranslation("CartPage");
 
   const totalPrice = products.reduce((acc, product) => {
     acc += product.price * product.quantity!;

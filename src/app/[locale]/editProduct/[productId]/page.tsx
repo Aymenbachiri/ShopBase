@@ -1,8 +1,7 @@
-import { getAllProductIds } from "@/lib/helpers/getAllProductIds";
 import { getProductById } from "@/lib/helpers/getProductById";
 import { ServerTranslation } from "@/lib/helpers/ServerTranslation";
-import type { EditProductPageProps } from "@/lib/types/types";
-import EditProductPage from "@/pages/EditProductPage";
+import type { EditProductPageProps, ProductsType } from "@/lib/types/types";
+import EditProductPage from "@/page/EditProductPage";
 import { Metadata } from "next";
 
 export async function generateMetadata({
@@ -40,16 +39,12 @@ export async function generateMetadata({
   };
 }
 
-export async function generateStaticParams(): Promise<
-  {
-    productId: string;
-  }[]
-> {
-  const productIds = await getAllProductIds();
-
-  return productIds.map((id) => ({
-    productId: id,
-  }));
+export async function generateStaticParams() {
+  const API_URL = process.env.API_URL;
+  const products: ProductsType[] = await fetch(`${API_URL}/api/products`).then(
+    (res) => res.json()
+  );
+  return products.map((product) => ({ productId: product._id }));
 }
 
 export default function EditProduct({

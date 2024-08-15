@@ -2,7 +2,7 @@ import { getTranslations } from "next-intl/server";
 import LogInIcon from "../svg/LogInIcon";
 import { Link } from "@/navigation";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
+import { authOptions } from "./Auth";
 
 export default async function IsAuth({
   children,

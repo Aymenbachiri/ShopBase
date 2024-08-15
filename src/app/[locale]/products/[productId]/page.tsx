@@ -1,8 +1,8 @@
 import Notfound from "@/app/not-found";
 import MySuspense from "@/components/reusable_components/MySuspense";
-import { getAllProductIds } from "@/lib/helpers/getAllProductIds";
 import { getProductById } from "@/lib/helpers/getProductById";
-import SingleProductPage from "@/pages/SingleProductPage";
+import type { ProductsType } from "@/lib/types/types";
+import SingleProductPage from "@/page/SingleProductPage";
 import type { Metadata } from "next";
 
 type Props = {
@@ -48,16 +48,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export async function generateStaticParams(): Promise<
-  {
-    productId: string;
-  }[]
-> {
-  const productIds = await getAllProductIds();
-
-  return productIds.map((id) => ({
-    productId: id,
-  }));
+export async function generateStaticParams() {
+  const API_URL = process.env.API_URL;
+  const products: ProductsType[] = await fetch(`${API_URL}/api/products`).then(
+    (res) => res.json()
+  );
+  return products.map((product) => ({ productId: product._id }));
 }
 
 export default async function Product({ params }: Props) {

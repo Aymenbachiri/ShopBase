@@ -1,5 +1,5 @@
 import { ServerTranslation } from "@/lib/helpers/ServerTranslation";
-import CartPage from "@/pages/CartPage";
+import CartPage from "@/page/CartPage";
 import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {

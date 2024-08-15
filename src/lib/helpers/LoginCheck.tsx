@@ -1,8 +1,8 @@
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import LogoutBtn from "@/components/auth/LogoutBtn";
 import { Link } from "@/navigation";
 import { getServerSession } from "next-auth";
 import { ServerTranslation } from "./ServerTranslation";
+import { authOptions } from "./Auth";
 
 export default async function LoginCheck({
   children,

@@ -1,4 +1,4 @@
-import RegisterUserPage from "@/pages/RegisterUserPage";
+import RegisterUserPage from "@/page/RegisterUserPage";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 

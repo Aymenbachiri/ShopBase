@@ -1,7 +1,7 @@
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import { Link } from "@/navigation";
 import { getServerSession } from "next-auth";
 import { ServerTranslation } from "./ServerTranslation";
+import { authOptions } from "./Auth";
 
 export default async function ProtectedRoute({
   children,

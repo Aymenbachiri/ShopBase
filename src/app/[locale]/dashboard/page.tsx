@@ -1,7 +1,7 @@
 import MySuspense from "@/components/reusable_components/MySuspense";
 import ProtectedRoute from "@/lib/helpers/ProtectedRoute";
 import { ServerTranslation } from "@/lib/helpers/ServerTranslation";
-import DashboardPage from "@/pages/DashboardPage";
+import DashboardPage from "@/page/DashboardPage";
 import type { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {

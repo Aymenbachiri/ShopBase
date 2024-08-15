@@ -1,6 +1,6 @@
 import MySuspense from "@/components/reusable_components/MySuspense";
 import DotsIcon from "@/lib/svg/DotsIcon";
-import ProductsPage from "@/pages/ProductsPage";
+import ProductsPage from "@/page/ProductsPage";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 

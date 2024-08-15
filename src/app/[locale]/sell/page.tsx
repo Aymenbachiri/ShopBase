@@ -1,4 +1,4 @@
-import SellProductPage from "@/pages/SellProductPage";
+import SellProductPage from "@/page/SellProductPage";
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 

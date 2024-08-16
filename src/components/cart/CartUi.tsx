@@ -7,7 +7,7 @@ export default async function CartUi() {
   const { t } = await ServerTranslation("CartPage");
 
   return (
-    <main className="h-[90vh]  my-[110px]">
+    <main className="my-[110px]">
       <div className="mx-auto px-4 sm:px-6 lg:px-8">
         <section className="flex items-center justify-center">
           <h1 className="text-2xl font-semibold text-gray-900 dark:text-gray-200">

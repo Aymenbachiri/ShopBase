@@ -33,7 +33,7 @@ export default async function CartCheckout() {
       <section className="mt-6 text-center flex items-center gap-4">
         <button
           type="button"
-          className="group inline-flex w-full items-center justify-center rounded-md bg-gray-900 px-6 py-4 text-lg font-semibold text-white transition-all duration-200 ease-in-out focus:shadow hover:bg-gray-800"
+          className="group inline-flex w-full items-center justify-center rounded-md bg-gray-900 py-4 text-lg font-semibold text-white transition-all duration-200 ease-in-out focus:shadow hover:bg-gray-800"
         >
           {t("Checkout")}
           <svg

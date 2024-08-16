@@ -328,8 +328,20 @@
     "Answer4": "Nous offrons une politique de retour de 30 jours sur la plupart des produits. Si vous n'êtes pas satisfait de votre achat, vous pouvez le retourner dans les 30 jours pour un remboursement complet ou un échange. Veuillez vous assurer que l'article est dans son état et son emballage d'origine."
   },
   "Footer": {
-    "Copyright": "Logo tous droits réservés {year}",
+    "Copyright": "ShopBase tous droits réservés {year}",
     "ProvidedBy": "Fournit par :",
     "Aymen": "Aymen"
+  },
+  "AboutPage": {
+    "metaTitle": "À Propos de Nous - ShopBase",
+    "metaDescription": "Découvrez ShopBase, notre mission, nos valeurs et l'équipe derrière notre plateforme innovante.",
+    "ogTitle": "À Propos de Nous - ShopBase",
+    "ogDescription": "Découvrez qui nous sommes, ce que nous faisons et pourquoi ShopBase est le choix leader pour vos besoins en ecommerce.",
+    "ogImageAlt": "Image de la page À propos",
+    "twitterTitle": "À Propos de Nous - ShopBase",
+    "twitterDescription": "Explorez l'histoire de ShopBase et rencontrez l'équipe qui s'engage à fournir des solutions ecommerce exceptionnelles.",
+    "Title": "À Propos de Nous",
+    "Description": "Nous sommes une entreprise dédiée à fournir des solutions innovantes à nos clients. Notre équipe est passionnée par l'excellence et l'établissement de relations à long terme. Avec des années d'expérience dans notre secteur, nous comprenons les défis auxquels nos clients sont confrontés et travaillons sans relâche pour dépasser leurs attentes. Notre mission est de réussir grâce à une technologie de pointe et un service client inégalé.",
+    "ImageAlt": "Image À Propos de Nous"
   }
 }

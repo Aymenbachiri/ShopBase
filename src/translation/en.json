@@ -328,8 +328,20 @@
     "Answer4": "We offer a 30-day return policy on most products. If you're not satisfied with your purchase, you can return it within 30 days for a full refund or exchange. Please make sure the item is in its original condition and packaging."
   },
   "Footer": {
-    "Copyright": "",
+    "Copyright": "ShopBase all rights reserved {year}",
     "ProvidedBy": "Provided by:",
     "Aymen": "Aymen"
+  },
+  "AboutPage": {
+    "metaTitle": "About Us - ShopBase",
+    "metaDescription": "Learn more about ShopBase, our mission, values, and the team behind our innovative platform.",
+    "ogTitle": "About Us - ShopBase",
+    "ogDescription": "Discover who we are, what we do, and why ShopBase is the leading choice for your ecommerce needs.",
+    "ogImageAlt": "About Us page image",
+    "twitterTitle": "About Us - ShopBase",
+    "twitterDescription": "Explore the story of ShopBase and meet the team that is committed to providing exceptional ecommerce solutions.",
+    "Title": "About Us",
+    "Description": "We are a company dedicated to providing innovative solutions to our clients. Our team is passionate about delivering excellence and fostering long-term relationships. With years of experience in our industry, we understand the challenges our clients face and work tirelessly to exceed their expectations. Our mission is to drive success through cutting-edge technology and unparalleled customer service.",
+    "ImageAlt": "About Us Image"
   }
 }

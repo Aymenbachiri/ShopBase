@@ -124,3 +124,9 @@ export type TypedTranslator<Messages extends AbstractIntlMessages> = {
   (key: keyof Messages, values?: TranslationValues): string;
   (key: (keyof Messages)[], values?: TranslationValues): string[];
 };
+
+export type UpdatePasswordBtnProp = {
+  loading: boolean;
+  captcha: boolean;
+  UpdatePasswordButton: string;
+};

@@ -255,5 +255,36 @@
       "PriceMustBeNumber": "يجب أن يكون السعر رقمًا",
       "PriceMustBePositiveNumber": "يجب أن يكون السعر رقمًا موجبًا"
     }
+  },
+  "SettingsPage": {
+    "metaTitle": "الإعدادات - ShopBase",
+    "metaDescription": "إدارة إعدادات حسابك على ShopBase.",
+    "ogTitle": "الإعدادات - ShopBase",
+    "ogDescription": "قم بتكوين إعدادات حسابك على ShopBase.",
+    "ogImageAlt": "صفحة إعدادات ShopBase",
+    "twitterTitle": "الإعدادات - ShopBase",
+    "twitterDescription": "قم بتعديل تفضيلاتك على ShopBase.",
+    "heading": "تحديث كلمة المرور الخاصة بك",
+    "subheading": "تأكد من أمان حسابك عن طريق تحديث كلمة المرور بانتظام.",
+    "UpdatePasswordSchemaErrors": {
+      "currentPasswordRequired": "كلمة المرور الحالية مطلوبة",
+      "invalidPassword": "بيانات الاعتماد غير صحيحة",
+      "passwordMinLength": "يجب أن تكون كلمة المرور 8 أحرف على الأقل",
+      "confirmPasswordMinLength": "يجب أن تكون كلمة المرور المؤكدة 8 أحرف على الأقل",
+      "passwordsDoNotMatch": "كلمات المرور غير متطابقة",
+      "updating": "جارٍ التحديث...",
+      "captchaFailed": "فشل التحقق من Captcha؛ يرجى التأكيد على أنك لست روبوتًا.",
+      "updateSuccess": "تم تحديث كلمة المرور بنجاح.",
+      "updateFailed": "فشل في تحديث كلمة المرور",
+      "failedToUpdate": "فشل في تحديث كلمة المرور",
+      "unexpectedError": "حدث خطأ غير متوقع. يرجى المحاولة مرة أخرى.",
+      "currentPasswordInput": "كلمة المرور الحالية",
+      "currentPasswordInputPlaceholder": "أدخل كلمة المرور الحالية الخاصة بك",
+      "passwordInput": "كلمة المرور الجديدة",
+      "passwordInputPlaceholder": "أدخل كلمة مرور جديدة",
+      "confirmPasswordInput": "تأكيد كلمة المرور",
+      "confirmPasswordInputPlaceholder": "كرر كلمة المرور",
+      "UpdatePasswordButton": "تحديث"
+    }
   }
 }

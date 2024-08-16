@@ -1,11 +1,11 @@
 import MySuspense from "@/components/reusable_components/MySuspense";
+import { ServerTranslation } from "@/lib/helpers/ServerTranslation";
 import DotsIcon from "@/lib/svg/DotsIcon";
 import ProductsPage from "@/page/ProductsPage";
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("ProductsPage");
+  const { t } = await ServerTranslation("ProductsPage");
 
   return {
     title: t("metaTitle"),
@@ -34,7 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function Products() {
-  const t = await getTranslations("ProductsPage");
+  const { t } = await ServerTranslation("ProductsPage");
 
   return (
     <main className="px-4 py-8 sm:px-6 lg:px-8">

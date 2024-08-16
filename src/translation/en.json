@@ -255,5 +255,36 @@
       "PriceMustBeNumber": "Price must be a number",
       "PriceMustBePositiveNumber": "Price must be a positive number"
     }
+  },
+  "SettingsPage": {
+    "metaTitle": "Settings - ShopBase",
+    "metaDescription": "Manage your account settings on ShopBase.",
+    "ogTitle": "Settings - ShopBase",
+    "ogDescription": "Configure your account settings on ShopBase.",
+    "ogImageAlt": "ShopBase Settings Page",
+    "twitterTitle": "Settings - ShopBase",
+    "twitterDescription": "Adjust your preferences on ShopBase.",
+    "heading": "Update Your Password",
+    "subheading": "Ensure your account is secure by updating your password regularly.",
+    "UpdatePasswordSchemaErrors": {
+      "currentPasswordRequired": "Current Password is required",
+      "invalidPassword": "Wrong Credentials",
+      "passwordMinLength": "Password must be at least 8 characters",
+      "confirmPasswordMinLength": "Confirm Password must be at least 8 characters",
+      "passwordsDoNotMatch": "Passwords do not match",
+      "updating": "Updating...",
+      "captchaFailed": "Captcha verification failed; please confirm you are not a robot.",
+      "updateSuccess": "Updating Password succeeded.",
+      "updateFailed": "Failed to update password",
+      "failedToUpdate": "Failed to update password",
+      "unexpectedError": "An unexpected error occurred. Please try again.",
+      "currentPasswordInput": "Current Password",
+      "currentPasswordInputPlaceholder": "Enter your current password",
+      "passwordInput": "Password",
+      "passwordInputPlaceholder": "Enter new password",
+      "confirmPasswordInput": "Confirm Password",
+      "confirmPasswordInputPlaceholder": "Repeat password",
+      "UpdatePasswordButton": "Update"
+    }
   }
 }

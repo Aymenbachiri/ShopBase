@@ -1,9 +1,8 @@
 import { z } from "zod";
 
-export const registerUserSchema = z
+export const updatePasswordSchema = z
   .object({
-    name: z.string().min(1),
-    email: z.string().email(),
+    currentPassword: z.string().min(8),
     password: z.string().min(8),
     confirmPassword: z.string().min(8),
   })
@@ -12,4 +11,4 @@ export const registerUserSchema = z
     path: ["confirmPassword"],
   });
 
-export type RegisterFormInputs = z.infer<typeof registerUserSchema>;
+export type UpdateFormInputs = z.infer<typeof updatePasswordSchema>;

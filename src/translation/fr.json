@@ -255,5 +255,36 @@
       "PriceMustBeNumber": "Le prix doit être un nombre",
       "PriceMustBePositiveNumber": "Le prix doit être un nombre positif"
     }
+  },
+  "SettingsPage": {
+    "metaTitle": "Paramètres - ShopBase",
+    "metaDescription": "Gérez les paramètres de votre compte sur ShopBase.",
+    "ogTitle": "Paramètres - ShopBase",
+    "ogDescription": "Configurez les paramètres de votre compte sur ShopBase.",
+    "ogImageAlt": "Page des paramètres de ShopBase",
+    "twitterTitle": "Paramètres - ShopBase",
+    "twitterDescription": "Ajustez vos préférences sur ShopBase.",
+    "heading": "Mettez à jour votre mot de passe",
+    "subheading": "Assurez la sécurité de votre compte en mettant à jour régulièrement votre mot de passe.",
+    "UpdatePasswordSchemaErrors": {
+      "currentPasswordRequired": "Le mot de passe actuel est requis",
+      "invalidPassword": "Identifiants incorrects",
+      "passwordMinLength": "Le mot de passe doit comporter au moins 8 caractères",
+      "confirmPasswordMinLength": "La confirmation du mot de passe doit comporter au moins 8 caractères",
+      "passwordsDoNotMatch": "Les mots de passe ne correspondent pas",
+      "updating": "Mise à jour...",
+      "captchaFailed": "La vérification Captcha a échoué; veuillez confirmer que vous n'êtes pas un robot.",
+      "updateSuccess": "La mise à jour du mot de passe a réussi.",
+      "updateFailed": "Échec de la mise à jour du mot de passe",
+      "failedToUpdate": "Échec de la mise à jour du mot de passe",
+      "unexpectedError": "Une erreur inattendue s'est produite. Veuillez réessayer.",
+      "currentPasswordInput": "Mot de passe actuel",
+      "currentPasswordInputPlaceholder": "Entrez votre mot de passe actuel",
+      "passwordInput": "Nouveau mot de passe",
+      "passwordInputPlaceholder": "Entrez un nouveau mot de passe",
+      "confirmPasswordInput": "Confirmez le mot de passe",
+      "confirmPasswordInputPlaceholder": "Répétez le mot de passe",
+      "UpdatePasswordButton": "Mise à jour"
+    }
   }
 }

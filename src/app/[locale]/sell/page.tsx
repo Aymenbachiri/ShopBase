@@ -1,9 +1,9 @@
+import { ServerTranslation } from "@/lib/helpers/ServerTranslation";
 import SellProductPage from "@/page/SellProductPage";
 import type { Metadata } from "next";
-import { getTranslations } from "next-intl/server";
 
 export async function generateMetadata(): Promise<Metadata> {
-  const t = await getTranslations("SellProductPage");
+  const { t } = await ServerTranslation("SellProductPage");
 
   return {
     title: t("metaTitle"),

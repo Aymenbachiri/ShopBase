@@ -5,7 +5,7 @@ export default function UserIcon() {
       width="1em"
       height="1em"
       viewBox="0 0 24 24"
-      className="text-2xl text-gray-300 md:text-gray-700 dark:text-gray-200"
+      className="text-2xl text-gray-700 md:text-gray-700 dark:text-gray-200"
     >
       <path
         fill="none"

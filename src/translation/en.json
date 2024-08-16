@@ -313,5 +313,23 @@
     "Review8": "Fantastic service! The staff was friendly, and the product quality is superb.",
     "Review9": "Easy to order and excellent after-sales support. Will definitely shop here again.",
     "Review10": "I love the variety of products available. Everything I needed was in one place."
+  },
+  "Location": {
+    "Header": "Our Location"
+  },
+  "Faq": {
+    "Question1": "How do I create an account on ShopBase?",
+    "Answer1": "To create an account, click on the Sign Up button on the top right corner of the homepage. Fill in your details, and you'll receive a confirmation email. Click the link in the email to activate your account.",
+    "Question2": "What payment methods are accepted?",
+    "Answer2": "ShopBase accepts a variety of payment methods, including credit/debit cards, PayPal, and other secure online payment gateways. You can choose your preferred method during checkout.",
+    "Question3": "How can I track my order?",
+    "Answer3": "Once your order is shipped, you'll receive an email with a tracking number. You can use this number to track your order on our website or the carrier's tracking page.",
+    "Question4": "What is the return policy?",
+    "Answer4": "We offer a 30-day return policy on most products. If you're not satisfied with your purchase, you can return it within 30 days for a full refund or exchange. Please make sure the item is in its original condition and packaging."
+  },
+  "Footer": {
+    "Copyright": "",
+    "ProvidedBy": "Provided by:",
+    "Aymen": "Aymen"
   }
 }

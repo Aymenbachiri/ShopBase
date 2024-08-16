@@ -154,3 +154,19 @@ export interface Feature {
   description: FeatureKey;
   icon: JSX.Element;
 }
+
+type FaqListKey =
+  | "Question1"
+  | "Answer1"
+  | "Question2"
+  | "Answer2"
+  | "Question3"
+  | "Answer3"
+  | "Question4"
+  | "Answer4";
+
+export interface FaqListItem {
+  Question: FaqListKey;
+  Answer: FaqListKey;
+  Icon: JSX.Element;
+}

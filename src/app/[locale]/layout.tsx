@@ -1,4 +1,5 @@
 import Navbar from "@/components/navbar/Navbar";
+import Footer from "@/components/sections/Footer";
 import AuthProvider from "@/lib/providers/AuthProvider";
 import ReduxProvider from "@/lib/providers/ReduxProvider";
 import SmoothScrollProvider from "@/lib/providers/SmoothScrollProvider";
@@ -45,6 +46,7 @@ export default function LocaleLayout({
                 <main dir={dir}>
                   <Navbar />
                   {children}
+                  <Footer />
                   <Toaster position="top-center" />
                 </main>
               </ReduxProvider>

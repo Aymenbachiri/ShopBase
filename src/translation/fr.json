@@ -313,5 +313,23 @@
     "Review8": "Service fantastique ! Le personnel était sympathique et la qualité du produit est superbe.",
     "Review9": "Facile à commander et excellent support après-vente. Je reviendrai sûrement faire des achats ici.",
     "Review10": "J'adore la variété de produits disponibles. Tout ce dont j'avais besoin était au même endroit."
+  },
+  "Location": {
+    "Header": "Notre Emplacement"
+  },
+  "Faq": {
+    "Question1": "Comment créer un compte sur ShopBase ?",
+    "Answer1": "Pour créer un compte, cliquez sur le bouton Inscription en haut à droite de la page d'accueil. Remplissez vos informations, et vous recevrez un email de confirmation. Cliquez sur le lien dans l'email pour activer votre compte.",
+    "Question2": "Quels modes de paiement sont acceptés ?",
+    "Answer2": "ShopBase accepte divers modes de paiement, y compris les cartes de crédit/débit, PayPal, et d'autres passerelles de paiement en ligne sécurisées. Vous pouvez choisir votre méthode préférée lors du paiement.",
+    "Question3": "Comment puis-je suivre ma commande ?",
+    "Answer3": "Une fois votre commande expédiée, vous recevrez un email avec un numéro de suivi. Vous pouvez utiliser ce numéro pour suivre votre commande sur notre site Web ou sur la page de suivi du transporteur.",
+    "Question4": "Quelle est la politique de retour ?",
+    "Answer4": "Nous offrons une politique de retour de 30 jours sur la plupart des produits. Si vous n'êtes pas satisfait de votre achat, vous pouvez le retourner dans les 30 jours pour un remboursement complet ou un échange. Veuillez vous assurer que l'article est dans son état et son emballage d'origine."
+  },
+  "Footer": {
+    "Copyright": "Logo tous droits réservés {year}",
+    "ProvidedBy": "Fournit par :",
+    "Aymen": "Aymen"
   }
 }

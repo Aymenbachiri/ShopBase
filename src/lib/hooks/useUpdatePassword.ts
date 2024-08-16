@@ -71,8 +71,8 @@ const useUpdatePassword = () => {
       } finally {
         setLoading(false);
         // Sign out the user after successful password change
-        // await signOut({ redirect: false });
-        // router.push("/login");
+        await signOut();
+        router.refresh();
       }
     },
     [captcha, reset, router, t]

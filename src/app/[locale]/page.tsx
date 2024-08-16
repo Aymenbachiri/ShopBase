@@ -1,10 +1,12 @@
+import Features from "@/components/sections/Features";
+import Hero from "@/components/sections/Hero";
 import Testimonials from "@/components/testimonials/Testimonials";
-import HomePage from "@/page/HomePage";
 
 export default function LocaleHomePage() {
   return (
     <>
-      <HomePage />
+      <Hero />
+      <Features />
       <Testimonials />
     </>
   );

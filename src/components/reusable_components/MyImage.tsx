@@ -6,9 +6,9 @@ interface MyImageProps
   src: string | StaticImport;
   className?: string | undefined;
   alt: string;
-  width: number | `${number}` | undefined;
-  height: number | `${number}` | undefined;
-  sizes: string | undefined;
+  width?: number | `${number}` | undefined;
+  height?: number | `${number}` | undefined;
+  sizes?: string | undefined;
 }
 
 export default function MyImage({

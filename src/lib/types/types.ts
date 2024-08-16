@@ -140,3 +140,17 @@ export type MarqueeProps = {
   repeat?: number;
   [key: string]: any;
 };
+
+type FeatureKey =
+  | "ProductLabel"
+  | "ProductDescription"
+  | "PaymentLabel"
+  | "PaymentDescription"
+  | "CostumerSupportLabel"
+  | "CostumerSupportDescription";
+
+export interface Feature {
+  label: FeatureKey;
+  description: FeatureKey;
+  icon: JSX.Element;
+}

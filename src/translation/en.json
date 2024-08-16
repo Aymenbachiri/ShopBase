@@ -52,7 +52,13 @@
         "target": "https://www.shopbase.com/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
-    }
+    },
+    "welcome": "Welcome to ShopBase",
+    "headline": "Discover Amazing Products at Unbeatable Prices",
+    "description": "ShopBase offers a wide range of products to meet your needs. Enjoy a seamless shopping experience with fast delivery and secure payment options.",
+    "primaryButton": "Shop Now",
+    "secondaryButton": "Learn More",
+    "imageAlt": "ShopBase Shopping Experience"
   },
   "RegisterUserPage": {
     "metaTitle": "Create Your ShopBase Account | Start Selling Online Today",
@@ -286,5 +292,26 @@
       "confirmPasswordInputPlaceholder": "Repeat password",
       "UpdatePasswordButton": "Update"
     }
+  },
+  "Features": {
+    "ProductLabel": "Easy Product Listing",
+    "ProductDescription": "Effortlessly add and manage your products with our intuitive listing tools, designed to help you start selling quickly.",
+    "PaymentLabel": "Secure Payments",
+    "PaymentDescription": "ShopBase ensures your transactions are safe and secure, with multiple payment options and robust fraud protection.",
+    "CostumerSupportLabel": "24/7 Customer Support",
+    "CostumerSupportDescription": "Our dedicated support team is available around the clock to assist you with any issues or questions."
+  },
+  "Testimonials": {
+    "Header": "What Our Customers Say",
+    "Review1": "Amazing experience! The customer service was top-notch, and the product exceeded my expectations.",
+    "Review2": "I’m very satisfied with my purchase. The quality is excellent, and delivery was fast.",
+    "Review3": "The website was easy to navigate, and my order arrived on time. Great service!",
+    "Review4": "I had an issue with my order, but customer support resolved it quickly and efficiently.",
+    "Review5": "The product quality is amazing, but the delivery took longer than expected.",
+    "Review6": "This is my go-to store for all my needs. Consistently high quality and great prices.",
+    "Review7": "The product was exactly as described, and I’m very pleased with my purchase.",
+    "Review8": "Fantastic service! The staff was friendly, and the product quality is superb.",
+    "Review9": "Easy to order and excellent after-sales support. Will definitely shop here again.",
+    "Review10": "I love the variety of products available. Everything I needed was in one place."
   }
 }

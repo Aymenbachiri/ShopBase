@@ -52,7 +52,13 @@
         "target": "https://www.shopbase.com/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
       }
-    }
+    },
+    "welcome": "Bienvenue chez ShopBase",
+    "headline": "Découvrez des produits incroyables à des prix imbattables",
+    "description": "ShopBase offre une large gamme de produits pour répondre à vos besoins. Profitez d'une expérience d'achat fluide avec une livraison rapide et des options de paiement sécurisées.",
+    "primaryButton": "Acheter maintenant",
+    "secondaryButton": "En savoir plus",
+    "imageAlt": "Expérience de shopping avec ShopBase"
   },
   "RegisterUserPage": {
     "metaTitle": "Créez votre compte ShopBase | Commencez à vendre en ligne aujourd'hui",
@@ -286,5 +292,26 @@
       "confirmPasswordInputPlaceholder": "Répétez le mot de passe",
       "UpdatePasswordButton": "Mise à jour"
     }
+  },
+  "Features": {
+    "ProductLabel": "Ajout de produits facile",
+    "ProductDescription": "Ajoutez et gérez vos produits facilement grâce à nos outils intuitifs, conçus pour vous aider à commencer à vendre rapidement.",
+    "PaymentLabel": "Paiements sécurisés",
+    "PaymentDescription": "ShopBase garantit que vos transactions sont sûres et sécurisées, avec plusieurs options de paiement et une protection robuste contre la fraude.",
+    "CostumerSupportLabel": "Support client 24/7",
+    "CostumerSupportDescription": "Notre équipe d'assistance dédiée est disponible 24 heures sur 24 pour vous aider avec toutes vos questions ou problèmes."
+  },
+  "Testimonials": {
+    "Header": "Ce que disent nos clients",
+    "Review1": "Expérience incroyable ! Le service client était de premier ordre et le produit a dépassé mes attentes.",
+    "Review2": "Je suis très satisfait de mon achat. La qualité est excellente et la livraison a été rapide.",
+    "Review3": "Le site web était facile à naviguer et ma commande est arrivée à temps. Super service !",
+    "Review4": "J'ai eu un problème avec ma commande, mais le service client l'a résolu rapidement et efficacement.",
+    "Review5": "La qualité du produit est incroyable, mais la livraison a pris plus de temps que prévu.",
+    "Review6": "C'est mon magasin préféré pour tous mes besoins. Qualité constamment élevée et bons prix.",
+    "Review7": "Le produit était exactement comme décrit et je suis très satisfait de mon achat.",
+    "Review8": "Service fantastique ! Le personnel était sympathique et la qualité du produit est superbe.",
+    "Review9": "Facile à commander et excellent support après-vente. Je reviendrai sûrement faire des achats ici.",
+    "Review10": "J'adore la variété de produits disponibles. Tout ce dont j'avais besoin était au même endroit."
   }
 }

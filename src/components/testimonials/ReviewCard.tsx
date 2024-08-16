@@ -1,6 +1,7 @@
+import { ServerTranslation } from "@/lib/helpers/ServerTranslation";
 import { cn } from "@/lib/utils/utils";
 
-export const ReviewCard = ({
+export const ReviewCard = async ({
   img,
   name,
   username,
@@ -9,8 +10,10 @@ export const ReviewCard = ({
   img: string;
   name: string;
   username: string;
-  body: string;
+  body: any;
 }) => {
+  const { t } = await ServerTranslation("Testimonials");
+
   return (
     <figure
       className={cn(
@@ -22,7 +25,7 @@ export const ReviewCard = ({
       )}
     >
       <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
+        <img className="rounded-full h-10 w-10" alt="" src={img} />
         <section className="flex flex-col">
           <figcaption className="text-sm font-medium dark:text-white">
             {name}
@@ -30,7 +33,7 @@ export const ReviewCard = ({
           <p className="text-xs font-medium dark:text-white/40">{username}</p>
         </section>
       </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
+      <blockquote className="mt-2 text-sm">{t(body)}</blockquote>
     </figure>
   );
 };

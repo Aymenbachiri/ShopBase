@@ -5,18 +5,60 @@ const locales = ["en", "fr", "ar"];
 const defaultLocale = "en";
 
 const pages = [
-  { url: "/", changefreq: "monthly", priority: "1.0", lastmod: "2024-08-05" },
+  { url: "/", changefreq: "weekly", priority: "1.0", lastmod: "2024-08-17" },
   {
-    url: "/app",
-    changefreq: "monthly",
+    url: "/about",
+    changefreq: "weekly",
     priority: "0.8",
-    lastmod: "2024-08-03",
+    lastmod: "2024-08-17",
   },
   {
-    url: "/app/topup",
-    changefreq: "monthly",
+    url: "/cart",
+    changefreq: "weekly",
     priority: "0.7",
-    lastmod: "2024-08-01",
+    lastmod: "2024-08-17",
+  },
+  {
+    url: "/dashboard",
+    changefreq: "weekly",
+    priority: "0.7",
+    lastmod: "2024-08-17",
+  },
+  {
+    url: "/editProduct",
+    changefreq: "weekly",
+    priority: "0.7",
+    lastmod: "2024-08-17",
+  },
+  {
+    url: "/login",
+    changefreq: "weekly",
+    priority: "0.7",
+    lastmod: "2024-08-17",
+  },
+  {
+    url: "/products",
+    changefreq: "weekly",
+    priority: "0.7",
+    lastmod: "2024-08-17",
+  },
+  {
+    url: "/register",
+    changefreq: "weekly",
+    priority: "0.7",
+    lastmod: "2024-08-17",
+  },
+  {
+    url: "/sell",
+    changefreq: "weekly",
+    priority: "0.7",
+    lastmod: "2024-08-17",
+  },
+  {
+    url: "/settings",
+    changefreq: "weekly",
+    priority: "0.7",
+    lastmod: "2024-08-17",
   },
 ];
 

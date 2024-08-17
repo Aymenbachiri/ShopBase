@@ -1,16 +1,14 @@
 import type { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { getServerSession } from "next-auth";
 import { credentialsSchema } from "../schemas/credentialsSchema";
 import connectToDB from "../database/database";
 import User from "../database/models/User";
 import { getErrorMessage } from "./getErrorMessage";
 import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken";
-import { serialize } from "cookie";
 
-const JWT_SECRET = process.env.NEXT_PUBLIC_JWT_SECRET;
-const COOKIE_NAME = "auth-token";
+if (!process.env.NEXTAUTH_SECRET) {
+  throw new Error("NEXTAUTH_SECRET must be set");
+}
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -44,29 +42,10 @@ export const authOptions: NextAuthOptions = {
               user.password
             );
             if (isPasswordCorrect) {
-              // Generate JWT token
-              const token = jwt.sign(
-                { userId: user._id, email: user.email },
-                JWT_SECRET,
-                { expiresIn: "1h" } // Token expires in 1 hour
-              );
-
-              // Set secure cookie
-              const secureCookie = serialize("authToken", token, {
-                httpOnly: true,
-                secure: process.env.NODE_ENV === "production",
-                sameSite: "strict",
-                path: "/",
-                maxAge: 3600, // 1 hour
-              });
-
-              // Return user and set cookie in response headers
               return {
                 id: user._id.toString(),
                 email: user.email,
                 name: user.name,
-                token,
-                cookie: secureCookie,
               };
             } else {
               throw new Error("Wrong Credentials");
@@ -82,24 +61,20 @@ export const authOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
-    async signIn({ user }) {
-      if (user) {
-        return true;
-      }
-      return false;
-    },
     async jwt({ token, user }) {
       if (user) {
-        token = {
-          id: user.id,
-          email: user.email,
-          name: user.name,
-        };
+        token.id = user.id;
+        token.email = user.email;
+        token.name = user.name;
       }
       return token;
     },
     async session({ session, token }) {
-      session.user = token;
+      if (token && session.user) {
+        session.user.id = token.id as string;
+        session.user.email = token.email as string;
+        session.user.name = token.name as string;
+      }
       return session;
     },
   },
@@ -110,20 +85,5 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: "jwt",
   },
-  jwt: {
-    secret: JWT_SECRET,
-  },
-  cookies: {
-    sessionToken: {
-      name: COOKIE_NAME,
-      options: {
-        httpOnly: true,
-        secure: process.env.NODE_ENV === "production",
-        sameSite: "lax",
-        path: "/",
-      },
-    },
-  },
+  secret: process.env.NEXTAUTH_SECRET,
 };
-
-export const getServerAuthSession = () => getServerSession(authOptions);

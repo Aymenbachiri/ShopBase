@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Link } from "@/navigation";
 import errorImg from "/public/assets/images/error.webp";
 import MyImage from "@/components/reusable_components/MyImage";
+import Link from "next/link";
 
 export default function Error({
   error,

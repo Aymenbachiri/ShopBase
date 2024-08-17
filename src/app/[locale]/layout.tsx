@@ -1,6 +1,7 @@
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/sections/Footer";
 import AuthProvider from "@/lib/providers/AuthProvider";
+import LocaleProvider from "@/lib/providers/LocaleProvider";
 import ReduxProvider from "@/lib/providers/ReduxProvider";
 import SmoothScrollProvider from "@/lib/providers/SmoothScrollProvider";
 import ThemeProvider from "@/lib/providers/ThemeProvider";
@@ -36,7 +37,7 @@ export default function LocaleLayout({
   if (nextLocale !== locale) notFound();
 
   return (
-    <>
+    <LocaleProvider locale={locale}>
       <NextIntlClientProvider locale={locale} messages={messages}>
         <AuthProvider>
           <ThemeProvider>
@@ -54,6 +55,6 @@ export default function LocaleLayout({
           </ThemeProvider>
         </AuthProvider>
       </NextIntlClientProvider>
-    </>
+    </LocaleProvider>
   );
 }

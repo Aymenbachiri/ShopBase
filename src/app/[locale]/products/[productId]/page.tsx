@@ -48,13 +48,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export async function generateStaticParams() {
-  const API_URL = process.env.API_URL;
-  const products: ProductsType[] = await fetch(`${API_URL}/api/products`).then(
-    (res) => res.json()
-  );
-  return products.map((product) => ({ productId: product._id }));
-}
 
 export default async function Product({ params }: Props) {
   const ProductId = params.productId;

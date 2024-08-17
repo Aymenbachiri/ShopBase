@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import type { ProductsType } from "../types/types";
 
-const API_URL = process.env.API_URL;
+const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
 export async function getProductById(ProductId: string): Promise<ProductsType> {
   try {

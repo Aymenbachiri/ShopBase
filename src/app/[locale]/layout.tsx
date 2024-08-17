@@ -13,10 +13,6 @@ import { notFound } from "next/navigation";
 import NextTopLoader from "nextjs-toploader";
 import { Toaster } from "react-hot-toast";
 
-export async function generateStaticParams() {
-  return [{ lang: "ar" }, { lang: "en" }, { lang: "fr" }];
-}
-
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("HomePage");
 

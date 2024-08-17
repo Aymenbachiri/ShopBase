@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const baseUrl = "https://www.chargily.com";
+const baseUrl = "https://shop-base-eight.vercel.app";
 const locales = ["en", "fr", "ar"];
 const defaultLocale = "en";
 

@@ -39,13 +39,6 @@ export async function generateMetadata({
   };
 }
 
-export async function generateStaticParams() {
-  const API_URL = process.env.API_URL;
-  const products: ProductsType[] = await fetch(`${API_URL}/api/products`).then(
-    (res) => res.json()
-  );
-  return products.map((product) => ({ productId: product._id }));
-}
 
 export default function EditProduct({
   params,

@@ -3,13 +3,6 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  rewrites: async () => [
-    {
-      source: "/sitemap.xml",
-      destination: "/api/sitemap",
-    },
-  ],
-};
+const nextConfig = {};
 
 export default withNextIntl(nextConfig);

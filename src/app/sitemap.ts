@@ -1,4 +1,4 @@
-import { MetadataRoute } from "next";
+import type { MetadataRoute } from "next";
 
 const baseUrl = "https://shop-base-eight.vercel.app";
 const locales = ["en", "fr", "ar"];
@@ -62,7 +62,44 @@ const pages = [
   },
 ];
 
-function generateSitemapXML(): string {
+export default function sitemap(): MetadataRoute.Sitemap {
+  return pages.flatMap((page) => {
+    const isMainPage = page.url === "/";
+    const alternateLinks = locales.map((locale) => ({
+      url:
+        locale === defaultLocale
+          ? `${baseUrl}${page.url}`
+          : `${baseUrl}/${locale}${page.url}`,
+      lastModified: new Date(page.lastmod),
+      changeFrequency:
+        page.changefreq as MetadataRoute.Sitemap[number]["changeFrequency"],
+      priority: parseFloat(page.priority),
+    }));
+
+    if (isMainPage) {
+      alternateLinks.push({
+        url: `${baseUrl}${page.url}`,
+        lastModified: new Date(page.lastmod),
+        changeFrequency:
+          page.changefreq as MetadataRoute.Sitemap[number]["changeFrequency"],
+        priority: parseFloat(page.priority),
+      });
+    }
+
+    return [
+      {
+        url: `${baseUrl}${page.url}`,
+        lastModified: new Date(page.lastmod),
+        changeFrequency:
+          page.changefreq as MetadataRoute.Sitemap[number]["changeFrequency"],
+        priority: parseFloat(page.priority),
+      },
+      ...alternateLinks,
+    ];
+  });
+}
+
+export function generateSitemapXML(): string {
   const urlEntries = pages.map((page) => {
     const isMainPage = page.url === "/";
     const alternateLinks = [
@@ -87,7 +124,7 @@ function generateSitemapXML(): string {
     ${alternateLinks
       .map(
         (link) =>
-          `    <xhtml:link rel="alternate"  hreflang="${link.hreflang}" href="${link.href}" />`
+          `    <link rel="alternate" hreflang="${link.hreflang}" href="${link.href}" />`
       )
       .join("\n")}
   </url>`;
@@ -99,15 +136,3 @@ function generateSitemapXML(): string {
 ${urlEntries.join("\n")}
 </urlset>`;
 }
-
-export default function sitemap(): MetadataRoute.Sitemap {
-  return pages.map((page) => ({
-    url: `${baseUrl}${page.url}`,
-    lastModified: new Date(page.lastmod),
-    changeFrequency:
-      page.changefreq as MetadataRoute.Sitemap[number]["changeFrequency"],
-    priority: parseFloat(page.priority),
-  }));
-}
-
-export { generateSitemapXML };

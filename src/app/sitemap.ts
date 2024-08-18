@@ -103,7 +103,7 @@ export function generateSitemapXML(): string {
     ${alternateLinks
       .map(
         (link) =>
-          `    <link rel="alternate" hreflang="${link.hreflang}" href="${link.href}" />`
+          `    <xhtml:link rel="alternate" hreflang="${link.hreflang}" href="${link.href}" />`
       )
       .join("\n")}
   </url>`;

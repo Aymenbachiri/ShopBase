@@ -1,4 +1,4 @@
-import type { MetadataRoute } from "next";
+import { MetadataRoute } from "next";
 
 const baseUrl = "https://shop-base-eight.vercel.app";
 const locales = ["en", "fr", "ar"];
@@ -63,9 +63,8 @@ const pages = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return pages.flatMap((page) => {
-    const isMainPage = page.url === "/";
-    const alternateLinks = locales.map((locale) => ({
+  return pages.flatMap((page) =>
+    locales.map((locale) => ({
       url:
         locale === defaultLocale
           ? `${baseUrl}${page.url}`
@@ -74,46 +73,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency:
         page.changefreq as MetadataRoute.Sitemap[number]["changeFrequency"],
       priority: parseFloat(page.priority),
-    }));
-
-    if (isMainPage) {
-      alternateLinks.push({
-        url: `${baseUrl}${page.url}`,
-        lastModified: new Date(page.lastmod),
-        changeFrequency:
-          page.changefreq as MetadataRoute.Sitemap[number]["changeFrequency"],
-        priority: parseFloat(page.priority),
-      });
-    }
-
-    return [
-      {
-        url: `${baseUrl}${page.url}`,
-        lastModified: new Date(page.lastmod),
-        changeFrequency:
-          page.changefreq as MetadataRoute.Sitemap[number]["changeFrequency"],
-        priority: parseFloat(page.priority),
-      },
-      ...alternateLinks,
-    ];
-  });
+    }))
+  );
 }
 
 export function generateSitemapXML(): string {
   const urlEntries = pages.map((page) => {
-    const isMainPage = page.url === "/";
-    const alternateLinks = [
-      ...locales.map((locale) => ({
-        hreflang: locale,
-        href:
-          locale === defaultLocale
-            ? `${baseUrl}${page.url}`
-            : `${baseUrl}/${locale}${page.url}`,
-      })),
-      ...(isMainPage
-        ? [{ hreflang: "x-default", href: `${baseUrl}${page.url}` }]
-        : []),
-    ];
+    const alternateLinks = locales.map((locale) => ({
+      hreflang: locale,
+      href:
+        locale === defaultLocale
+          ? `${baseUrl}${page.url}`
+          : `${baseUrl}/${locale}${page.url}`,
+    }));
+
+    if (page.url === "/") {
+      alternateLinks.push({
+        hreflang: "x-default",
+        href: `${baseUrl}${page.url}`,
+      });
+    }
 
     return `
   <url>

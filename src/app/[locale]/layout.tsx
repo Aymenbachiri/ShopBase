@@ -37,17 +37,16 @@ export default function LocaleLayout({
       <NextIntlClientProvider locale={locale} messages={messages}>
         <AuthProvider>
           <ThemeProvider>
-            <SmoothScrollProvider>
-              <ReduxProvider>
-                <NextTopLoader />
-                <main dir={dir}>
-                  <Navbar />
-                  {children}
-                  <Footer />
-                  <Toaster position="top-center" />
-                </main>
-              </ReduxProvider>
-            </SmoothScrollProvider>
+            <SmoothScrollProvider />
+            <ReduxProvider>
+              <NextTopLoader />
+              <main dir={dir}>
+                <Navbar />
+                {children}
+                <Footer />
+                <Toaster position="top-center" />
+              </main>
+            </ReduxProvider>
           </ThemeProvider>
         </AuthProvider>
       </NextIntlClientProvider>

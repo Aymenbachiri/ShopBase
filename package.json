@@ -12,7 +12,6 @@
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
     "@reduxjs/toolkit": "^2.2.7",
-    "@studio-freight/lenis": "^1.0.42",
     "@types/bcryptjs": "^2.4.6",
     "@types/nprogress": "^0.2.3",
     "bcryptjs": "^2.4.3",
@@ -20,6 +19,7 @@
     "framer-motion": "^11.3.24",
     "helmet": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
+    "lenis": "^1.1.10",
     "mongoose": "^8.5.1",
     "next": "^14.2.5",
     "next-auth": "^4.24.7",
